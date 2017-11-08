@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13240" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="GameInformation" representedClassName=".GameInformation" syncable="YES">
+        <attribute name="arenaCity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="arenaName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gameDateTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="gameNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="oppositionCity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="oppositionTeamName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="gameToShotRelationship" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ShotDetails" inverseName="gameRelationship" inverseEntity="ShotDetails" syncable="YES"/>
+    </entity>
+    <entity name="GoalieInformation" representedClassName=".GoalieInformation" syncable="YES">
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="divisionName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dob" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="goalieHeadShot" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="height" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="leagueName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="level" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="number" attributeType="String" syncable="YES"/>
+        <attribute name="shoots" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teamName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="weight" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="goalieToShotRelationship" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ShotDetails" inverseName="goalieRelationship" inverseEntity="ShotDetails" syncable="YES"/>
+    </entity>
+    <entity name="ShotDetails" representedClassName=".ShotDetails" syncable="YES">
+        <attribute name="advancedMode" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="advancedShotDifficulty" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="advancedShotDistance" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="advancedShotLocation" optional="YES" attributeType="Transformable" customClassName="." syncable="YES"/>
+        <attribute name="shotDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="shotLocation" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="shotNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="shotPeriod" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shotScoreClock" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shotType" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="gameRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GameInformation" inverseName="gameToShotRelationship" inverseEntity="GameInformation" syncable="YES"/>
+        <relationship name="goalieRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GoalieInformation" inverseName="goalieToShotRelationship" inverseEntity="GoalieInformation" syncable="YES"/>
+        <fetchIndex name="byShotNumberIndex">
+            <fetchIndexElement property="shotNumber" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <elements>
+        <element name="GameInformation" positionX="-333" positionY="-139" width="324" height="150"/>
+        <element name="GoalieInformation" positionX="-306" positionY="77" width="243" height="255"/>
+        <element name="ShotDetails" positionX="-857" positionY="-129" width="299" height="225"/>
+    </elements>
+</model>

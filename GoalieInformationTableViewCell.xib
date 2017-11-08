@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="95" id="KGk-i7-Jjw" customClass="GoalieInformationTableViewCell" customModule="Shot_On_Goal" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="875" height="95"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="875" height="94.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ok icon 80x80" translatesAutoresizingMaskIntoConstraints="NO" id="NaD-A8-lC2">
+                        <rect key="frame" x="0.0" y="8" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="8Mr-p2-Kym"/>
+                            <constraint firstAttribute="height" constant="80" id="HNu-7s-OmJ"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="account filled 80x80" translatesAutoresizingMaskIntoConstraints="NO" id="Hht-vr-OHL">
+                        <rect key="frame" x="80" y="8" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="9g9-EW-U9t"/>
+                            <constraint firstAttribute="height" constant="80" id="SxP-00-omw"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="P5A-6k-hMg" userLabel="Labels Stack View">
+                        <rect key="frame" x="165" y="20" width="545" height="54"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connor Surette #1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" preferredMaxLayoutWidth="250" translatesAutoresizingMaskIntoConstraints="NO" id="uKh-iU-JcZ">
+                                <rect key="frame" x="0.0" y="0.0" width="545" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99/99/.999%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGb-fq-yek">
+                                <rect key="frame" x="0.0" y="24" width="545" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" identifier="shot info height" id="eYq-An-hBw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bTL-1z-s1H" userLabel="Right Buttons Stack View">
+                        <rect key="frame" x="715" y="8" width="160" height="80"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rp4-YA-AJQ">
+                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="SVh-8E-9rv"/>
+                                    <constraint firstAttribute="height" constant="80" id="kl6-en-hGe"/>
+                                </constraints>
+                                <state key="normal" image="details icon 80x80"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJo-lf-lq8">
+                                <rect key="frame" x="80" y="0.0" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="RqP-jl-EP9"/>
+                                    <constraint firstAttribute="height" constant="80" id="pqY-wo-Ksh"/>
+                                </constraints>
+                                <state key="normal" image="chevron icon 80x80"/>
+                            </button>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Hht-vr-OHL" firstAttribute="leading" secondItem="NaD-A8-lC2" secondAttribute="trailing" id="2HV-Eo-jQC"/>
+                    <constraint firstItem="NaD-A8-lC2" firstAttribute="top" secondItem="Hht-vr-OHL" secondAttribute="top" id="GhF-7O-U9B"/>
+                    <constraint firstItem="bTL-1z-s1H" firstAttribute="leading" secondItem="P5A-6k-hMg" secondAttribute="trailing" constant="5" id="SVu-d0-baj"/>
+                    <constraint firstItem="P5A-6k-hMg" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="U1f-1S-h0a"/>
+                    <constraint firstItem="bTL-1z-s1H" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="UoD-2H-h0H"/>
+                    <constraint firstItem="NaD-A8-lC2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="WIz-yD-kS9"/>
+                    <constraint firstAttribute="trailing" secondItem="bTL-1z-s1H" secondAttribute="trailing" id="c7y-U7-0Ew"/>
+                    <constraint firstItem="P5A-6k-hMg" firstAttribute="leading" secondItem="Hht-vr-OHL" secondAttribute="trailing" constant="5" id="d7h-SB-Xr7"/>
+                    <constraint firstItem="NaD-A8-lC2" firstAttribute="top" secondItem="bTL-1z-s1H" secondAttribute="top" id="pV7-Ke-SBq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="checkMarkImageView" destination="NaD-A8-lC2" id="Hpv-GV-hw3"/>
+                <outlet property="chevronButton" destination="MJo-lf-lq8" id="Hxz-Um-eU6"/>
+                <outlet property="detailsButton" destination="Rp4-YA-AJQ" id="fXX-V2-kXJ"/>
+                <outlet property="goalieHeadShotImageView" destination="Hht-vr-OHL" id="HNr-Yy-zz4"/>
+                <outlet property="goalieInformationLabel" destination="uKh-iU-JcZ" id="HZM-Fc-VqS"/>
+                <outlet property="shotInformationLabel" destination="JGb-fq-yek" id="zgf-QT-WjS"/>
+            </connections>
+            <point key="canvasLocation" x="764.5" y="-56.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="account filled 80x80" width="80" height="80"/>
+        <image name="chevron icon 80x80" width="80" height="80"/>
+        <image name="details icon 80x80" width="80" height="80"/>
+        <image name="ok icon 80x80" width="80" height="80"/>
+    </resources>
+</document>

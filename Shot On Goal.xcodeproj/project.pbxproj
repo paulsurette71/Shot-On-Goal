@@ -1,0 +1,728 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7504DA861F8D5C3A00D31E06 /* ShotInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7504DA7F1F8D5C3A00D31E06 /* ShotInformationTableViewCell.swift */; };
+		7504DA871F8D5C3A00D31E06 /* ShotInformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7504DA801F8D5C3A00D31E06 /* ShotInformationTableViewCell.xib */; };
+		7505F96E1F952C7E00B6F652 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 755FE10C1E37BDC0006FC1FD /* Main.storyboard */; };
+		7505F96F1F952FA400B6F652 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7504DA7C1F8D58AD00D31E06 /* HomeViewController.swift */; };
+		750D1BBB1F9E7F9A008A1B1D /* MyGoalieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750D1BB91F9E7F9A008A1B1D /* MyGoalieTableViewController.swift */; };
+		750D1BBC1F9E7F9A008A1B1D /* MyGoalieTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 750D1BBA1F9E7F9A008A1B1D /* MyGoalieTableViewController.xib */; };
+		750D1BBF1F9E873E008A1B1D /* MyGoalieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750D1BBD1F9E873E008A1B1D /* MyGoalieTableViewCell.swift */; };
+		750D1BC01F9E873E008A1B1D /* MyGoalieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 750D1BBE1F9E873E008A1B1D /* MyGoalieTableViewCell.xib */; };
+		750D273C1FABAF2B00E31312 /* GameDateAttribString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750D273B1FABAF2B00E31312 /* GameDateAttribString.swift */; };
+		750D6A0F1E73021A00133067 /* PeriodGameDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750D6A0D1E73021A00133067 /* PeriodGameDetailTableViewCell.swift */; };
+		750D6A101E73021A00133067 /* PeriodGameDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 750D6A0E1E73021A00133067 /* PeriodGameDetailTableViewCell.xib */; };
+		7510B8161E53587C0079D83F /* CurrentGameDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7510B8151E53587C0079D83F /* CurrentGameDelegate.swift */; };
+		751522AA1F93ABE00086E9C1 /* EnableButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751522A91F93ABE00086E9C1 /* EnableButtons.swift */; };
+		751522AC1F93AE2D0086E9C1 /* DisableButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751522AB1F93AE2D0086E9C1 /* DisableButtons.swift */; };
+		7517B84A1FAFBB6300B2364F /* GoFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7517B8491FAFBB6300B2364F /* GoFetch.swift */; };
+		751D3E531FA4216F0047910A /* GoalieInformationPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751D3E521FA4216F0047910A /* GoalieInformationPopover.swift */; };
+		751D3E561FA42CB90047910A /* ShotDetailsPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751D3E551FA42CB90047910A /* ShotDetailsPopover.swift */; };
+		751D3E581FA42E650047910A /* PeriodPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751D3E571FA42E650047910A /* PeriodPopover.swift */; };
+		752417791E6DB19E00BEEC8E /* ColourPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752417781E6DB19E00BEEC8E /* ColourPalette.swift */; };
+		75285B2A1E4CBC1E0076E816 /* GoalieInformationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75285B291E4CBC1E0076E816 /* GoalieInformationTableViewController.swift */; };
+		75285B2C1E4CBC2F0076E816 /* GoalieDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75285B2B1E4CBC2F0076E816 /* GoalieDetailsTableViewController.swift */; };
+		752D2E001FA9107900E1D3BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 752D2DFF1FA9107900E1D3BB /* Assets.xcassets */; };
+		752E2A2F1FAA2B28009033B7 /* UpdateGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752E2A2E1FAA2B28009033B7 /* UpdateGame.swift */; };
+		752F11B51E6B0BDC00C61C30 /* GoalieInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752F11B31E6B0BDC00C61C30 /* GoalieInformationTableViewCell.swift */; };
+		752F11B61E6B0BDC00C61C30 /* GoalieInformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 752F11B41E6B0BDC00C61C30 /* GoalieInformationTableViewCell.xib */; };
+		7530BD6D1E7C03D7005C275B /* PeriodGameDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7530BD6C1E7C03D7005C275B /* PeriodGameDetailViewController.swift */; };
+		753894CC1FAF7584006FBAD3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 753894CB1FAF7561006FBAD3 /* CoreLocation.framework */; };
+		7549DD7B1E67A0EF00CC750E /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7549DD7A1E67A0EF00CC750E /* RoundedImageView.swift */; };
+		7553BB111FA350ED009DBD24 /* Reset Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7553BB101FA350ED009DBD24 /* Reset Alert.swift */; };
+		755FE1091E37BDC0006FC1FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755FE1081E37BDC0006FC1FD /* AppDelegate.swift */; };
+		755FE10B1E37BDC0006FC1FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755FE10A1E37BDC0006FC1FD /* ViewController.swift */; };
+		756291071F9FDAC2009A9ACD /* ShotDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756291051F9FDAC2009A9ACD /* ShotDetailsTableViewController.swift */; };
+		757C3E6C1E783A3F00B9D1CE /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 757C3E6B1E783A3F00B9D1CE /* Launch Screen.storyboard */; };
+		758A93411E5F67E900C46810 /* ConvertDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758A93401E5F67E900C46810 /* ConvertDate.swift */; };
+		758A93441E5F6CC800C46810 /* DrawPuck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758A93431E5F6CC800C46810 /* DrawPuck.swift */; };
+		758B2E6A1FA8EAE900A9926B /* EnableDisableButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758B2E691FA8EAE900A9926B /* EnableDisableButtons.swift */; };
+		758E2E4B1E57BD7200DF90B8 /* ScoreClockPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758E2E4A1E57BD7200DF90B8 /* ScoreClockPicker.swift */; };
+		7590EFD91F9A2B6F00AE8677 /* ShotsGoalAttrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7590EFD81F9A2B6F00AE8677 /* ShotsGoalAttrib.swift */; };
+		7591357C1E64B82E0088CB58 /* MainImageDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7591357B1E64B82E0088CB58 /* MainImageDelegate.swift */; };
+		759B97821E55DF2F00881A3E /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759B97811E55DF2F00881A3E /* CoreDataStack.swift */; };
+		759E9F451FA7535C00CE2268 /* ShowGoalieInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759E9F441FA7535C00CE2268 /* ShowGoalieInformation.swift */; };
+		759E9F471FA7769700CE2268 /* LeftGoalieDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759E9F461FA7769700CE2268 /* LeftGoalieDelegate.swift */; };
+		759E9F491FA776A700CE2268 /* RightGoalieDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759E9F481FA776A700CE2268 /* RightGoalieDelegate.swift */; };
+		759EF2FD1FA8AEEE00C04142 /* ButtonImagesForState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759EF2FC1FA8AEEE00C04142 /* ButtonImagesForState.swift */; };
+		759F68491E7C759600BB1183 /* ShareAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759F68481E7C759600BB1183 /* ShareAction.swift */; };
+		759F684B1E7C7A0F00BB1183 /* DrawPuckScaled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759F684A1E7C7A0F00BB1183 /* DrawPuckScaled.swift */; };
+		75A13E3A1E6E05EF00DCB968 /* GameInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A13E381E6E05EF00DCB968 /* GameInformationTableViewCell.swift */; };
+		75A13E3B1E6E05EF00DCB968 /* GameInformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75A13E391E6E05EF00DCB968 /* GameInformationTableViewCell.xib */; };
+		75A970A21E4E5B8800C6F617 /* GameInformationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A970A11E4E5B8800C6F617 /* GameInformationTableViewController.swift */; };
+		75A970A41E4E5B9A00C6F617 /* GameDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A970A31E4E5B9A00C6F617 /* GameDetailsTableViewController.swift */; };
+		75AACDE31E4D11AD00340A3E /* StoreScoreClockDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AACDE21E4D11AD00340A3E /* StoreScoreClockDelegate.swift */; };
+		75AC4F911E61C81600B63157 /* CalculateSavePercentage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AC4F901E61C81600B63157 /* CalculateSavePercentage.swift */; };
+		75B1FDD71FADDB6100CA704D /* StoreLastShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B1FDD61FADDB6100CA704D /* StoreLastShot.swift */; };
+		75BBBB3E1E70861200C079CE /* GoalieGameDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BBBB3D1E70861200C079CE /* GoalieGameDetailTableViewController.swift */; };
+		75D185891E95805B002400F2 /* ScoreClockPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D185881E95805B002400F2 /* ScoreClockPopoverViewController.swift */; };
+		75D21C621E745B5700063A09 /* BackButtonNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D21C611E745B5700063A09 /* BackButtonNav.swift */; };
+		75D580F01F9F7E57009FF25B /* GoalieDetailsAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D580EF1F9F7E57009FF25B /* GoalieDetailsAttributedString.swift */; };
+		75D582771E7D76390092034F /* ImportTestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D582761E7D76390092034F /* ImportTestData.swift */; };
+		75D582791E7DC7620092034F /* IsAppAlreadyLaunchedOnce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D582781E7DC7620092034F /* IsAppAlreadyLaunchedOnce.swift */; };
+		75E2AA191E9D6DEC007D4B11 /* GameInformation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E2AA131E9D6DEC007D4B11 /* GameInformation+CoreDataClass.swift */; };
+		75E2AA1A1E9D6DEC007D4B11 /* GameInformation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E2AA141E9D6DEC007D4B11 /* GameInformation+CoreDataProperties.swift */; };
+		75E2AA1B1E9D6DEC007D4B11 /* GoalieInformation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E2AA151E9D6DEC007D4B11 /* GoalieInformation+CoreDataClass.swift */; };
+		75E2AA1C1E9D6DEC007D4B11 /* GoalieInformation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E2AA161E9D6DEC007D4B11 /* GoalieInformation+CoreDataProperties.swift */; };
+		75E2AA211E9D6E22007D4B11 /* ShotDetails+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E2AA1F1E9D6E22007D4B11 /* ShotDetails+CoreDataClass.swift */; };
+		75E2AA221E9D6E22007D4B11 /* ShotDetails+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E2AA201E9D6E22007D4B11 /* ShotDetails+CoreDataProperties.swift */; };
+		75EDD2CE1E42588A007BD014 /* myShotTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 75EDD2CC1E42588A007BD014 /* myShotTracker.xcdatamodeld */; };
+		75F0AC4D1FA27811009200BA /* Undo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F0AC4C1FA27811009200BA /* Undo.swift */; };
+		75F301561FA7B5D800666918 /* LeftGoalieIndexPathDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F301551FA7B5D800666918 /* LeftGoalieIndexPathDelegate.swift */; };
+		75F301581FA7B5E900666918 /* RightGoalieIndexPathDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F301571FA7B5E900666918 /* RightGoalieIndexPathDelegate.swift */; };
+		75FC31F71FA3EF5F0062FC07 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FC31F61FA3EF5F0062FC07 /* MainViewController.swift */; };
+		75FC31F91FA3F5210062FC07 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75FC31F81FA3F5210062FC07 /* MainView.xib */; };
+		75FC31FB1FA3F7960062FC07 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FC31FA1FA3F7960062FC07 /* MainView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7504DA7C1F8D58AD00D31E06 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7504DA7F1F8D5C3A00D31E06 /* ShotInformationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotInformationTableViewCell.swift; sourceTree = "<group>"; };
+		7504DA801F8D5C3A00D31E06 /* ShotInformationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShotInformationTableViewCell.xib; sourceTree = "<group>"; };
+		750D1BB91F9E7F9A008A1B1D /* MyGoalieTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGoalieTableViewController.swift; sourceTree = "<group>"; };
+		750D1BBA1F9E7F9A008A1B1D /* MyGoalieTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyGoalieTableViewController.xib; sourceTree = "<group>"; };
+		750D1BBD1F9E873E008A1B1D /* MyGoalieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGoalieTableViewCell.swift; sourceTree = "<group>"; };
+		750D1BBE1F9E873E008A1B1D /* MyGoalieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyGoalieTableViewCell.xib; sourceTree = "<group>"; };
+		750D273B1FABAF2B00E31312 /* GameDateAttribString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDateAttribString.swift; sourceTree = "<group>"; };
+		750D6A0D1E73021A00133067 /* PeriodGameDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeriodGameDetailTableViewCell.swift; sourceTree = "<group>"; };
+		750D6A0E1E73021A00133067 /* PeriodGameDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PeriodGameDetailTableViewCell.xib; sourceTree = "<group>"; };
+		7510B8151E53587C0079D83F /* CurrentGameDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentGameDelegate.swift; sourceTree = "<group>"; };
+		751522A91F93ABE00086E9C1 /* EnableButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnableButtons.swift; sourceTree = "<group>"; };
+		751522AB1F93AE2D0086E9C1 /* DisableButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisableButtons.swift; sourceTree = "<group>"; };
+		7517B8491FAFBB6300B2364F /* GoFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoFetch.swift; sourceTree = "<group>"; };
+		751D3E521FA4216F0047910A /* GoalieInformationPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalieInformationPopover.swift; sourceTree = "<group>"; };
+		751D3E551FA42CB90047910A /* ShotDetailsPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotDetailsPopover.swift; sourceTree = "<group>"; };
+		751D3E571FA42E650047910A /* PeriodPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodPopover.swift; sourceTree = "<group>"; };
+		752417781E6DB19E00BEEC8E /* ColourPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColourPalette.swift; sourceTree = "<group>"; };
+		75285B291E4CBC1E0076E816 /* GoalieInformationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalieInformationTableViewController.swift; sourceTree = "<group>"; };
+		75285B2B1E4CBC2F0076E816 /* GoalieDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalieDetailsTableViewController.swift; sourceTree = "<group>"; };
+		752CCC941E9D4AA600804969 /* myShotTracker v2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "myShotTracker v2.xcdatamodel"; sourceTree = "<group>"; };
+		752D2DFF1FA9107900E1D3BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		752E2A2E1FAA2B28009033B7 /* UpdateGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateGame.swift; sourceTree = "<group>"; };
+		752F11B31E6B0BDC00C61C30 /* GoalieInformationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalieInformationTableViewCell.swift; sourceTree = "<group>"; };
+		752F11B41E6B0BDC00C61C30 /* GoalieInformationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoalieInformationTableViewCell.xib; sourceTree = "<group>"; };
+		7530BD6C1E7C03D7005C275B /* PeriodGameDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeriodGameDetailViewController.swift; sourceTree = "<group>"; };
+		753894CB1FAF7561006FBAD3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		7549DD7A1E67A0EF00CC750E /* RoundedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
+		7553BB101FA350ED009DBD24 /* Reset Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reset Alert.swift"; sourceTree = "<group>"; };
+		755FE1051E37BDC0006FC1FD /* Shot On Goal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shot On Goal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		755FE1081E37BDC0006FC1FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		755FE10A1E37BDC0006FC1FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		755FE10D1E37BDC0006FC1FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		755FE1141E37BDC0006FC1FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		756291051F9FDAC2009A9ACD /* ShotDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotDetailsTableViewController.swift; sourceTree = "<group>"; };
+		757C3E6B1E783A3F00B9D1CE /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		758A93401E5F67E900C46810 /* ConvertDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConvertDate.swift; path = ../ConvertDate.swift; sourceTree = "<group>"; };
+		758A93431E5F6CC800C46810 /* DrawPuck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawPuck.swift; sourceTree = "<group>"; };
+		758B2E691FA8EAE900A9926B /* EnableDisableButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnableDisableButtons.swift; sourceTree = "<group>"; };
+		758E2E4A1E57BD7200DF90B8 /* ScoreClockPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreClockPicker.swift; sourceTree = "<group>"; };
+		7590EFD81F9A2B6F00AE8677 /* ShotsGoalAttrib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotsGoalAttrib.swift; sourceTree = "<group>"; };
+		7591357B1E64B82E0088CB58 /* MainImageDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainImageDelegate.swift; sourceTree = "<group>"; };
+		759B97811E55DF2F00881A3E /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		759E9F441FA7535C00CE2268 /* ShowGoalieInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowGoalieInformation.swift; sourceTree = "<group>"; };
+		759E9F461FA7769700CE2268 /* LeftGoalieDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftGoalieDelegate.swift; sourceTree = "<group>"; };
+		759E9F481FA776A700CE2268 /* RightGoalieDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightGoalieDelegate.swift; sourceTree = "<group>"; };
+		759EF2FC1FA8AEEE00C04142 /* ButtonImagesForState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonImagesForState.swift; sourceTree = "<group>"; };
+		759F68481E7C759600BB1183 /* ShareAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareAction.swift; sourceTree = "<group>"; };
+		759F684A1E7C7A0F00BB1183 /* DrawPuckScaled.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawPuckScaled.swift; sourceTree = "<group>"; };
+		75A13E381E6E05EF00DCB968 /* GameInformationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameInformationTableViewCell.swift; sourceTree = "<group>"; };
+		75A13E391E6E05EF00DCB968 /* GameInformationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameInformationTableViewCell.xib; sourceTree = "<group>"; };
+		75A970A11E4E5B8800C6F617 /* GameInformationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameInformationTableViewController.swift; sourceTree = "<group>"; };
+		75A970A31E4E5B9A00C6F617 /* GameDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDetailsTableViewController.swift; sourceTree = "<group>"; };
+		75AACDE21E4D11AD00340A3E /* StoreScoreClockDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoreScoreClockDelegate.swift; path = ../StoreScoreClockDelegate.swift; sourceTree = "<group>"; };
+		75AC4F901E61C81600B63157 /* CalculateSavePercentage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalculateSavePercentage.swift; path = ../CalculateSavePercentage.swift; sourceTree = "<group>"; };
+		75B1FDD61FADDB6100CA704D /* StoreLastShot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreLastShot.swift; sourceTree = "<group>"; };
+		75BBBB3D1E70861200C079CE /* GoalieGameDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalieGameDetailTableViewController.swift; sourceTree = "<group>"; };
+		75D185881E95805B002400F2 /* ScoreClockPopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreClockPopoverViewController.swift; sourceTree = "<group>"; };
+		75D21C611E745B5700063A09 /* BackButtonNav.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackButtonNav.swift; sourceTree = "<group>"; };
+		75D580EF1F9F7E57009FF25B /* GoalieDetailsAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalieDetailsAttributedString.swift; sourceTree = "<group>"; };
+		75D582761E7D76390092034F /* ImportTestData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportTestData.swift; sourceTree = "<group>"; };
+		75D582781E7DC7620092034F /* IsAppAlreadyLaunchedOnce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsAppAlreadyLaunchedOnce.swift; sourceTree = "<group>"; };
+		75E2AA131E9D6DEC007D4B11 /* GameInformation+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "GameInformation+CoreDataClass.swift"; path = "../GameInformation+CoreDataClass.swift"; sourceTree = "<group>"; };
+		75E2AA141E9D6DEC007D4B11 /* GameInformation+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "GameInformation+CoreDataProperties.swift"; path = "../GameInformation+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		75E2AA151E9D6DEC007D4B11 /* GoalieInformation+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "GoalieInformation+CoreDataClass.swift"; path = "../GoalieInformation+CoreDataClass.swift"; sourceTree = "<group>"; };
+		75E2AA161E9D6DEC007D4B11 /* GoalieInformation+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "GoalieInformation+CoreDataProperties.swift"; path = "../GoalieInformation+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		75E2AA1F1E9D6E22007D4B11 /* ShotDetails+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ShotDetails+CoreDataClass.swift"; path = "../ShotDetails+CoreDataClass.swift"; sourceTree = "<group>"; };
+		75E2AA201E9D6E22007D4B11 /* ShotDetails+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ShotDetails+CoreDataProperties.swift"; path = "../ShotDetails+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		75E991D51E40EA1700C11ED7 /* SFDisplay-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SFDisplay-Thin.otf"; path = "myShotTracker/fonts/SFDisplay-Thin.otf"; sourceTree = "<group>"; };
+		75EDD2CD1E42588A007BD014 /* myShotTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = myShotTracker.xcdatamodel; sourceTree = "<group>"; };
+		75F0AC4C1FA27811009200BA /* Undo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Undo.swift; sourceTree = "<group>"; };
+		75F301551FA7B5D800666918 /* LeftGoalieIndexPathDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftGoalieIndexPathDelegate.swift; sourceTree = "<group>"; };
+		75F301571FA7B5E900666918 /* RightGoalieIndexPathDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightGoalieIndexPathDelegate.swift; sourceTree = "<group>"; };
+		75FC31F61FA3EF5F0062FC07 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		75FC31F81FA3F5210062FC07 /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
+		75FC31FA1FA3F7960062FC07 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		755FE1021E37BDC0006FC1FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				753894CC1FAF7584006FBAD3 /* CoreLocation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		37676BEEE8EF5B8301C7B5E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				753894CB1FAF7561006FBAD3 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7504DA7E1F8D5C3A00D31E06 /* TableView Cells */ = {
+			isa = PBXGroup;
+			children = (
+				750D1BB91F9E7F9A008A1B1D /* MyGoalieTableViewController.swift */,
+				750D1BBA1F9E7F9A008A1B1D /* MyGoalieTableViewController.xib */,
+				7504DA7F1F8D5C3A00D31E06 /* ShotInformationTableViewCell.swift */,
+				7504DA801F8D5C3A00D31E06 /* ShotInformationTableViewCell.xib */,
+			);
+			name = "TableView Cells";
+			path = "../../Shot On Goal v2/Shot On Goal v2/TableView Cells";
+			sourceTree = "<group>";
+		};
+		751271D31FAA604200192B1F /* Goalie Flow */ = {
+			isa = PBXGroup;
+			children = (
+				75285B291E4CBC1E0076E816 /* GoalieInformationTableViewController.swift */,
+				75BBBB3D1E70861200C079CE /* GoalieGameDetailTableViewController.swift */,
+				75285B2B1E4CBC2F0076E816 /* GoalieDetailsTableViewController.swift */,
+				7530BD6C1E7C03D7005C275B /* PeriodGameDetailViewController.swift */,
+			);
+			name = "Goalie Flow";
+			sourceTree = "<group>";
+		};
+		751D3E541FA4274E0047910A /* Main Flow */ = {
+			isa = PBXGroup;
+			children = (
+				75F1F9AF1FAE290D00D3EDD5 /* Period Flow */,
+				75FC31F61FA3EF5F0062FC07 /* MainViewController.swift */,
+				75FC31F81FA3F5210062FC07 /* MainView.xib */,
+				75FC31FA1FA3F7960062FC07 /* MainView.swift */,
+			);
+			name = "Main Flow";
+			sourceTree = "<group>";
+		};
+		755FE0FC1E37BDC0006FC1FD = {
+			isa = PBXGroup;
+			children = (
+				755FE1071E37BDC0006FC1FD /* myShotTracker */,
+				755FE1061E37BDC0006FC1FD /* Products */,
+				37676BEEE8EF5B8301C7B5E5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		755FE1061E37BDC0006FC1FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				755FE1051E37BDC0006FC1FD /* Shot On Goal.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		755FE1071E37BDC0006FC1FD /* myShotTracker */ = {
+			isa = PBXGroup;
+			children = (
+				7504DA7E1F8D5C3A00D31E06 /* TableView Cells */,
+				757E5B331E4E0FF400797EFE /* Delegates */,
+				758A934A1E5F723700C46810 /* Cells */,
+				75FD3C0A1E3BCB5100A214E5 /* San Francisco Fonts */,
+				758C99961FAB4473004277B4 /* Game Flow */,
+				751271D31FAA604200192B1F /* Goalie Flow */,
+				758A93451E5F6EAB00C46810 /* Shot Details Flow */,
+				758A93421E5F68BD00C46810 /* Classes */,
+				75860FB01FA90B0B00621BEC /* Storyboard */,
+				751D3E541FA4274E0047910A /* Main Flow */,
+				755FE1141E37BDC0006FC1FD /* Info.plist */,
+				752D2DFF1FA9107900E1D3BB /* Assets.xcassets */,
+				75EDD2CF1E4278BE007BD014 /* CoreData */,
+				757E5B341E4E101200797EFE /* View Controllers */,
+			);
+			path = myShotTracker;
+			sourceTree = "<group>";
+		};
+		757E5B331E4E0FF400797EFE /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				755FE1081E37BDC0006FC1FD /* AppDelegate.swift */,
+				75F301551FA7B5D800666918 /* LeftGoalieIndexPathDelegate.swift */,
+				75F301571FA7B5E900666918 /* RightGoalieIndexPathDelegate.swift */,
+				75AACDE21E4D11AD00340A3E /* StoreScoreClockDelegate.swift */,
+				7510B8151E53587C0079D83F /* CurrentGameDelegate.swift */,
+				7591357B1E64B82E0088CB58 /* MainImageDelegate.swift */,
+				759E9F461FA7769700CE2268 /* LeftGoalieDelegate.swift */,
+				759E9F481FA776A700CE2268 /* RightGoalieDelegate.swift */,
+				75B1FDD61FADDB6100CA704D /* StoreLastShot.swift */,
+			);
+			name = Delegates;
+			sourceTree = "<group>";
+		};
+		757E5B341E4E101200797EFE /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7504DA7C1F8D58AD00D31E06 /* HomeViewController.swift */,
+				755FE10A1E37BDC0006FC1FD /* ViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		75860FB01FA90B0B00621BEC /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				755FE10C1E37BDC0006FC1FD /* Main.storyboard */,
+				757C3E6B1E783A3F00B9D1CE /* Launch Screen.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		758A93421E5F68BD00C46810 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				752417781E6DB19E00BEEC8E /* ColourPalette.swift */,
+				75AC4F901E61C81600B63157 /* CalculateSavePercentage.swift */,
+				758A93401E5F67E900C46810 /* ConvertDate.swift */,
+				758A93431E5F6CC800C46810 /* DrawPuck.swift */,
+				759F684A1E7C7A0F00BB1183 /* DrawPuckScaled.swift */,
+				7549DD7A1E67A0EF00CC750E /* RoundedImageView.swift */,
+				75D21C611E745B5700063A09 /* BackButtonNav.swift */,
+				759F68481E7C759600BB1183 /* ShareAction.swift */,
+				75D582761E7D76390092034F /* ImportTestData.swift */,
+				75D582781E7DC7620092034F /* IsAppAlreadyLaunchedOnce.swift */,
+				751522A91F93ABE00086E9C1 /* EnableButtons.swift */,
+				751522AB1F93AE2D0086E9C1 /* DisableButtons.swift */,
+				7590EFD81F9A2B6F00AE8677 /* ShotsGoalAttrib.swift */,
+				75D580EF1F9F7E57009FF25B /* GoalieDetailsAttributedString.swift */,
+				75F0AC4C1FA27811009200BA /* Undo.swift */,
+				7553BB101FA350ED009DBD24 /* Reset Alert.swift */,
+				751D3E521FA4216F0047910A /* GoalieInformationPopover.swift */,
+				759E9F441FA7535C00CE2268 /* ShowGoalieInformation.swift */,
+				759EF2FC1FA8AEEE00C04142 /* ButtonImagesForState.swift */,
+				758B2E691FA8EAE900A9926B /* EnableDisableButtons.swift */,
+				752E2A2E1FAA2B28009033B7 /* UpdateGame.swift */,
+				750D273B1FABAF2B00E31312 /* GameDateAttribString.swift */,
+				7517B8491FAFBB6300B2364F /* GoFetch.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		758A93451E5F6EAB00C46810 /* Shot Details Flow */ = {
+			isa = PBXGroup;
+			children = (
+				751D3E551FA42CB90047910A /* ShotDetailsPopover.swift */,
+				756291051F9FDAC2009A9ACD /* ShotDetailsTableViewController.swift */,
+			);
+			name = "Shot Details Flow";
+			sourceTree = "<group>";
+		};
+		758A934A1E5F723700C46810 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				752F11B31E6B0BDC00C61C30 /* GoalieInformationTableViewCell.swift */,
+				752F11B41E6B0BDC00C61C30 /* GoalieInformationTableViewCell.xib */,
+				75A13E381E6E05EF00DCB968 /* GameInformationTableViewCell.swift */,
+				75A13E391E6E05EF00DCB968 /* GameInformationTableViewCell.xib */,
+				750D6A0D1E73021A00133067 /* PeriodGameDetailTableViewCell.swift */,
+				750D6A0E1E73021A00133067 /* PeriodGameDetailTableViewCell.xib */,
+				750D1BBD1F9E873E008A1B1D /* MyGoalieTableViewCell.swift */,
+				750D1BBE1F9E873E008A1B1D /* MyGoalieTableViewCell.xib */,
+			);
+			name = Cells;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		758C99961FAB4473004277B4 /* Game Flow */ = {
+			isa = PBXGroup;
+			children = (
+				75A970A11E4E5B8800C6F617 /* GameInformationTableViewController.swift */,
+				75A970A31E4E5B9A00C6F617 /* GameDetailsTableViewController.swift */,
+			);
+			name = "Game Flow";
+			sourceTree = "<group>";
+		};
+		75EDD2CF1E4278BE007BD014 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				75E2AA1F1E9D6E22007D4B11 /* ShotDetails+CoreDataClass.swift */,
+				75E2AA201E9D6E22007D4B11 /* ShotDetails+CoreDataProperties.swift */,
+				75E2AA131E9D6DEC007D4B11 /* GameInformation+CoreDataClass.swift */,
+				75E2AA141E9D6DEC007D4B11 /* GameInformation+CoreDataProperties.swift */,
+				75E2AA151E9D6DEC007D4B11 /* GoalieInformation+CoreDataClass.swift */,
+				75E2AA161E9D6DEC007D4B11 /* GoalieInformation+CoreDataProperties.swift */,
+				759B97811E55DF2F00881A3E /* CoreDataStack.swift */,
+				75EDD2CC1E42588A007BD014 /* myShotTracker.xcdatamodeld */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		75F1F9AF1FAE290D00D3EDD5 /* Period Flow */ = {
+			isa = PBXGroup;
+			children = (
+				758E2E4A1E57BD7200DF90B8 /* ScoreClockPicker.swift */,
+				75D185881E95805B002400F2 /* ScoreClockPopoverViewController.swift */,
+				751D3E571FA42E650047910A /* PeriodPopover.swift */,
+			);
+			name = "Period Flow";
+			sourceTree = "<group>";
+		};
+		75FD3C0A1E3BCB5100A214E5 /* San Francisco Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				75E991D51E40EA1700C11ED7 /* SFDisplay-Thin.otf */,
+			);
+			name = "San Francisco Fonts";
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		755FE1041E37BDC0006FC1FD /* Shot On Goal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 755FE1171E37BDC0006FC1FD /* Build configuration list for PBXNativeTarget "Shot On Goal" */;
+			buildPhases = (
+				755FE1011E37BDC0006FC1FD /* Sources */,
+				755FE1021E37BDC0006FC1FD /* Frameworks */,
+				755FE1031E37BDC0006FC1FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Shot On Goal";
+			productName = myShotTracker;
+			productReference = 755FE1051E37BDC0006FC1FD /* Shot On Goal.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		755FE0FD1E37BDC0006FC1FD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Surette, Paul";
+				TargetAttributes = {
+					755FE1041E37BDC0006FC1FD = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 28DUX73466;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 755FE1001E37BDC0006FC1FD /* Build configuration list for PBXProject "Shot On Goal" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 755FE0FC1E37BDC0006FC1FD;
+			productRefGroup = 755FE1061E37BDC0006FC1FD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				755FE1041E37BDC0006FC1FD /* Shot On Goal */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		755FE1031E37BDC0006FC1FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				750D6A101E73021A00133067 /* PeriodGameDetailTableViewCell.xib in Resources */,
+				752F11B61E6B0BDC00C61C30 /* GoalieInformationTableViewCell.xib in Resources */,
+				7505F96E1F952C7E00B6F652 /* Main.storyboard in Resources */,
+				750D1BBC1F9E7F9A008A1B1D /* MyGoalieTableViewController.xib in Resources */,
+				75A13E3B1E6E05EF00DCB968 /* GameInformationTableViewCell.xib in Resources */,
+				7504DA871F8D5C3A00D31E06 /* ShotInformationTableViewCell.xib in Resources */,
+				75FC31F91FA3F5210062FC07 /* MainView.xib in Resources */,
+				757C3E6C1E783A3F00B9D1CE /* Launch Screen.storyboard in Resources */,
+				752D2E001FA9107900E1D3BB /* Assets.xcassets in Resources */,
+				750D1BC01F9E873E008A1B1D /* MyGoalieTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		755FE1011E37BDC0006FC1FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				751D3E561FA42CB90047910A /* ShotDetailsPopover.swift in Sources */,
+				75FC31F71FA3EF5F0062FC07 /* MainViewController.swift in Sources */,
+				75A13E3A1E6E05EF00DCB968 /* GameInformationTableViewCell.swift in Sources */,
+				759F68491E7C759600BB1183 /* ShareAction.swift in Sources */,
+				75D582771E7D76390092034F /* ImportTestData.swift in Sources */,
+				7504DA861F8D5C3A00D31E06 /* ShotInformationTableViewCell.swift in Sources */,
+				75E2AA1B1E9D6DEC007D4B11 /* GoalieInformation+CoreDataClass.swift in Sources */,
+				751522AA1F93ABE00086E9C1 /* EnableButtons.swift in Sources */,
+				75D580F01F9F7E57009FF25B /* GoalieDetailsAttributedString.swift in Sources */,
+				75B1FDD71FADDB6100CA704D /* StoreLastShot.swift in Sources */,
+				759E9F491FA776A700CE2268 /* RightGoalieDelegate.swift in Sources */,
+				7530BD6D1E7C03D7005C275B /* PeriodGameDetailViewController.swift in Sources */,
+				759F684B1E7C7A0F00BB1183 /* DrawPuckScaled.swift in Sources */,
+				75F0AC4D1FA27811009200BA /* Undo.swift in Sources */,
+				7510B8161E53587C0079D83F /* CurrentGameDelegate.swift in Sources */,
+				755FE10B1E37BDC0006FC1FD /* ViewController.swift in Sources */,
+				75D582791E7DC7620092034F /* IsAppAlreadyLaunchedOnce.swift in Sources */,
+				758B2E6A1FA8EAE900A9926B /* EnableDisableButtons.swift in Sources */,
+				75F301581FA7B5E900666918 /* RightGoalieIndexPathDelegate.swift in Sources */,
+				75D185891E95805B002400F2 /* ScoreClockPopoverViewController.swift in Sources */,
+				756291071F9FDAC2009A9ACD /* ShotDetailsTableViewController.swift in Sources */,
+				750D273C1FABAF2B00E31312 /* GameDateAttribString.swift in Sources */,
+				75D21C621E745B5700063A09 /* BackButtonNav.swift in Sources */,
+				758A93441E5F6CC800C46810 /* DrawPuck.swift in Sources */,
+				7590EFD91F9A2B6F00AE8677 /* ShotsGoalAttrib.swift in Sources */,
+				75AACDE31E4D11AD00340A3E /* StoreScoreClockDelegate.swift in Sources */,
+				759B97821E55DF2F00881A3E /* CoreDataStack.swift in Sources */,
+				7505F96F1F952FA400B6F652 /* HomeViewController.swift in Sources */,
+				75A970A41E4E5B9A00C6F617 /* GameDetailsTableViewController.swift in Sources */,
+				758E2E4B1E57BD7200DF90B8 /* ScoreClockPicker.swift in Sources */,
+				752E2A2F1FAA2B28009033B7 /* UpdateGame.swift in Sources */,
+				758A93411E5F67E900C46810 /* ConvertDate.swift in Sources */,
+				751522AC1F93AE2D0086E9C1 /* DisableButtons.swift in Sources */,
+				750D6A0F1E73021A00133067 /* PeriodGameDetailTableViewCell.swift in Sources */,
+				75EDD2CE1E42588A007BD014 /* myShotTracker.xcdatamodeld in Sources */,
+				759E9F451FA7535C00CE2268 /* ShowGoalieInformation.swift in Sources */,
+				7591357C1E64B82E0088CB58 /* MainImageDelegate.swift in Sources */,
+				752F11B51E6B0BDC00C61C30 /* GoalieInformationTableViewCell.swift in Sources */,
+				750D1BBB1F9E7F9A008A1B1D /* MyGoalieTableViewController.swift in Sources */,
+				752417791E6DB19E00BEEC8E /* ColourPalette.swift in Sources */,
+				75285B2A1E4CBC1E0076E816 /* GoalieInformationTableViewController.swift in Sources */,
+				750D1BBF1F9E873E008A1B1D /* MyGoalieTableViewCell.swift in Sources */,
+				751D3E581FA42E650047910A /* PeriodPopover.swift in Sources */,
+				75F301561FA7B5D800666918 /* LeftGoalieIndexPathDelegate.swift in Sources */,
+				75E2AA211E9D6E22007D4B11 /* ShotDetails+CoreDataClass.swift in Sources */,
+				75AC4F911E61C81600B63157 /* CalculateSavePercentage.swift in Sources */,
+				75E2AA221E9D6E22007D4B11 /* ShotDetails+CoreDataProperties.swift in Sources */,
+				75A970A21E4E5B8800C6F617 /* GameInformationTableViewController.swift in Sources */,
+				7553BB111FA350ED009DBD24 /* Reset Alert.swift in Sources */,
+				759EF2FD1FA8AEEE00C04142 /* ButtonImagesForState.swift in Sources */,
+				7549DD7B1E67A0EF00CC750E /* RoundedImageView.swift in Sources */,
+				751D3E531FA4216F0047910A /* GoalieInformationPopover.swift in Sources */,
+				75E2AA1A1E9D6DEC007D4B11 /* GameInformation+CoreDataProperties.swift in Sources */,
+				75285B2C1E4CBC2F0076E816 /* GoalieDetailsTableViewController.swift in Sources */,
+				7517B84A1FAFBB6300B2364F /* GoFetch.swift in Sources */,
+				75E2AA1C1E9D6DEC007D4B11 /* GoalieInformation+CoreDataProperties.swift in Sources */,
+				755FE1091E37BDC0006FC1FD /* AppDelegate.swift in Sources */,
+				75BBBB3E1E70861200C079CE /* GoalieGameDetailTableViewController.swift in Sources */,
+				75FC31FB1FA3F7960062FC07 /* MainView.swift in Sources */,
+				75E2AA191E9D6DEC007D4B11 /* GameInformation+CoreDataClass.swift in Sources */,
+				759E9F471FA7769700CE2268 /* LeftGoalieDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		755FE10C1E37BDC0006FC1FD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				755FE10D1E37BDC0006FC1FD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		755FE1151E37BDC0006FC1FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		755FE1161E37BDC0006FC1FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		755FE1181E37BDC0006FC1FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 28DUX73466;
+				INFOPLIST_FILE = myShotTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.paulsurette.myShotTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		755FE1191E37BDC0006FC1FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 28DUX73466;
+				INFOPLIST_FILE = myShotTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.paulsurette.myShotTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		755FE1001E37BDC0006FC1FD /* Build configuration list for PBXProject "Shot On Goal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				755FE1151E37BDC0006FC1FD /* Debug */,
+				755FE1161E37BDC0006FC1FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		755FE1171E37BDC0006FC1FD /* Build configuration list for PBXNativeTarget "Shot On Goal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				755FE1181E37BDC0006FC1FD /* Debug */,
+				755FE1191E37BDC0006FC1FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		75EDD2CC1E42588A007BD014 /* myShotTracker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				752CCC941E9D4AA600804969 /* myShotTracker v2.xcdatamodel */,
+				75EDD2CD1E42588A007BD014 /* myShotTracker.xcdatamodel */,
+			);
+			currentVersion = 752CCC941E9D4AA600804969 /* myShotTracker v2.xcdatamodel */;
+			path = myShotTracker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 755FE0FD1E37BDC0006FC1FD /* Project object */;
+}

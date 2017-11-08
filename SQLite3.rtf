@@ -1,0 +1,209 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fnil\fcharset0 AndaleMono;}
+{\colortbl;\red255\green255\blue255;\red47\green255\blue18;}
+\margl1440\margr1440\vieww32300\viewh22320\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs32 \cf2 \cb0 \CocoaLigature0 Last login: Tue Mar  7 07:35:15 on console\
+c02rh89kg8wn:~ itpes$ sqlite3 /Users/itpes/Desktop/com.paulsurette.myShotTracker\\ 2017-03-07\\ 11\\:01.47.681.xcappdata/AppData/Library/Application\\ Support/myShotTracker.sqlite \
+SQLite version 3.8.10.2 2015-05-20 18:17:19\
+Enter ".help" for usage hints.\
+sqlite> .schema\
+CREATE TABLE ZGAMEINFORMATION ( Z_PK INTEGER PRIMARY KEY, Z_ENT INTEGER, Z_OPT INTEGER, ZGAMEDATETIME TIMESTAMP, ZARENACITY VARCHAR, ZARENANAME VARCHAR, ZGAMENUMBER VARCHAR, ZOPPOSITIONCITY VARCHAR, ZOPPOSITIONTEAMNAME VARCHAR );\
+CREATE TABLE ZGOALIEINFORMATION ( Z_PK INTEGER PRIMARY KEY, Z_ENT INTEGER, Z_OPT INTEGER, ZDOB TIMESTAMP, ZCITY VARCHAR, ZDIVISIONNAME VARCHAR, ZFIRSTNAME VARCHAR, ZHEIGHT VARCHAR, ZLASTNAME VARCHAR, ZLEAGUENAME VARCHAR, ZLEVEL VARCHAR, ZNUMBER VARCHAR, ZSHOOTS VARCHAR, ZTEAMNAME VARCHAR, ZWEIGHT VARCHAR, ZGOALIEHEADSHOT BLOB );\
+CREATE TABLE ZSHOTDETAILS ( Z_PK INTEGER PRIMARY KEY, Z_ENT INTEGER, Z_OPT INTEGER, ZSHOTNUMBER INTEGER, ZGAMERELATIONSHIP INTEGER, ZGOALIERELATIONSHIP INTEGER, ZSHOTDATE TIMESTAMP, ZSHOTPERIOD VARCHAR, ZSHOTSCORECLOCK VARCHAR, ZSHOTTYPE VARCHAR, ZSHOTLOCATION BLOB );\
+CREATE INDEX ZSHOTDETAILS_ZSHOTNUMBER_INDEX ON ZSHOTDETAILS (ZSHOTNUMBER);\
+CREATE INDEX ZSHOTDETAILS_ZGAMERELATIONSHIP_INDEX ON ZSHOTDETAILS (ZGAMERELATIONSHIP);\
+CREATE INDEX ZSHOTDETAILS_ZGOALIERELATIONSHIP_INDEX ON ZSHOTDETAILS (ZGOALIERELATIONSHIP);\
+CREATE TABLE Z_PRIMARYKEY (Z_ENT INTEGER PRIMARY KEY, Z_NAME VARCHAR, Z_SUPER INTEGER, Z_MAX INTEGER);\
+CREATE TABLE Z_METADATA (Z_VERSION INTEGER PRIMARY KEY, Z_UUID VARCHAR(255), Z_PLIST BLOB);\
+CREATE TABLE Z_MODELCACHE (Z_CONTENT BLOB);\
+sqlite> select * from ZGAMEINFORMATION;\
+1|1|18|509835615|Milton|Milton Sport Centre D||Milton|Winterhawks Blue \
+2|1|12|510106256|Stoney Creek|Stoney Creek Arena||Stoney Creek|Warriors \
+3|1|18|510710436|Guelph |Centennial ||Stoney Creek |Warriors \
+sqlite> select * from ZGOALIEINFORMATION;\
+1|2|28|150562289|||Connor||Surette|||31||||????\
+2|2|20|510594706.345475|||Evan||Pastorius|||29||||????\
+sqlite> select * from ZSHOTDETAILS;\
+2|3|1|1|||510586086.034738|1st Period|9:56|shot|bplist00?X$versionX$objectsY$archiverT$top\
+3|3|1|2|||510586086.382319|1st Period|9:55|shot|bplist00?X$versionX$objectsY$archiverT$top\
+4|3|1|3|||510586086.583814|1st Period|9:55|shot|bplist00?X$versionX$objectsY$archiverT$top\
+5|3|1|4|||510586086.834636|1st Period|9:55|shot|bplist00?X$versionX$objectsY$archiverT$top\
+7|3|1|5|||510586092.835447|1st Period|9:49|shot|bplist00?X$versionX$objectsY$archiverT$top\
+8|3|1|6|||510586093.100761|1st Period|9:49|shot|bplist00?X$versionX$objectsY$archiverT$top\
+9|3|1|7|||510586093.450914|1st Period|9:48|shot|bplist00?X$versionX$objectsY$archiverT$top\
+10|3|1|8|||510586093.550761|1st Period|9:48|shot|bplist00?X$versionX$objectsY$archiverT$top\
+11|3|1|1|||510588271.10818|1st Period|00:00|goal|bplist00?X$versionX$objectsY$archiverT$top\
+12|3|1|1|||510589906.086665|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+13|3|1|2|||510589906.103992|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+14|3|1|3|||510589906.179042|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+16|3|1|1|||510590243.068347|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+17|3|1|2|||510590243.289404|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+19|3|1|3|||510590250.657167|1st Period|00:00|goal|bplist00?X$versionX$objectsY$archiverT$top\
+20|3|1|1|||510590352.11571|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+21|3|1|2|||510590352.133387|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+22|3|1|3|||510590352.337571|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+23|3|1|4|||510590352.522489|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+24|3|1|5|||510590352.720819|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+25|3|1|6|||510590353.064997|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+26|3|1|7|||510590353.266705|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+27|3|1|8|||510590353.488856|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+28|3|1|9|||510590353.703459|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+29|3|1|10|||510590353.856014|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+30|3|1|11|||510590356.055506|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+31|3|1|12|||510590357.655745|1st Period|00:00|goal|bplist00?X$versionX$objectsY$archiverT$top\
+41|3|1|1|||510590523.944649|1st Period|00:00|goal|bplist00?X$versionX$objectsY$archiverT$top\
+42|3|1|1|1|1|510594778.099613|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+43|3|1|2|1|1|510594779.283264|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+44|3|1|3|1|1|510594780.61907|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+45|3|1|4|1|1|510594787.505713|2nd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+46|3|1|5|1|1|510594788.432588|2nd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+47|3|1|6|1|1|510594789.067994|2nd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+48|3|1|7|1|1|510594789.998704|2nd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+49|3|1|8|1|1|510594790.482622|2nd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+50|3|1|9|1|1|510594792.9832|2nd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+51|3|1|10|1|1|510594798.451818|3rd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+52|3|1|11|1|1|510594799.350464|3rd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+53|3|1|12|1|1|510594799.78482|3rd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+54|3|1|13|1|1|510594800.350202|3rd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+55|3|1|14|1|1|510594800.917807|3rd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+56|3|1|15|1|1|510594801.802073|3rd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+57|3|1|16|1|1|510594802.402586|3rd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+58|3|1|17|1|1|510594803.753966|3rd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+59|3|1|1|2|2|510595217.2267|1st Period|00:00|goal|bplist00?X$versionX$objectsY$archiverT$top\
+60|3|1|2|2|2|510595218.957981|1st Period|00:00|goal|bplist00?X$versionX$objectsY$archiverT$top\
+61|3|1|3|2|2|510595219.780434|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+62|3|1|4|2|2|510595220.29756|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+63|3|1|5|2|2|510595221.146282|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+64|3|1|6|2|2|510595222.316362|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+65|3|1|7|2|2|510595222.812224|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+66|3|1|8|2|2|510595223.246042|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+67|3|1|9|2|2|510595223.648607|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+68|3|1|10|2|2|510595224.631204|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+69|3|1|11|2|2|510595225.262776|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+70|3|1|1|3|2|510595266.501621|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+71|3|1|2|3|2|510595266.733294|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+72|3|1|3|3|2|510595266.952959|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+73|3|1|4|3|2|510595267.235819|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+74|3|1|5|3|2|510595267.468679|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+75|3|1|6|3|2|510595267.886248|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+76|3|1|7|3|2|510595269.568104|1st Period|00:00|goal|bplist00?X$versionX$objectsY$archiverT$top\
+77|3|1|8|3|2|510595271.251504|1st Period|00:00|goal|bplist00?X$versionX$objectsY$archiverT$top\
+78|3|1|9|3|1|510595276.506647|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+79|3|1|10|3|1|510595276.786907|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+80|3|1|11|3|1|510595277.006416|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+81|3|1|12|3|1|510595277.336847|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+82|3|1|13|3|1|510595277.752907|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+83|3|1|14|3|1|510595278.070189|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+84|3|1|15|3|1|510595278.423553|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+85|3|1|16|3|1|510595279.104175|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+86|3|1|17|3|1|510595279.423667|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+sqlite> select count(*) from ZSHOTDETAILS;\
+73\
+sqlite> select * from ZSHOTDETAILS where ZGAMERELATIONSHIP = 1;\
+42|3|1|1|1|1|510594778.099613|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+43|3|1|2|1|1|510594779.283264|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+44|3|1|3|1|1|510594780.61907|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+45|3|1|4|1|1|510594787.505713|2nd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+46|3|1|5|1|1|510594788.432588|2nd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+47|3|1|6|1|1|510594789.067994|2nd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+48|3|1|7|1|1|510594789.998704|2nd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+49|3|1|8|1|1|510594790.482622|2nd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+50|3|1|9|1|1|510594792.9832|2nd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+51|3|1|10|1|1|510594798.451818|3rd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+52|3|1|11|1|1|510594799.350464|3rd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+53|3|1|12|1|1|510594799.78482|3rd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+54|3|1|13|1|1|510594800.350202|3rd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+55|3|1|14|1|1|510594800.917807|3rd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+56|3|1|15|1|1|510594801.802073|3rd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+57|3|1|16|1|1|510594802.402586|3rd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+58|3|1|17|1|1|510594803.753966|3rd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+sqlite> select * from ZSHOTDETAILS where ZGAMERELATIONSHIP = 1 and ZGOALIERELATIONSHIP = 1;\
+42|3|1|1|1|1|510594778.099613|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+43|3|1|2|1|1|510594779.283264|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+44|3|1|3|1|1|510594780.61907|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+45|3|1|4|1|1|510594787.505713|2nd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+46|3|1|5|1|1|510594788.432588|2nd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+47|3|1|6|1|1|510594789.067994|2nd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+48|3|1|7|1|1|510594789.998704|2nd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+49|3|1|8|1|1|510594790.482622|2nd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+50|3|1|9|1|1|510594792.9832|2nd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+51|3|1|10|1|1|510594798.451818|3rd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+52|3|1|11|1|1|510594799.350464|3rd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+53|3|1|12|1|1|510594799.78482|3rd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+54|3|1|13|1|1|510594800.350202|3rd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+55|3|1|14|1|1|510594800.917807|3rd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+56|3|1|15|1|1|510594801.802073|3rd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+57|3|1|16|1|1|510594802.402586|3rd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+58|3|1|17|1|1|510594803.753966|3rd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+sqlite> select * from ZSHOTDETAILS where ZGAMERELATIONSHIP = 1 and ZGOALIERELATIONSHIP = 2;\
+sqlite> select * from ZSHOTDETAILS where ZGAMERELATIONSHIP = 1 and ZGOALIERELATIONSHIP = 1;\
+42|3|1|1|1|1|510594778.099613|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+43|3|1|2|1|1|510594779.283264|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+44|3|1|3|1|1|510594780.61907|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+45|3|1|4|1|1|510594787.505713|2nd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+46|3|1|5|1|1|510594788.432588|2nd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+47|3|1|6|1|1|510594789.067994|2nd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+48|3|1|7|1|1|510594789.998704|2nd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+49|3|1|8|1|1|510594790.482622|2nd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+50|3|1|9|1|1|510594792.9832|2nd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+51|3|1|10|1|1|510594798.451818|3rd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+52|3|1|11|1|1|510594799.350464|3rd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+53|3|1|12|1|1|510594799.78482|3rd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+54|3|1|13|1|1|510594800.350202|3rd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+55|3|1|14|1|1|510594800.917807|3rd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+56|3|1|15|1|1|510594801.802073|3rd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+57|3|1|16|1|1|510594802.402586|3rd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+58|3|1|17|1|1|510594803.753966|3rd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+sqlite> select * from ZSHOTDETAILS where ZGAMERELATIONSHIP = 1 and ZGOALIERELATIONSHIP = 1 GROUP BY ZSHOTPERIOD;\
+44|3|1|3|1|1|510594780.61907|1st Period|00:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+50|3|1|9|1|1|510594792.9832|2nd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+58|3|1|17|1|1|510594803.753966|3rd Period|0:00|shot|bplist00?X$versionX$objectsY$archiverT$top\
+sqlite> select ZSHOTPERIOD, count(*) from ZSHOTDETAILS where ZGAMERELATIONSHIP = 1 and ZGOALIERELATIONSHIP = 1 GROUP BY ZSHOTPERIOD;\
+1st Period|3\
+2nd Period|6\
+3rd Period|8\
+sqlite> select ZSHOTPERIOD, sum(count(*)) from ZSHOTDETAILS where ZGAMERELATIONSHIP = 1 and ZGOALIERELATIONSHIP = 1 GROUP BY ZSHOTPERIOD;\
+Error: misuse of aggregate function count()\
+sqlite> select ZSHOTPERIOD, count(*) from ZSHOTDETAILS where ZGAMERELATIONSHIP = 1 and ZGOALIERELATIONSHIP = 1 GROUP BY ZSHOTPERIOD;\
+1st Period|3\
+2nd Period|6\
+3rd Period|8\
+sqlite> select ZSHOTPERIOD, count(*) from ZSHOTDETAILS where ZGAMERELATIONSHIP = 1 and ZGOALIERELATIONSHIP = 1 GROUP BY ZSHOTPERIOD UNION ALL \
+   ...> ;\
+Error: near ";": syntax error\
+sqlite> select ZSHOTPERIOD, count(*) from ZSHOTDETAILS where ZGAMERELATIONSHIP = 1 and ZGOALIERELATIONSHIP = 1 GROUP BY ZSHOTPERIOD UNION ALL select ZSHOTPERIOD, count(*);\
+Error: no such column: ZSHOTPERIOD\
+sqlite> select ZSHOTPERIOD, count(*) from ZSHOTDETAILS where ZGAMERELATIONSHIP = 1 and ZGOALIERELATIONSHIP = 1 GROUP BY ZSHOTPERIOD UNION ALL select ZSHOTPERIOD, count(*) from ZSOTDETAILS;;\
+Error: no such table: ZSOTDETAILS\
+sqlite> select ZSHOTPERIOD, count(*) from ZSHOTDETAILS where ZGAMERELATIONSHIP = 1 and ZGOALIERELATIONSHIP = 1 GROUP BY ZSHOTPERIOD UNION ALL select ZSHOTPERIOD, count(*) from ZSHOTDETAILS;;\
+1st Period|3\
+2nd Period|6\
+3rd Period|8\
+1st Period|73\
+sqlite> select ZSHOTPERIOD, count(*) from ZSHOTDETAILS where ZGAMERELATIONSHIP = 1 and ZGOALIERELATIONSHIP = 1 GROUP BY ZSHOTPERIOD UNION ALL select ZSHOTPERIOD, count(*) from ZSHOTDETAILS where ZGAMERELATIONSHIP = 1 and ZGOALIERELATIONSHIP = 1;\
+1st Period|3\
+2nd Period|6\
+3rd Period|8\
+3rd Period|17\
+sqlite> select ZSHOTPERIOD, count(*) from ZSHOTDETAILS where ZGAMERELATIONSHIP = 1 and ZGOALIERELATIONSHIP = 1 GROUP BY ZSHOTPERIOD UNION ALL select 'SUM' ZSHOTPERIOD, count(*) from ZSHOTDETAILS where ZGAMERELATIONSHIP = 1 and ZGOALIERELATIONSHIP = 1;\
+1st Period|3\
+2nd Period|6\
+3rd Period|8\
+SUM|17\
+sqlite> select ZSHOTPERIOD, count(*) from ZSHOTDETAILS where ZGAMERELATIONSHIP = 1 and ZGOALIERELATIONSHIP = 1 GROUP BY ZSHOTPERIOD UNION ALL select 'Total Shots' ZSHOTPERIOD, count(*) from ZSHOTDETAILS where ZGAMERELATIONSHIP = 1 and ZGOALIERELATIONSHIP = 1;\
+1st Period|3\
+2nd Period|6\
+3rd Period|8\
+Total Shots|17\
+sqlite> \
+\
+\
+\
+\
+\
+sqlite> select ZGAMEINFORMATION.ZGAMEDATETIME, ZGAMEINFORMATION.ZOPPOSITIONCITY, ZGAMEINFORMATION.ZOPPOSITIONTEAMNAME, count(ZSHOTTYPE) from ZSHOTDETAILS INNER JOIN ZGAMEINFORMATION on ZSHOTDETAILS.ZGAMERELATIONSHIP where ZGOALIERELATIONSHIP = 1 group by ZGAMERELATIONSHIP, ZSHOTTYPE;\
+510710436|Stoney Creek |Warriors |51\
+510710436|Stoney Creek |Warriors |27\
+}
