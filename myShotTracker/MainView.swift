@@ -70,8 +70,7 @@ class MainView: UIView {
     var leftGoalieIndex: storeLeftGoalieIndexPathDelegate?
     var rightGoalieIndex: storeRightGoalieIndexPathDelegate?
     var periodSelected: storeScoreClockDelegate?
-//    var leftGoalieLastShot:  storeLastShotsDelegate?
-//    var rightGoalieLastShot: storeLastShotsDelegate?
+
     var lastShot:            storeLastShotsDelegate?
     
     //IBAction
