@@ -21,8 +21,9 @@ class ColourPalette {
         UINavigationBar.appearance().barTintColor        = UIColor(named: "linkWater")
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.black]
         UINavigationBar.appearance().titleTextAttributes = [ NSAttributedStringKey.font: UIFont.systemFont(ofSize: 28, weight: .heavy)]
-
-         //UITabBar
+//        UINavigationBar.appearance(whenContainedInInstancesOf: [UIActivityViewController.self]).titleTextAttributes = [ NSAttributedStringKey.font: UIFont.systemFont(ofSize: 20, weight: .thin) ]
+        
+        //UITabBar
         UITabBar.appearance().tintColor               = UIColor(named: "hockeyNetRed")
         UITabBar.appearance().barTintColor            = UIColor(named: "linkWater")
         UITabBar.appearance().unselectedItemTintColor = UIColor.gray

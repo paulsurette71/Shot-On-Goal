@@ -42,6 +42,7 @@ class PeriodGameDetailViewController: UIViewController {
     let goalieDetailsAttributedString            = GoalieDetailsAttributedString()
     let formatShotGoalPercentageAttributedString = FormatShotGoalPercentageAttributedString()
     let goFetch                                  = GoFetch()
+    let saveHockeyNetAsImage                     = SaveHockeyNetAsImage()
     
     //Fetch Results
     var shotResults = [ShotDetails]()
@@ -89,12 +90,16 @@ class PeriodGameDetailViewController: UIViewController {
         
         let goalieNetImagesArray = shareAction.gatherData(shotInformation: shotResults, periodInformation: numberOfPeriodsResults)
         
-        let resultsArray = shareAction.buildMessage(goalie: goalie!, dateStringForTitle: dateStringForTitle!, goalieNetArray: goalieNetImagesArray )
+        let resultsArray = shareAction.buildMessage(goalie: goalie!, dateStringForTitle: dateStringForTitle!, goalieNetArray: goalieNetImagesArray, shotInformation: shotResults )
         
         let activityViewController = UIActivityViewController(activityItems: resultsArray, applicationActivities: nil)
         
-        present(activityViewController, animated: true, completion: nil)
+        //set Subject line
+        let subjectLine = createSubjectLine()
+    
+        activityViewController.setValue(subjectLine, forKey: "Subject")
         
+        present(activityViewController, animated: true, completion: nil)
     }
     
     func showGoalieInfoInNav () {
@@ -112,6 +117,17 @@ class PeriodGameDetailViewController: UIViewController {
         tableView.register(netNib, forCellReuseIdentifier: "perodGameDetailCell")
         tableView.rowHeight       = 260 //435 //250
         tableView.allowsSelection = false
+    }
+    
+    func createSubjectLine() -> String {
+        
+        let gameDate = dateStringForTitle?.string
+        let currentGoalie = goalieDetailsAttributedString.goalieDetailInformation(number: (goalie?.number)!, firstName: (goalie?.firstName)!, lastName: (goalie?.lastName)!).string
+        let subjectLine = currentGoalie + ": " + gameDate!
+        
+        
+        return subjectLine
+        
     }
 }
 
@@ -152,6 +168,8 @@ extension PeriodGameDetailViewController: UITableViewDataSource {
         shotCount = 0
         goalCount = 0
         
+        let period = (numberOfPeriodsResults[indexPath.section] as AnyObject).value(forKey: "shotPeriod") as! String
+        
         if indexPath.section == 0 {
             
             for shots in shotResults {
@@ -177,7 +195,7 @@ extension PeriodGameDetailViewController: UITableViewDataSource {
             
         }  else { //if indexPath.row
             
-            let period = (numberOfPeriodsResults[indexPath.section] as AnyObject).value(forKey: "shotPeriod") as! String
+            //            let period = (numberOfPeriodsResults[indexPath.section] as AnyObject).value(forKey: "shotPeriod") as! String
             
             currentPeriod = period
             
@@ -207,6 +225,8 @@ extension PeriodGameDetailViewController: UITableViewDataSource {
             }
         }
         
+        //        saveHockeyNetAsImage.saveAsPNG(hockeyNetImageView: cell.hockeyNetImageView, period: period)
+        
         cell.shotGoalDetailLabel.attributedText = formatShotGoalPercentageAttributedString.formattedString(shots: shotCount, goals: goalCount, fontSize: 24)
         
         return cell
@@ -219,4 +239,3 @@ extension PeriodGameDetailViewController: UITableViewDataSource {
         return sectionTitle
     }
 }
-

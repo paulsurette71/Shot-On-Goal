@@ -541,14 +541,8 @@
                         <outlet property="arenaCityTextField" destination="ZBV-e8-Q8U" id="jA5-Wp-aVr"/>
                         <outlet property="arenaNameTextField" destination="mwf-Xj-DK7" id="PZb-k7-NqE"/>
                         <outlet property="gameDatePicker" destination="kiB-5h-Eh5" id="dtJ-Hi-v2G"/>
-                        <outlet property="goalsAgainstForGoaliesLabel" destination="vbe-x1-2mw" id="vNy-YR-Dhv"/>
-                        <outlet property="goalsLabel" destination="qv9-lv-fxF" id="W1O-Uk-xtA"/>
                         <outlet property="oppositionCityTextField" destination="s2N-Ir-eNx" id="f8m-Xi-8j4"/>
                         <outlet property="oppositionTeamNameTextField" destination="fKi-R1-6V0" id="XWl-Au-PkF"/>
-                        <outlet property="shotDetailImageView" destination="JGz-Y4-YXR" id="xpy-lN-Gfd"/>
-                        <outlet property="shotInformationLabel" destination="k6j-qt-ocm" id="W5e-GZ-koQ"/>
-                        <outlet property="shotsForGoaliesLabel" destination="zKr-Gz-i1d" id="RnV-07-xrW"/>
-                        <outlet property="shotsLabel" destination="QeR-rD-RLf" id="hGF-OT-UjD"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gid-LQ-JiM" userLabel="First Responder" sceneMemberID="firstResponder"/>
