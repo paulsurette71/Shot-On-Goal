@@ -45,10 +45,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, storeCurrentGameDelegate,
         
         let rootViewController = window?.rootViewController as! UITabBarController
         
-        //HomeViewController
-        //        let mainNavigationController  = rootViewController.viewControllers?[0] as! UINavigationController
-        //        mainNavigationController.navigationBar.isTranslucent = false
-        
         //Main Tab
         let scrollNavigationController  = rootViewController.viewControllers?[0] as! UINavigationController
         scrollNavigationController.navigationBar.isTranslucent = false
@@ -63,8 +59,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, storeCurrentGameDelegate,
         scrollViewController.rightGoalieIndex    = self
         scrollViewController.periodSelected      = self
         scrollViewController.storeImageSize      = self
-//        scrollViewController.leftGoalieLastShot  = self
-//        scrollViewController.rightGoalieLastShot = self
         scrollViewController.lastShot            = self
         
         

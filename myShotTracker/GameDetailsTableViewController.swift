@@ -53,20 +53,20 @@ class GameDetailsTableViewController: UITableViewController {
         tableView.contentInset = UIEdgeInsets(top: 20.0, left: 0, bottom: 0, right: 0)
         
         configureView()
-        gameDetails()
+//        gameDetails()
         
     }
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         
-        if detailItem != nil {
-            return 4
-            
-        } else {
-            
-            return 3
-        }
+//        if detailItem != nil {
+//            return 4
+//
+//        } else {
+//
+          return 3
+//        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -78,36 +78,36 @@ class GameDetailsTableViewController: UITableViewController {
             return 2
         case 2:
             return 2
-        case 3:
-                        
-            if detailItem != nil {
-                
-                var counter = 0
-                
-                if let results = fetchShotsResults {
-                    
-                    print("results")
-                    counter = results.count
-
-                }
-                
-                let index = IndexPath(item: 1, section: 3)
-                print("index \(index)")
-                
-
-                tableView.insertRows(at: [index], with: .automatic)
-
-                
-                tableView.reloadData()  //Update Game Header count
-                
-                print("fetchShotsResults \(counter)")
-                
-                return counter
-                
-            } else {
-                
-                return 0
-            }
+//        case 3:
+//
+//            if detailItem != nil {
+//
+//                var counter = 0
+//
+//                if let results = fetchShotsResults {
+//
+//                    print("results")
+//                    counter = results.count
+//
+//                }
+//
+//                let index = IndexPath(item: 1, section: 3)
+//                print("index \(index)")
+//                
+//
+//                tableView.insertRows(at: [index], with: .automatic)
+//
+//                
+//                tableView.reloadData()  //Update Game Header count
+//                
+//                print("fetchShotsResults \(counter)")
+//                
+//                return counter
+//
+//            } else {
+//
+//                return 0
+//            }
             
         default:
             return 0
@@ -225,160 +225,160 @@ class GameDetailsTableViewController: UITableViewController {
         }
     }
     
-    func gameDetails() {
-        
-        if detailItem != nil {
-            
-            fetchShots()
-            fetchGoals()
-            fetchShotsforDrawing()
-            
-//            let result = goFetch.fetchGoaliesForGame(managedContext: managedContext, currentGame: detailItem!)
-//            print("result \(result)")
-            
-            for shotsOnGoal in fetchShotsResults!  {
-                
-                //A goal is considered a shot
-                let shots = shotsOnGoal["countShots"]
-                totalShots += shots as! Int
-                
-                let lastName = String(describing: shotsOnGoal["goalieRelationship.lastName"]!)
-                shotsString += String(describing: shots!) + " " + lastName + "\r"
-            }
-            
-            for goalsScored in fetchGoalsResults! {
-                
-                //A goal is considered a shot
-                let goals = goalsScored["countShots"]
-                totalGoals += goals as! Int
-                
-                let lastName = String(describing: goalsScored["goalieRelationship.lastName"]!)
-                goalsString += String(describing: goals!) + " " + lastName + "\r"
-            }
-        }
-        
-        //Change goals in string to red.
-        let numberOfGoalsAttributedString: NSMutableAttributedString = NSMutableAttributedString(string: String(totalGoals))
-        numberOfGoalsAttributedString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.red, range: NSMakeRange(0, numberOfGoalsAttributedString.length))
-        
-        let numberOfShotsAttributedString = NSMutableAttributedString(string: String(totalShots))
-        let savePercentageAttributedString = NSMutableAttributedString(string:calculateSavePercentage.calculateSavePercentage(shots: Double(totalShots), goals: Double(totalGoals)))
-        
-        let combination = NSMutableAttributedString()
-        let pipeString = NSMutableAttributedString(string: "|")
-        
-        combination.append(numberOfShotsAttributedString)
-        combination.append(pipeString)
-        combination.append(numberOfGoalsAttributedString)
-        combination.append(pipeString)
-        combination.append(savePercentageAttributedString)
-        
-        shotInformationLabel.attributedText = combination
-        shotsForGoaliesLabel.text           = shotsString as String?
-        goalsAgainstForGoaliesLabel.text    = goalsString as String?
-        
-    }
+//    func gameDetails() {
+//
+//        if detailItem != nil {
+//
+//            fetchShots()
+//            fetchGoals()
+//            fetchShotsforDrawing()
+//
+////            let result = goFetch.fetchGoaliesForGame(managedContext: managedContext, currentGame: detailItem!)
+////            print("result \(result)")
+//
+//            for shotsOnGoal in fetchShotsResults!  {
+//
+//                //A goal is considered a shot
+//                let shots = shotsOnGoal["countShots"]
+//                totalShots += shots as! Int
+//
+//                let lastName = String(describing: shotsOnGoal["goalieRelationship.lastName"]!)
+//                shotsString += String(describing: shots!) + " " + lastName + "\r"
+//            }
+//
+//            for goalsScored in fetchGoalsResults! {
+//
+//                //A goal is considered a shot
+//                let goals = goalsScored["countShots"]
+//                totalGoals += goals as! Int
+//
+//                let lastName = String(describing: goalsScored["goalieRelationship.lastName"]!)
+//                goalsString += String(describing: goals!) + " " + lastName + "\r"
+//            }
+//        }
+//
+//        //Change goals in string to red.
+//        let numberOfGoalsAttributedString: NSMutableAttributedString = NSMutableAttributedString(string: String(totalGoals))
+//        numberOfGoalsAttributedString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.red, range: NSMakeRange(0, numberOfGoalsAttributedString.length))
+//
+//        let numberOfShotsAttributedString = NSMutableAttributedString(string: String(totalShots))
+//        let savePercentageAttributedString = NSMutableAttributedString(string:calculateSavePercentage.calculateSavePercentage(shots: Double(totalShots), goals: Double(totalGoals)))
+//
+//        let combination = NSMutableAttributedString()
+//        let pipeString = NSMutableAttributedString(string: "|")
+//
+//        combination.append(numberOfShotsAttributedString)
+//        combination.append(pipeString)
+//        combination.append(numberOfGoalsAttributedString)
+//        combination.append(pipeString)
+//        combination.append(savePercentageAttributedString)
+//
+//        shotInformationLabel.attributedText = combination
+//        shotsForGoaliesLabel.text           = shotsString as String?
+//        goalsAgainstForGoaliesLabel.text    = goalsString as String?
+//
+//    }
     
-    func fetchShots() {
-        
-        //http://stackoverflow.com/questions/37306769/how-to-aggregate-in-swift
-        
-        //select ZGOALIERELATIONSHIP, count(ZSHOTTYPE) from ZSHOTDETAILS where ZGAMERELATIONSHIP = 6 group by ZGOALIERELATIONSHIP;
-        
-        
-        let fetchRequest       = NSFetchRequest<NSFetchRequestResult>(entityName: "ShotDetails")
-        let predicate          = NSPredicate(format: "gameRelationship = %@", detailItem!)
-        fetchRequest.predicate = predicate
-        fetchRequest.fetchBatchSize = 8
-        
-        //count(ZSHOTTYPE)
-        let countExpressionDesc                  = NSExpressionDescription()
-        countExpressionDesc.name                 = "countShots"
-        countExpressionDesc.expression           = NSExpression(forFunction: "count:", arguments: [NSExpression(forKeyPath: "shotType")])
-        countExpressionDesc.expressionResultType = .integer16AttributeType
-        
-        fetchRequest.propertiesToGroupBy = [#keyPath(ShotDetails.goalieRelationship.firstName), #keyPath(ShotDetails.goalieRelationship.lastName)]
-        fetchRequest.propertiesToFetch   = [#keyPath(ShotDetails.goalieRelationship.firstName), #keyPath(ShotDetails.goalieRelationship.lastName), countExpressionDesc]
-        fetchRequest.resultType          = .dictionaryResultType
-        
-        do {
-            
-            fetchShotsResults = try managedContext.fetch(fetchRequest) as? [[String:AnyObject]]
-            print("fetchShotsResults \(fetchShotsResults!)")
-            
-        } catch let error as NSError {
-            
-            print("GameDetailsTableViewController|fetchShots: Could not fetch. \(error), \(error.userInfo)")
-        }
-    }
+//    func fetchShots() {
+//
+//        //http://stackoverflow.com/questions/37306769/how-to-aggregate-in-swift
+//
+//        //select ZGOALIERELATIONSHIP, count(ZSHOTTYPE) from ZSHOTDETAILS where ZGAMERELATIONSHIP = 6 group by ZGOALIERELATIONSHIP;
+//
+//
+//        let fetchRequest       = NSFetchRequest<NSFetchRequestResult>(entityName: "ShotDetails")
+//        let predicate          = NSPredicate(format: "gameRelationship = %@", detailItem!)
+//        fetchRequest.predicate = predicate
+//        fetchRequest.fetchBatchSize = 8
+//
+//        //count(ZSHOTTYPE)
+//        let countExpressionDesc                  = NSExpressionDescription()
+//        countExpressionDesc.name                 = "countShots"
+//        countExpressionDesc.expression           = NSExpression(forFunction: "count:", arguments: [NSExpression(forKeyPath: "shotType")])
+//        countExpressionDesc.expressionResultType = .integer16AttributeType
+//
+//        fetchRequest.propertiesToGroupBy = [#keyPath(ShotDetails.goalieRelationship.firstName), #keyPath(ShotDetails.goalieRelationship.lastName)]
+//        fetchRequest.propertiesToFetch   = [#keyPath(ShotDetails.goalieRelationship.firstName), #keyPath(ShotDetails.goalieRelationship.lastName), countExpressionDesc]
+//        fetchRequest.resultType          = .dictionaryResultType
+//
+//        do {
+//
+//            fetchShotsResults = try managedContext.fetch(fetchRequest) as? [[String:AnyObject]]
+////            print("fetchShotsResults \(fetchShotsResults!)")
+//
+//        } catch let error as NSError {
+//
+//            print("GameDetailsTableViewController|fetchShots: Could not fetch. \(error), \(error.userInfo)")
+//        }
+//    }
     
-    func fetchGoals() {
-        
-        //http://stackoverflow.com/questions/37306769/how-to-aggregate-in-swift
-        
-        //select ZGOALIERELATIONSHIP, count(ZSHOTTYPE) from ZSHOTDETAILS where ZGAMERELATIONSHIP = 6 group by ZGOALIERELATIONSHIP;
-        
-        
-        let fetchRequest       = NSFetchRequest<NSFetchRequestResult>(entityName: "ShotDetails")
-        let predicate          = NSPredicate(format: "gameRelationship = %@ AND shotType = 'goal'", detailItem!)
-        fetchRequest.predicate = predicate
-        fetchRequest.fetchBatchSize = 8
-        
-        //count(ZSHOTTYPE)
-        let countExpressionDesc                  = NSExpressionDescription()
-        countExpressionDesc.name                 = "countShots"
-        countExpressionDesc.expression           = NSExpression(forFunction: "count:", arguments: [NSExpression(forKeyPath: "shotType")])
-        countExpressionDesc.expressionResultType = .integer16AttributeType
-        
-        fetchRequest.propertiesToGroupBy = [#keyPath(ShotDetails.goalieRelationship.lastName)]
-        fetchRequest.propertiesToFetch   = [#keyPath(ShotDetails.goalieRelationship.lastName), countExpressionDesc]
-        fetchRequest.resultType          = .dictionaryResultType
-        
-        do {
-            
-            fetchGoalsResults = try managedContext.fetch(fetchRequest) as? [[String:AnyObject]]
-            
-        } catch let error as NSError {
-            
-            print("GameDetailsTableViewController|fetchGoals: Could not fetch. \(error), \(error.userInfo)")
-        }
-    }
+//    func fetchGoals() {
+//
+//        //http://stackoverflow.com/questions/37306769/how-to-aggregate-in-swift
+//
+//        //select ZGOALIERELATIONSHIP, count(ZSHOTTYPE) from ZSHOTDETAILS where ZGAMERELATIONSHIP = 6 group by ZGOALIERELATIONSHIP;
+//
+//
+//        let fetchRequest       = NSFetchRequest<NSFetchRequestResult>(entityName: "ShotDetails")
+//        let predicate          = NSPredicate(format: "gameRelationship = %@ AND shotType = 'goal'", detailItem!)
+//        fetchRequest.predicate = predicate
+//        fetchRequest.fetchBatchSize = 8
+//
+//        //count(ZSHOTTYPE)
+//        let countExpressionDesc                  = NSExpressionDescription()
+//        countExpressionDesc.name                 = "countShots"
+//        countExpressionDesc.expression           = NSExpression(forFunction: "count:", arguments: [NSExpression(forKeyPath: "shotType")])
+//        countExpressionDesc.expressionResultType = .integer16AttributeType
+//
+//        fetchRequest.propertiesToGroupBy = [#keyPath(ShotDetails.goalieRelationship.lastName)]
+//        fetchRequest.propertiesToFetch   = [#keyPath(ShotDetails.goalieRelationship.lastName), countExpressionDesc]
+//        fetchRequest.resultType          = .dictionaryResultType
+//
+//        do {
+//
+//            fetchGoalsResults = try managedContext.fetch(fetchRequest) as? [[String:AnyObject]]
+//
+//        } catch let error as NSError {
+//
+//            print("GameDetailsTableViewController|fetchGoals: Could not fetch. \(error), \(error.userInfo)")
+//        }
+//    }
     
     
-    func fetchShotsforDrawing() {
-        
-        //select ZGOALIERELATIONSHIP, ZSHOTLOCATION from ZSHOTDETAILS where ZGAMERELATIONSHIP = 5;
-        
-        let fetchRequest       = NSFetchRequest<NSFetchRequestResult>(entityName: "ShotDetails")
-        let predicate          = NSPredicate(format: "gameRelationship = %@", detailItem!)
-        fetchRequest.predicate = predicate
-        fetchRequest.fetchBatchSize = 8
-        
-        fetchRequest.propertiesToFetch   = [#keyPath(ShotDetails.shotLocation),#keyPath(ShotDetails.shotType),#keyPath(ShotDetails.shotNumber)]
-        fetchRequest.resultType          = .dictionaryResultType
-        
-        do {
-            
-            shotsOnGoal = try managedContext.fetch(fetchRequest) as? [[String:AnyObject]]
-            
-        } catch let error as NSError {
-            
-            print("GameDetailsTableViewController|fetchShotsforDrawing: Could not fetch. \(error), \(error.userInfo)")
-        }
-        
-        for shots in shotsOnGoal! {
-            
-            if String(describing: shots["shotType"]!) == "shot" {
-                
-                drawPuckScaled.drawPuck(location: shots["shotLocation"] as! CGPoint, view: shotDetailImageView, colour: UIColor.black.cgColor, shotNumber: String(describing: shots["shotNumber"]!))
-                
-            } else {
-                
-                drawPuckScaled.drawPuck(location: shots["shotLocation"] as! CGPoint, view: shotDetailImageView, colour: UIColor.red.cgColor, shotNumber: String(describing: shots["shotNumber"]!))
-                
-            }
-        }
-    }
+//    func fetchShotsforDrawing() {
+//
+//        //select ZGOALIERELATIONSHIP, ZSHOTLOCATION from ZSHOTDETAILS where ZGAMERELATIONSHIP = 5;
+//
+//        let fetchRequest       = NSFetchRequest<NSFetchRequestResult>(entityName: "ShotDetails")
+//        let predicate          = NSPredicate(format: "gameRelationship = %@", detailItem!)
+//        fetchRequest.predicate = predicate
+//        fetchRequest.fetchBatchSize = 8
+//
+//        fetchRequest.propertiesToFetch   = [#keyPath(ShotDetails.shotLocation),#keyPath(ShotDetails.shotType),#keyPath(ShotDetails.shotNumber)]
+//        fetchRequest.resultType          = .dictionaryResultType
+//
+//        do {
+//
+//            shotsOnGoal = try managedContext.fetch(fetchRequest) as? [[String:AnyObject]]
+//
+//        } catch let error as NSError {
+//
+//            print("GameDetailsTableViewController|fetchShotsforDrawing: Could not fetch. \(error), \(error.userInfo)")
+//        }
+//
+//        for shots in shotsOnGoal! {
+//
+//            if String(describing: shots["shotType"]!) == "shot" {
+//
+//                drawPuckScaled.drawPuck(location: shots["shotLocation"] as! CGPoint, view: shotDetailImageView, colour: UIColor.black.cgColor, shotNumber: String(describing: shots["shotNumber"]!))
+//
+//            } else {
+//
+//                drawPuckScaled.drawPuck(location: shots["shotLocation"] as! CGPoint, view: shotDetailImageView, colour: UIColor.red.cgColor, shotNumber: String(describing: shots["shotNumber"]!))
+//
+//            }
+//        }
+//    }
     
 //    func fetchGoalies() {
 //

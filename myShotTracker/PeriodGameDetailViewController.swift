@@ -41,6 +41,7 @@ class PeriodGameDetailViewController: UIViewController {
     let backButtonNav                            = BackButtonNav()
     let goalieDetailsAttributedString            = GoalieDetailsAttributedString()
     let formatShotGoalPercentageAttributedString = FormatShotGoalPercentageAttributedString()
+    let goFetch                                  = GoFetch()
     
     //Fetch Results
     var shotResults = [ShotDetails]()
@@ -56,8 +57,8 @@ class PeriodGameDetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        fectchShots()
-        fectchPeriods()
+        shotResults            = goFetch.fectchShots(goalie: goalie!, game: game!, managedContext: managedContext)
+        numberOfPeriodsResults = goFetch.fectchPeriods(goalie: goalie!, game: game!, managedContext: managedContext)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -112,53 +113,6 @@ class PeriodGameDetailViewController: UIViewController {
         tableView.rowHeight       = 260 //435 //250
         tableView.allowsSelection = false
     }
-    
-    func fectchShots() {
-        
-        //select ZSHOTPERIOD, ZSHOTTYPE, count(*) from ZSHOTDETAILS where ZGAMERELATIONSHIP = 1 and ZGOALIERELATIONSHIP = 3 GROUP BY ZSHOTPERIOD, ZSHOTTYPE;
-        
-        let fetchRequest: NSFetchRequest<ShotDetails> = ShotDetails.fetchRequest()
-        let currentGoalie      = NSPredicate(format: "goalieRelationship = %@", goalie!)
-        let predicate          = NSPredicate(format: "gameRelationship = %@", game! as! CVarArg)
-        
-        fetchRequest.predicate  = NSCompoundPredicate(andPredicateWithSubpredicates: [currentGoalie,predicate])
-        fetchRequest.fetchBatchSize = 8
-        
-        do {
-            
-            shotResults = try managedContext.fetch(fetchRequest)
-            
-        } catch let error as NSError {
-            
-            print("PeriodGameDetailTableViewController|fectchShots: Could not fetch. \(error), \(error.userInfo)")
-        }
-    }
-    
-    func fectchPeriods() {
-        
-        //select ZSHOTPERIOD from ZSHOTDETAILS where ZGAMERELATIONSHIP = 1 and ZGOALIERELATIONSHIP =1 group by ZSHOTPERIOD;
-        
-        
-        let fetchRequest       = NSFetchRequest<NSFetchRequestResult>(entityName: "ShotDetails")
-        let currentGoalie      = NSPredicate(format: "goalieRelationship = %@", goalie!)
-        let predicate          = NSPredicate(format: "gameRelationship = %@", game! as! CVarArg)
-        
-        fetchRequest.propertiesToGroupBy = [#keyPath(ShotDetails.shotPeriod)]
-        fetchRequest.propertiesToFetch   = [#keyPath(ShotDetails.shotPeriod)]
-        fetchRequest.resultType          = .dictionaryResultType
-        
-        fetchRequest.predicate  = NSCompoundPredicate(andPredicateWithSubpredicates: [currentGoalie,predicate])
-        fetchRequest.fetchBatchSize = 8
-        
-        do {
-            
-            numberOfPeriodsResults = try managedContext.fetch(fetchRequest)
-            
-        } catch let error as NSError {
-            
-            print("PeriodGameDetailTableViewController|fectchPeriods: Could not fetch. \(error), \(error.userInfo)")
-        }
-    }
 }
 
 extension PeriodGameDetailViewController: UITableViewDataSource {
@@ -187,7 +141,6 @@ extension PeriodGameDetailViewController: UITableViewDataSource {
         
     }
     
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "perodGameDetailCell", for: indexPath) as! PeriodGameDetailTableViewCell
@@ -199,17 +152,11 @@ extension PeriodGameDetailViewController: UITableViewDataSource {
         shotCount = 0
         goalCount = 0
         
-        let period = (numberOfPeriodsResults[indexPath.section] as AnyObject).value(forKey: "shotPeriod") as! String
-        
-        currentPeriod = period
-        
-        for shots in shotResults {
+        if indexPath.section == 0 {
             
-            let shotOrGoal = shots.shotType
-            
-            shotPeriod = shots.shotPeriod!
-            
-            if period == shotPeriod {
+            for shots in shotResults {
+                
+                let shotOrGoal = shots.shotType
                 
                 if shotOrGoal == "shot" {
                     
@@ -217,13 +164,45 @@ extension PeriodGameDetailViewController: UITableViewDataSource {
                     
                     drawPuckScaled.drawPuck(location: shots.shotLocation as! CGPoint, view: cell.hockeyNetImageView, colour: UIColor.black.cgColor, shotNumber: String(shots.shotNumber))
                     
-                    
                 } else {
                     
                     goalCount += 1
+                    shotCount += 1
                     
                     drawPuckScaled.drawPuck(location: shots.shotLocation as! CGPoint, view: cell.hockeyNetImageView, colour: UIColor.red.cgColor, shotNumber: String(shots.shotNumber))
                     
+                }  //shotOrGoal
+                
+            }  //for shots
+            
+        }  else { //if indexPath.row
+            
+            let period = (numberOfPeriodsResults[indexPath.section] as AnyObject).value(forKey: "shotPeriod") as! String
+            
+            currentPeriod = period
+            
+            for shots in shotResults {
+                
+                let shotOrGoal = shots.shotType
+                
+                shotPeriod = shots.shotPeriod!
+                
+                if period == shotPeriod {
+                    
+                    if shotOrGoal == "shot" {
+                        
+                        shotCount += 1
+                        
+                        drawPuckScaled.drawPuck(location: shots.shotLocation as! CGPoint, view: cell.hockeyNetImageView, colour: UIColor.black.cgColor, shotNumber: String(shots.shotNumber))
+                        
+                    } else {
+                        
+                        goalCount += 1
+                        shotCount += 1
+                        
+                        drawPuckScaled.drawPuck(location: shots.shotLocation as! CGPoint, view: cell.hockeyNetImageView, colour: UIColor.red.cgColor, shotNumber: String(shots.shotNumber))
+                        
+                    }
                 }
             }
         }

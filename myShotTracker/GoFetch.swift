@@ -22,7 +22,7 @@ class GoFetch {
         fetchRequest.predicate      = predicate
         fetchRequest.fetchBatchSize = 8
         
-//        fetchRequest.propertiesToFetch = [goalie]
+        //        fetchRequest.propertiesToFetch = [goalie]
         
         fetchRequest.propertiesToGroupBy = [#keyPath(ShotDetails.goalieRelationship.number),#keyPath(ShotDetails.goalieRelationship.firstName), #keyPath(ShotDetails.goalieRelationship.lastName)]
         fetchRequest.propertiesToFetch   = [#keyPath(ShotDetails.goalieRelationship.number),#keyPath(ShotDetails.goalieRelationship.firstName), #keyPath(ShotDetails.goalieRelationship.lastName)]
@@ -40,7 +40,62 @@ class GoFetch {
         return fetchGoalieForGame
     }
     
+    func fectchShots(goalie:GoalieInformation, game:Any, managedContext:NSManagedObjectContext) -> [ShotDetails] {
+        
+        //select ZSHOTPERIOD, ZSHOTTYPE, count(*) from ZSHOTDETAILS where ZGAMERELATIONSHIP = 1 and ZGOALIERELATIONSHIP = 3 GROUP BY ZSHOTPERIOD, ZSHOTTYPE;
+        
+        var shotResults = [ShotDetails]()
+        
+        let fetchRequest: NSFetchRequest<ShotDetails> = ShotDetails.fetchRequest()
+        let currentGoalie      = NSPredicate(format: "goalieRelationship = %@", goalie)
+        let predicate          = NSPredicate(format: "gameRelationship = %@", game as! CVarArg)
+        
+        fetchRequest.predicate  = NSCompoundPredicate(andPredicateWithSubpredicates: [currentGoalie,predicate])
+        fetchRequest.fetchBatchSize = 8
+        
+        do {
+            
+            shotResults =  try managedContext.fetch(fetchRequest)
+            
+        } catch let error as NSError {
+            
+            print("PeriodGameDetailTableViewController|fectchShots: Could not fetch. \(error), \(error.userInfo)")
+        }
+        
+        return shotResults
+    }
     
-    
+    func fectchPeriods(goalie:GoalieInformation, game:Any, managedContext:NSManagedObjectContext) -> [Any] {
+        
+        //select ZSHOTPERIOD from ZSHOTDETAILS where ZGAMERELATIONSHIP = 1 and ZGOALIERELATIONSHIP =1 group by ZSHOTPERIOD;
+        
+        var numberOfPeriodsResults = [Any]()
+        
+        let fetchRequest       = NSFetchRequest<NSFetchRequestResult>(entityName: "ShotDetails")
+        let currentGoalie      = NSPredicate(format: "goalieRelationship = %@", goalie)
+        let predicate          = NSPredicate(format: "gameRelationship = %@", game as! CVarArg)
+        
+        fetchRequest.propertiesToGroupBy = [#keyPath(ShotDetails.shotPeriod)]
+        fetchRequest.propertiesToFetch   = [#keyPath(ShotDetails.shotPeriod)]
+        fetchRequest.resultType          = .dictionaryResultType
+        
+        fetchRequest.predicate  = NSCompoundPredicate(andPredicateWithSubpredicates: [currentGoalie,predicate])
+        fetchRequest.fetchBatchSize = 8
+        
+        do {
+            
+            numberOfPeriodsResults = try managedContext.fetch(fetchRequest)
+            
+            let gameSection = ["shotPeriod":"Game"]
+            numberOfPeriodsResults.insert(gameSection, at: 0)
+            
+        } catch let error as NSError {
+            
+            print("PeriodGameDetailTableViewController|fectchPeriods: Could not fetch. \(error), \(error.userInfo)")
+        }
+        
+        return numberOfPeriodsResults
+        
+    }  //func fectchPeriods
     
 }  //GoFetch
