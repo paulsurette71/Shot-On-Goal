@@ -88,15 +88,15 @@ class PeriodGameDetailViewController: UIViewController {
     
     @objc func showActivityViewController() {
         
-        let goalieNetImagesArray = shareAction.gatherData(shotInformation: shotResults, periodInformation: numberOfPeriodsResults)
+        let goalieNetImagesArray = shareAction.gatherData(shotInformation: shotResults)
         
-        let resultsArray = shareAction.buildMessage(goalie: goalie!, dateStringForTitle: dateStringForTitle!, goalieNetArray: goalieNetImagesArray, shotInformation: shotResults )
+        let resultsArray = shareAction.buildMessage(goalie: goalie!, dateStringForTitle: dateStringForTitle!, goalieNetArray: goalieNetImagesArray, shotInformation: shotResults, periodInformation: numberOfPeriodsResults )
         
         let activityViewController = UIActivityViewController(activityItems: resultsArray, applicationActivities: nil)
         
         //set Subject line
         let subjectLine = createSubjectLine()
-    
+        
         activityViewController.setValue(subjectLine, forKey: "Subject")
         
         present(activityViewController, animated: true, completion: nil)
@@ -124,7 +124,6 @@ class PeriodGameDetailViewController: UIViewController {
         let gameDate = dateStringForTitle?.string
         let currentGoalie = goalieDetailsAttributedString.goalieDetailInformation(number: (goalie?.number)!, firstName: (goalie?.firstName)!, lastName: (goalie?.lastName)!).string
         let subjectLine = currentGoalie + ": " + gameDate!
-        
         
         return subjectLine
         
