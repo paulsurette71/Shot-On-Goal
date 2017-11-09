@@ -78,10 +78,6 @@ class ShareAction {
         
         goalieNetArray.append(UIImagePNGRepresentation(scaleImage!)!)
         
-        //            //create array of dictionaries that carr the shot and goal totals.
-        //            shotDictionary = ["period": period, "shot": shotCount, "goal": goalCount]
-        //            shotArray.append(shotDictionary)
-        
         UIGraphicsEndImageContext()
         
         //            //Write to file just to make sure...
@@ -106,33 +102,28 @@ class ShareAction {
     } //gatherData
     
     
-    func buildMessage(goalie:GoalieInformation, dateStringForTitle:NSAttributedString, goalieNetArray:[Data], shotInformation: [Any],  periodInformation:[Any]) -> [Any] {
+    func buildMessage(goalie:GoalieInformation, dateStringForTitle:NSAttributedString, goalieNetArray:[Data], shotInformation: [Any]) -> [Any] {
         
-        let currentGoalie = goalieDetailsAttributedString.goalieDetailInformation(number: goalie.number!, firstName: goalie.firstName!, lastName: goalie.lastName!)
-        
-        let currentTeam = NSMutableAttributedString(string: goalie.city! + " " + goalie.teamName!)
-        currentTeam.addAttribute(NSAttributedStringKey.font,value: UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.heavy),range: NSMakeRange(0, currentTeam.length))
-        
-        
-        let combination = NSMutableAttributedString()
-        let shotDetails = NSMutableAttributedString()
-        
-        let newLineAttributedString = NSMutableAttributedString(string: "\n")
+        var message           = ""
+        var shotDetailMessage = ""
         
         var shotTotal = 0
         var goalTotal = 0
-        
-        combination.append(currentGoalie)
-        combination.append(newLineAttributedString)
-        combination.append(currentTeam)
-        combination.append(newLineAttributedString)
-        combination.append(newLineAttributedString)
-        combination.append(dateStringForTitle)
-        combination.append(newLineAttributedString)
-        
         var dateArray = [Date]()
         
-        print("periodInformation \(periodInformation)")
+        let currentGoalie = goalie.firstName! + " " + goalie.lastName! + " #" + goalie.number!
+        let currentTeam   = goalie.city! + " " + goalie.teamName!
+        let gameDate      = dateStringForTitle.string
+        let newLine       = "\n"
+        
+        message += newLine
+        message += currentGoalie
+        message += newLine
+        message += currentTeam
+        message += newLine
+        message += newLine
+        message += gameDate
+        message += newLine
         
         var storedPeriod = ""
         
@@ -142,11 +133,9 @@ class ShareAction {
             
             if currentPeriod != storedPeriod {
                 
-                let currentPeriodAttributedString = NSMutableAttributedString(string:("\(currentPeriod)"))
-                currentPeriodAttributedString.addAttribute(NSAttributedStringKey.font,value: UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.heavy),range: NSMakeRange(0, currentPeriodAttributedString.length))
-                shotDetails.append(currentPeriodAttributedString)
-                shotDetails.append(newLineAttributedString)
-                shotDetails.append(newLineAttributedString)
+                shotDetailMessage += newLine
+                shotDetailMessage += currentPeriod
+                shotDetailMessage += newLine
                 
                 storedPeriod = currentPeriod
             }
@@ -154,15 +143,15 @@ class ShareAction {
             let shotOrGoal        = ((shots as AnyObject).value(forKey: "shotType")) as! String
             let currentTime       = ((shots as AnyObject).value(forKey: "shotDate")) as! Date
             let prettyTime        = convertDate(date: currentTime as NSDate)
-            //            let currentPeriod     = ((shots as AnyObject).value(forKey: "shotPeriod")) as! String
             let currentShotNumber = ((shots as AnyObject).value(forKey: "shotNumber")) as! Int
             
             dateArray.append(currentTime)
             let timeDif = calculateDifferenceInTime(array: dateArray)
             
-            let currentTeam = NSMutableAttributedString(string:("Shot #\(String(currentShotNumber)) \(prettyTime) \(shotOrGoal) \(timeDif.stringTime)"))
-            shotDetails.append(currentTeam)
-            shotDetails.append(newLineAttributedString)
+            let shotDetails = shotOrGoal.capitalized + " #\(String(currentShotNumber))" + " - " + prettyTime + " - " + timeDif.stringTime
+            
+            shotDetailMessage += shotDetails
+            shotDetailMessage += newLine
             
             if shotOrGoal == "shot" {
                 
@@ -178,15 +167,15 @@ class ShareAction {
         } //for shots
         
         let shotTotals = formatShotGoalPercentageAttributedString.formattedString(shots: shotTotal, goals: goalTotal, fontSize: 17)
+        message += newLine
+        message += shotTotals.string
         
-        shotDetails.addAttribute(NSAttributedStringKey.font,value: UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.regular),range: NSMakeRange(0, shotDetails.length))
+        print(message)
+        print(shotDetailMessage)
         
-        combination.append(shotTotals)
-        combination.append(newLineAttributedString)
-        
-        messageArray.insert(combination, at: 0)
+        messageArray.insert(message, at: 0)
         messageArray.insert(goalieNetArray[0], at: 1)
-        messageArray.insert(shotDetails, at: 2)
+        messageArray.insert(shotDetailMessage, at: 2)
         
         return messageArray
     }

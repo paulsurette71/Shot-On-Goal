@@ -61,8 +61,6 @@ class MainViewController: UIViewController {
     var rightGoalieIndex:    storeRightGoalieIndexPathDelegate?
     var periodSelected:      storeScoreClockDelegate?
     var storeImageSize:      getMainImageSizeDelegate?
-//    var leftGoalieLastShot:  storeLastShotsDelegate?
-//    var rightGoalieLastShot: storeLastShotsDelegate?
     var lastShot:            storeLastShotsDelegate?
     
     @IBOutlet weak var scrollView: UIScrollView!
@@ -78,24 +76,19 @@ class MainViewController: UIViewController {
         
         mainView = UINib(nibName: "MainView", bundle: nil).instantiate(withOwner: nil, options: nil).first as? MainView
         
-//        let isAppAlreadyLaunchedOnce = IsAppAlreadyLaunchedOnce()
-//        let importTestData           = ImportTestData()
-//        
-//        if !isAppAlreadyLaunchedOnce.isAppAlreadyLaunchedOnce() {
-//            
-//            //Import Test data
-//            importTestData.importGoalies()
-//            
-//        }
+        let isAppAlreadyLaunchedOnce = IsAppAlreadyLaunchedOnce()
+        let importTestData           = ImportTestData()
         
-
-        
+        if !isAppAlreadyLaunchedOnce.isAppAlreadyLaunchedOnce() {
+            
+            //Import Test data
+            importTestData.importGoalies()
+            
+        }
         
         setupScrollView()
         setupGestures()
         setupUI()
-        
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -190,8 +183,6 @@ class MainViewController: UIViewController {
         mainView?.leftGoalieIndex     = leftGoalieIndex
         mainView?.rightGoalieIndex    = rightGoalieIndex
         mainView?.periodSelected      = periodSelected
-//        mainView?.leftGoalieLastShot  = leftGoalieLastShot
-//        mainView?.rightGoalieLastShot = rightGoalieLastShot
         mainView?.lastShot            = lastShot
         
     } //setupScrollView

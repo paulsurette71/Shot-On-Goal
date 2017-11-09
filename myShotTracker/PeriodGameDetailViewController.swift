@@ -90,7 +90,7 @@ class PeriodGameDetailViewController: UIViewController {
         
         let goalieNetImagesArray = shareAction.gatherData(shotInformation: shotResults)
         
-        let resultsArray = shareAction.buildMessage(goalie: goalie!, dateStringForTitle: dateStringForTitle!, goalieNetArray: goalieNetImagesArray, shotInformation: shotResults, periodInformation: numberOfPeriodsResults )
+        let resultsArray = shareAction.buildMessage(goalie: goalie!, dateStringForTitle: dateStringForTitle!, goalieNetArray: goalieNetImagesArray, shotInformation: shotResults )
         
         let activityViewController = UIActivityViewController(activityItems: resultsArray, applicationActivities: nil)
         
