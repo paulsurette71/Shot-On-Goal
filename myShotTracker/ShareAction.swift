@@ -167,8 +167,12 @@ class ShareAction {
         } //for shots
         
         let shotTotals = formatShotGoalPercentageAttributedString.formattedString(shots: shotTotal, goals: goalTotal, fontSize: 17)
+        
         message += newLine
         message += shotTotals.string
+        message += newLine
+        
+//        shotDetailMessage += newLine
         
         print(message)
         print(shotDetailMessage)
