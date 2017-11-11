@@ -742,7 +742,6 @@
                                                 <constraint firstItem="YDV-tq-LHf" firstAttribute="centerY" secondItem="byq-TF-EWm" secondAttribute="centerY" id="KdD-bQ-GRX"/>
                                                 <constraint firstItem="5qB-Ia-Fax" firstAttribute="centerY" secondItem="YDV-tq-LHf" secondAttribute="centerY" id="YTp-m2-FOF"/>
                                                 <constraint firstItem="5qB-Ia-Fax" firstAttribute="leading" secondItem="YDV-tq-LHf" secondAttribute="trailing" constant="20" id="nTv-uN-UqT"/>
-                                                <constraint firstItem="5qB-Ia-Fax" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="byq-TF-EWm" secondAttribute="leading" id="pGX-D8-kJJ"/>
                                                 <constraint firstAttribute="trailing" secondItem="5qB-Ia-Fax" secondAttribute="trailing" constant="405" id="vSG-zZ-OKa"/>
                                             </constraints>
                                         </tableViewCellContentView>
