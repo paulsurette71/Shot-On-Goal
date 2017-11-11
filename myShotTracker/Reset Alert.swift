@@ -11,14 +11,11 @@ import UIKit
 
 class ResetAlert {
     
-    //    let showMyGoalieInformation = ShowMyGoalieInformation()
-    //    let showMyGameInformation   = ShowMyGameInformation()
     let disableButtons          = DisableButtons()
     
     //App Delegate
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let formatShotGoalPercentageAttributedString = FormatShotGoalPercentageAttributedString()
-    
     
     func showAlert(mainView: MainView) {
         
@@ -78,7 +75,7 @@ class ResetAlert {
         mainView.leftGoalieHeadshotImageView.image = UIImage(named: "account filled 50x50")
         mainView.rightGoalieHeadShotImageView.image = UIImage(named: "account filled 50x50")
         
-//        mainView.leftShotGoalPercentageLabel.attributedText = formatShotGoalPercentageAttributedString.defaultGoalPercentage()
+        mainView.leftShotGoalPercentageLabel.attributedText = nil
 //        mainView.rightShotGoalPercentageLabel.attributedText = formatShotGoalPercentageAttributedString.defaultGoalPercentage()
         
         mainView.leftTeamNameLabel.text = "No Goalie"
