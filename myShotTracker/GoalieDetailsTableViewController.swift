@@ -56,7 +56,7 @@ class GoalieDetailsTableViewController: UITableViewController, UIImagePickerCont
         
         imagePickerController.delegate = self
         
-        roundedImageView.setRounded(image: playerImageView)
+        roundedImageView.setRounded(image: playerImageView, colour: "hockeyNetRed")
         
         configureView()
         

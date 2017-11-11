@@ -150,8 +150,8 @@ class MainViewController: UIViewController {
         //Classes
         let roundedImageView = RoundedImageView()
         
-        roundedImageView.setRounded(image: (mainView?.leftGoalieHeadshotImageView)!)
-        roundedImageView.setRounded(image: (mainView?.rightGoalieHeadShotImageView)!)
+        roundedImageView.setRounded(image: (mainView?.leftGoalieHeadshotImageView)!, colour: "hockeyNetRed")
+        roundedImageView.setRounded(image: (mainView?.rightGoalieHeadShotImageView)!, colour: "blue")
         
         //disable clear Button
         mainView?.leftResetButton.isEnabled = false

@@ -76,7 +76,7 @@ class ResetAlert {
         mainView.rightGoalieHeadShotImageView.image = UIImage(named: "account filled 50x50")
         
         mainView.leftShotGoalPercentageLabel.attributedText = nil
-//        mainView.rightShotGoalPercentageLabel.attributedText = formatShotGoalPercentageAttributedString.defaultGoalPercentage()
+        mainView.rightShotGoalPercentageLabel.attributedText = nil
         
         mainView.leftTeamNameLabel.text = "No Goalie"
         mainView.rightTeamNameLabel.text = "No Goalie"

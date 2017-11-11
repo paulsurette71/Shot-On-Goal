@@ -17,7 +17,7 @@ class ChangeGoalieAlert {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let formatShotGoalPercentageAttributedString = FormatShotGoalPercentageAttributedString()
     
-    func showAlert(viewController: UIViewController, mainView: MainView, tableView: UITableView, currentGoalieIndex:IndexPath) {
+    func showAlert(viewController: UIViewController, mainView: MainView, tableView: UITableView, currentGoalieIndex:IndexPath, sender: UIButton) {
         
         print("class->ChangeGoalieAlert->showAlert")
         
@@ -36,7 +36,7 @@ class ChangeGoalieAlert {
             let oldCell = tableView.cellForRow(at: currentGoalieIndex) as! MyGoalieTableViewCell
             oldCell.checkmarkImageView.isHidden = true
             
-            self.yesAlert(mainView: mainView)
+            self.yesAlert(mainView: mainView, sender: sender)
             
         }
         
@@ -47,42 +47,72 @@ class ChangeGoalieAlert {
         
     }
     
-    func yesAlert(mainView: MainView) {
+    func yesAlert(mainView: MainView, sender: UIButton) {
         
-        //Empty the delegate
-        //            appDelegate.leftGoalie  = nil
-        //            appDelegate.rightGoalie = nil
-        //            appDelegate.currentGame = nil
-        
-        //Empty Array
-        GlobalVariables.myShotArray.removeAll()
-        //            GlobalVariables.theirShotArray.removeAll()
-        
-        //Reset global variables
-        GlobalVariables.myShotsOnNet    = 0
-        GlobalVariables.myGoals         = 0
-        //            GlobalVariables.theirShotsOnNet = 0
-        //            GlobalVariables.theirGoals      = 0
-        
-        mainView.leftHockeyNetImageView.layer.sublayers?.removeAll()
-        //            mainView.rightHockeyNetImageView.layer.sublayers?.removeAll()
-        
-        mainView.leftGoalieNameInformationLabel.attributedText = nil
-        //            mainView.rightGoalieNameInformationLabel.attributedText = nil
-        
-        mainView.leftGoalieHeadshotImageView.image = UIImage(named: "account filled 50x50")
-        //            mainView.rightGoalieHeadShotImageView.image = UIImage(named: "account filled 50x50")
-        
-                mainView.leftShotGoalPercentageLabel.attributedText = nil // attributedText = formatShotGoalPercentageAttributedString.defaultGoalPercentage()
-        //        mainView.rightShotGoalPercentageLabel.attributedText = formatShotGoalPercentageAttributedString.defaultGoalPercentage()
-        
-        mainView.leftTeamNameLabel.text = "No Goalie"
-        //            mainView.rightTeamNameLabel.text = "No Goalie"
-        
-        appDelegate.leftGoalieIndex  = nil
-        //            appDelegate.rightGoalieIndex = nil
-        
-        disableButtons.disableButtons(mainView: mainView)
+        if sender == mainView.leftGoalieButton {
+            
+            print("left button")
+            
+            //Empty the delegate
+            appDelegate.leftGoalie  = nil
+            appDelegate.leftGoalieIndex  = nil
+            
+            //Empty Array
+            GlobalVariables.myShotArray.removeAll()
+            
+            //Reset global variables
+            GlobalVariables.myShotsOnNet    = 0
+            GlobalVariables.myGoals         = 0
+            
+            mainView.leftHockeyNetImageView.layer.sublayers?.removeAll()
+            mainView.leftGoalieNameInformationLabel.attributedText = nil
+            mainView.leftGoalieHeadshotImageView.image = UIImage(named: "account filled 50x50")
+            mainView.leftShotGoalPercentageLabel.attributedText = nil
+            mainView.leftTeamNameLabel.text = "No Goalie"
+            
+            //Disable all left buttons on screen
+            mainView.leftUndoButton.isEnabled = false
+            mainView.leftResetButton.isEnabled = false
+            
+            mainView.leftPeriodButton.isEnabled = false
+            mainView.leftPeriodButton.setImage(UIImage(named: "options 1st period disabled cell"), for: .disabled)
+            
+            mainView.leftShotDetailsButton.isEnabled = false
+            mainView.leftHockeyNetImageView.isUserInteractionEnabled = false
+
+            
+        } else {
+            
+            print("right button")
+            
+            //Empty the delegate
+            appDelegate.rightGoalie = nil
+            appDelegate.rightGoalieIndex = nil
+            
+            //Empty Array
+            GlobalVariables.theirShotArray.removeAll()
+            
+            //Reset global variables
+            GlobalVariables.theirShotsOnNet = 0
+            GlobalVariables.theirGoals      = 0
+            
+            mainView.rightHockeyNetImageView.layer.sublayers?.removeAll()
+            mainView.rightGoalieNameInformationLabel.attributedText = nil
+            mainView.rightGoalieHeadShotImageView.image = UIImage(named: "account filled 50x50")
+            mainView.rightShotGoalPercentageLabel.attributedText = nil
+            mainView.rightTeamNameLabel.text = "No Goalie"
+            
+            //Disable all left buttons on screen
+            mainView.rightUndoButton.isEnabled = false
+            mainView.rightResetButton.isEnabled = false
+            
+            mainView.rightPeriodButton.isEnabled = false
+            mainView.rightPeriodButton.setImage(UIImage(named: "options footer 1st period disabled"), for: .disabled)
+            
+            mainView.rightShotDetailsButton.isEnabled = false
+            mainView.rightHockeyNetImageView.isUserInteractionEnabled = false
+
+        }
         
     }  //yesAlert
     

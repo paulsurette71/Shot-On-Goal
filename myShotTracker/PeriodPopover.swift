@@ -31,7 +31,7 @@ class PeriodPopover: UIViewController {
         scoreClockPopoverViewController.mainView               = mainView
         scoreClockPopoverViewController.sender                 = sender
         scoreClockPopoverViewController.modalPresentationStyle = .popover
-        
+                
         let popover = scoreClockPopoverViewController.popoverPresentationController!
         popover.delegate = self
         popover.permittedArrowDirections = .any

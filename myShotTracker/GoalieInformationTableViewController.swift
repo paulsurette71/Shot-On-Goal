@@ -145,7 +145,7 @@ class GoalieInformationTableViewController: UITableViewController {
         
         cell.selectionStyle = .none
         
-        roundedImageView.setRounded(image: cell.goalieHeadShotImageView)
+        roundedImageView.setRounded(image: cell.goalieHeadShotImageView, colour: "hockeyNetRed")
         
         let goalie        = fetchedResultsController.object(at: indexPath)
         let numberOfShots = fetchShots(indexPath: indexPath)

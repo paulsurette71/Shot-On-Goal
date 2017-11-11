@@ -10,6 +10,9 @@ import UIKit
 
 class ScoreClockPopoverViewController: UIViewController {
     
+    //UILabel
+    @IBOutlet weak var periodHeadingLabel: UILabel!
+    
     //IBOutlet
     @IBOutlet weak var picker: ScoreClockPicker!
     
@@ -28,7 +31,21 @@ class ScoreClockPopoverViewController: UIViewController {
         super.viewDidLoad()
         
         print("viewDidLoad->ScoreClockPopoverViewController")
-                
+        
+        
+//        if sender == mainView?.leftPeriodButton {
+//
+//            print("left button")
+//
+//            periodHeadingLabel.backgroundColor = UIColor(named: "blue")
+//
+//        } else {
+//
+//            print("right button")
+//
+//            periodHeadingLabel.backgroundColor = UIColor(named: "blue")
+//        }
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,6 +56,20 @@ class ScoreClockPopoverViewController: UIViewController {
             return
         }
         
+//        if sender == mainView?.leftPeriodButton {
+//            
+//            print("left button")
+//            
+//            self.periodHeadingLabel.backgroundColor = UIColor(named: "blue")
+//
+//            
+//        } else {
+//            
+//            print("right button")
+//            
+//            self.periodHeadingLabel.backgroundColor = UIColor(named: "blue")
+//        }
+
         currentPeriod = appDelegate.periodSelected
         picker.setPickerToSelectedPeriod(currentPeriod: currentPeriod!)
         

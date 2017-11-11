@@ -111,11 +111,11 @@ class ShotDetailsTableViewController: UITableViewController {
         guard let header = view as? UITableViewHeaderFooterView else {
             return
         }
-        
-        if #available(iOS 11.0, *) {
+                
+        if sender == mainView?.leftShotDetailsButton {
             view.tintColor = UIColor(named: "hockeyNetRed")
         } else {
-            // Fallback on earlier versions
+            view.tintColor = UIColor(named: "blue")
         }
         
         header.textLabel?.textColor = UIColor.white

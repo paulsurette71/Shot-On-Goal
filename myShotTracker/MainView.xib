@@ -69,7 +69,7 @@
                                         <action selector="leftShotDetails:" destination="iN0-l3-epB" eventType="touchUpInside" id="dxu-CE-dPa"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8le-BB-1zQ">
+                                <button opaque="NO" tag="47" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8le-BB-1zQ">
                                     <rect key="frame" x="0.0" y="127.5" width="170" height="44"/>
                                     <state key="normal" image="options 1st period enabled cell"/>
                                     <state key="disabled" image="options 1st period disabled cell"/>
@@ -187,7 +187,7 @@
                                         <action selector="rightShotDetails:" destination="iN0-l3-epB" eventType="touchUpInside" id="JFu-zT-tpp"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TKO-T6-6Qo">
+                                <button opaque="NO" tag="99" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TKO-T6-6Qo">
                                     <rect key="frame" x="0.0" y="127.5" width="170" height="44"/>
                                     <state key="normal" image="options footer 1st period enabled"/>
                                     <state key="disabled" image="options footer 1st period disabled"/>
