@@ -305,25 +305,24 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJL-ii-bbL" userLabel="CityLabel">
                                                     <rect key="frame" x="11" y="3" width="100" height="37"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="tz4-Lm-DgB"/>
+                                                        <constraint firstAttribute="width" constant="100" id="tz4-Lm-DgB"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                                     <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mandatory" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ZBV-e8-Q8U">
-                                                    <rect key="frame" x="131" y="7" width="200" height="30"/>
+                                                    <rect key="frame" x="121" y="7" width="300" height="30"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="geI-oe-ibX"/>
+                                                        <constraint firstAttribute="width" constant="300" id="2FU-tl-k74"/>
                                                     </constraints>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="ZBV-e8-Q8U" secondAttribute="trailing" constant="405" id="6fD-dK-axx"/>
-                                                <constraint firstItem="ZBV-e8-Q8U" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aJL-ii-bbL" secondAttribute="trailing" constant="8" symbolic="YES" id="InS-Ef-zMW"/>
+                                                <constraint firstItem="ZBV-e8-Q8U" firstAttribute="leading" secondItem="aJL-ii-bbL" secondAttribute="trailing" constant="10" id="InS-Ef-zMW"/>
                                                 <constraint firstAttribute="bottom" secondItem="ZBV-e8-Q8U" secondAttribute="bottom" constant="6" id="S2K-sy-S9X"/>
                                                 <constraint firstItem="ZBV-e8-Q8U" firstAttribute="top" secondItem="Yd7-8D-wn4" secondAttribute="top" constant="7" id="aFP-n3-kAv"/>
                                                 <constraint firstItem="aJL-ii-bbL" firstAttribute="leading" secondItem="Yd7-8D-wn4" secondAttribute="leading" constant="11" id="bQH-fp-3Hz"/>
@@ -342,28 +341,27 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arena Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpv-EC-tF5" userLabel="ArenaNameLabel">
                                                     <rect key="frame" x="11" y="3" width="100" height="37"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="9m6-th-h5y"/>
+                                                        <constraint firstAttribute="width" constant="100" id="9m6-th-h5y"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                                     <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mandatory" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="mwf-Xj-DK7" userLabel="Arena Name Text Field">
-                                                    <rect key="frame" x="131" y="7" width="200" height="30"/>
+                                                    <rect key="frame" x="121" y="7" width="300" height="30"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="46b-Xk-Iyh"/>
+                                                        <constraint firstAttribute="width" constant="300" id="na5-7w-RPx"/>
                                                     </constraints>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="zpv-EC-tF5" firstAttribute="top" secondItem="LVW-Y5-fpi" secondAttribute="top" constant="3" id="6Ps-r9-eTv"/>
-                                                <constraint firstAttribute="trailing" secondItem="mwf-Xj-DK7" secondAttribute="trailing" constant="405" id="Jj7-Os-iTs"/>
                                                 <constraint firstItem="zpv-EC-tF5" firstAttribute="leading" secondItem="LVW-Y5-fpi" secondAttribute="leading" constant="11" id="LiG-9m-Kgl"/>
                                                 <constraint firstItem="mwf-Xj-DK7" firstAttribute="top" secondItem="LVW-Y5-fpi" secondAttribute="top" constant="7" id="UZ0-bD-oRi"/>
-                                                <constraint firstItem="mwf-Xj-DK7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zpv-EC-tF5" secondAttribute="trailing" constant="8" symbolic="YES" id="k56-38-9HO"/>
+                                                <constraint firstItem="mwf-Xj-DK7" firstAttribute="leading" secondItem="zpv-EC-tF5" secondAttribute="trailing" constant="10" id="k56-38-9HO"/>
                                                 <constraint firstAttribute="bottom" secondItem="zpv-EC-tF5" secondAttribute="bottom" constant="3" id="neq-Ym-wU7"/>
                                                 <constraint firstAttribute="bottom" secondItem="mwf-Xj-DK7" secondAttribute="bottom" constant="6" id="r6E-yP-47i"/>
                                             </constraints>
@@ -383,29 +381,28 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCq-aZ-hJX" userLabel="opposition City Label">
                                                     <rect key="frame" x="11" y="3" width="100" height="37"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="WNa-hS-18T"/>
+                                                        <constraint firstAttribute="width" constant="100" id="WNa-hS-18T"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                                     <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mandatory" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="s2N-Ir-eNx" userLabel="Opposition City Text Field">
-                                                    <rect key="frame" x="131" y="7" width="200" height="30"/>
+                                                    <rect key="frame" x="121" y="7" width="300" height="30"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="JqT-9F-vUw"/>
+                                                        <constraint firstAttribute="width" constant="300" id="JqT-9F-vUw"/>
                                                     </constraints>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="s2N-Ir-eNx" secondAttribute="bottom" constant="6" id="MXW-lv-Tb8"/>
                                                 <constraint firstItem="FCq-aZ-hJX" firstAttribute="top" secondItem="gMk-i1-Shy" secondAttribute="top" constant="3" id="Shb-MO-yS4"/>
-                                                <constraint firstItem="s2N-Ir-eNx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FCq-aZ-hJX" secondAttribute="trailing" constant="8" symbolic="YES" id="Zl8-yx-D7v"/>
+                                                <constraint firstItem="s2N-Ir-eNx" firstAttribute="leading" secondItem="FCq-aZ-hJX" secondAttribute="trailing" constant="10" id="Zl8-yx-D7v"/>
                                                 <constraint firstItem="FCq-aZ-hJX" firstAttribute="leading" secondItem="gMk-i1-Shy" secondAttribute="leading" constant="11" id="bGp-RI-KLa"/>
                                                 <constraint firstItem="s2N-Ir-eNx" firstAttribute="top" secondItem="gMk-i1-Shy" secondAttribute="top" constant="7" id="gpy-kR-1fr"/>
-                                                <constraint firstAttribute="trailing" secondItem="s2N-Ir-eNx" secondAttribute="trailing" constant="405" id="lkT-x9-TMB"/>
                                                 <constraint firstAttribute="bottom" secondItem="FCq-aZ-hJX" secondAttribute="bottom" constant="3" id="pOe-Xa-ZfM"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -420,20 +417,20 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaH-E8-YNp" userLabel="Opposition Team Name Label">
                                                     <rect key="frame" x="11" y="3" width="100" height="37"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="1Og-FT-NRr"/>
+                                                        <constraint firstAttribute="width" constant="100" id="1Og-FT-NRr"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                                     <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mandatory" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fKi-R1-6V0" userLabel="Opposition Team Text Field">
-                                                    <rect key="frame" x="131" y="7" width="200" height="30"/>
+                                                    <rect key="frame" x="121" y="7" width="300" height="30"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="nSE-8p-x5a"/>
+                                                        <constraint firstAttribute="width" constant="300" id="nSE-8p-x5a"/>
                                                     </constraints>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -442,8 +439,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="fKi-R1-6V0" secondAttribute="bottom" constant="6" id="LDt-A9-449"/>
                                                 <constraint firstItem="GaH-E8-YNp" firstAttribute="leading" secondItem="Pwk-MA-73C" secondAttribute="leading" constant="11" id="j7p-fD-GIt"/>
                                                 <constraint firstAttribute="bottom" secondItem="GaH-E8-YNp" secondAttribute="bottom" constant="3" id="jQy-oD-BO7"/>
-                                                <constraint firstAttribute="trailing" secondItem="fKi-R1-6V0" secondAttribute="trailing" constant="405" id="kjL-mY-fMa"/>
-                                                <constraint firstItem="fKi-R1-6V0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GaH-E8-YNp" secondAttribute="trailing" constant="8" symbolic="YES" id="sFQ-K9-wSg"/>
+                                                <constraint firstItem="fKi-R1-6V0" firstAttribute="leading" secondItem="GaH-E8-YNp" secondAttribute="trailing" constant="10" id="sFQ-K9-wSg"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>

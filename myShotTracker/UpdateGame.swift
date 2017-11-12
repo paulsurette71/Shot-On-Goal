@@ -39,9 +39,7 @@ class UpdateGame {
             newShot.shotPeriod      = (shot?.period).map { $0.rawValue }
             newShot.shotDate        = shot?.timeOfShot as NSDate?
             
-            
             lastShotArray.append(newShot)
-            
             lastShot?.storeLastShot(lastShot: lastShotArray)
             
             try managedContext.save()

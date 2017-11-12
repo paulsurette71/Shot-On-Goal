@@ -26,7 +26,7 @@ class UndoLastShot {
                 //Check to see if the last shot was a shot or goal.
                 let lastShot = (GlobalVariables.myShotArray.last)?.result
                 
-                managedContext.delete((appDelegate.lastShot?.last!)!)
+                managedContext.delete((appDelegate.lastShot?.last)!)
                 
                 do {
                     try managedContext.save()

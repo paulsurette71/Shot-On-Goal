@@ -31,6 +31,7 @@ class GameInformationTableViewController: UITableViewController {
     let calculateSavePercentage = CalculateSavePercentage()
     let gameDateAttribString    = GameDateAttribString()
     let formatShotGoalPercentageAttributedString = FormatShotGoalPercentageAttributedString()
+    let thereAppearsToBe                         = ThereAppearsToBe()
     
     //App Delegate
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -83,7 +84,7 @@ class GameInformationTableViewController: UITableViewController {
         
         tableView.reloadData()
     }
-        
+    
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         
@@ -128,7 +129,7 @@ class GameInformationTableViewController: UITableViewController {
         cell.gameInformationLabel.attributedText = gameDateAttribString.gameDateAtrib(curentDate: currentDate, oppositionCity:  game.oppositionCity!, oppositionTeamName: game.oppositionTeamName!)
         
         let numberOfShots = fetchShots(indexPath: indexPath)
-//        fetchTestShots(indexPath: indexPath)
+        //        fetchTestShots(indexPath: indexPath)
         
         
         cell.shotInformationLabel.attributedText = formatShotGoalPercentageAttributedString.formattedString(shots: Int(numberOfShots.shots)!, goals: Int(numberOfShots.goals)!, fontSize: 17)
@@ -211,13 +212,24 @@ class GameInformationTableViewController: UITableViewController {
         
         if cell.checkMarkImageView.isHidden {
             
-            cell.checkMarkImageView.isHidden = false
+            if appDelegate.leftGoalie != nil || appDelegate.rightGoalie != nil {
+                
+                if GlobalVariables.myShotsOnNet > 0 || GlobalVariables.theirShotsOnNet > 0 {
+                    
+                    thereAppearsToBe.aGameInProgress(viewController: self, tableView: tableView, indexPath: indexPath)
+                    
+                }
+            }
             
-            selectedRow = indexPath
+                cell.checkMarkImageView.isHidden = false
+                
+                selectedRow = indexPath
+                
+                selectedGame = self.fetchedResultsController.object(at: indexPath)
+                
+                currentGameDelegate?.storeCurrentGame(currentGame: selectedGame!)
+                
             
-            selectedGame = self.fetchedResultsController.object(at: indexPath)
-            
-            currentGameDelegate?.storeCurrentGame(currentGame: selectedGame!)
             
         } else {
             
@@ -231,44 +243,6 @@ class GameInformationTableViewController: UITableViewController {
         //reloading the table will get rid of the checkmark if already selected.
         tableView.reloadData()
         
-        
-        /*
-         
-         if selectedRow == nil {
-         
-         let cell = tableView.cellForRow(at: indexPath) as! GameInformationTableViewCell
-         
-         selectedRow = indexPath
-         
-         cell.checkmarkButton.isHidden = false
-         
-         selectedGame = self.fetchedResultsController.object(at: indexPath)
-         
-         currentGameDelegate?.storeCurrentGame(currentGame: selectedGame!)
-         
-         
-         } else {
-         
-         let cellWithCheckMark = tableView.cellForRow(at: selectedRow) as! GameInformationTableViewCell
-         let cellWithNoCheckMark = tableView.cellForRow(at: indexPath) as! GameInformationTableViewCell
-         
-         if selectedRow == indexPath {
-         
-         cellWithCheckMark.checkmarkButton.isHidden = true
-         selectedRow = nil
-         appDelegate.currentGame = nil
-         
-         } else {
-         
-         cellWithCheckMark.checkmarkButton.isHidden = true
-         cellWithNoCheckMark.checkmarkButton.isHidden = false
-         
-         selectedRow = indexPath
-         
-         }
-         }
-         
-         */
     }
     
     
@@ -335,45 +309,6 @@ class GameInformationTableViewController: UITableViewController {
         return (shots, goals, savePercentage)
         
     }
-    
-//    ////
-//
-//    func fetchTestShots(indexPath: IndexPath) {
-//
-//        //http://stackoverflow.com/questions/37306769/how-to-aggregate-in-swift
-//
-//        //select ZGOALIERELATIONSHIP, count(ZSHOTTYPE) from ZSHOTDETAILS where ZGAMERELATIONSHIP = 6 group by ZGOALIERELATIONSHIP;
-//
-//        let selectedGameIndexPath = self.fetchedResultsController.object(at: indexPath)
-//
-//        let fetchRequest       = NSFetchRequest<NSFetchRequestResult>(entityName: "ShotDetails")
-//        let predicate          = NSPredicate(format: "gameRelationship = %@", selectedGameIndexPath)
-//        fetchRequest.predicate = predicate
-//        fetchRequest.fetchBatchSize = 8
-//
-//        //count(ZSHOTTYPE)
-//        let countExpressionDesc                  = NSExpressionDescription()
-//        countExpressionDesc.name                 = "countShots"
-//        countExpressionDesc.expression           = NSExpression(forFunction: "count:", arguments: [NSExpression(forKeyPath: "shotType")])
-//        countExpressionDesc.expressionResultType = .integer16AttributeType
-//
-//        fetchRequest.propertiesToGroupBy = [#keyPath(ShotDetails.goalieRelationship.lastName), #keyPath(ShotDetails.goalieRelationship.firstName), #keyPath(ShotDetails.shotType)]
-//        //        fetchRequest.propertiesToGroupBy = [#keyPath(ShotDetails.goalieRelationship.firstName)]
-//        fetchRequest.propertiesToFetch   = [#keyPath(ShotDetails.goalieRelationship.firstName), #keyPath(ShotDetails.goalieRelationship.lastName), #keyPath(ShotDetails.shotType), countExpressionDesc]
-//        fetchRequest.resultType          = .dictionaryResultType
-//
-//        do {
-//
-//            let fetchShotsResults = try managedContext.fetch(fetchRequest) as? [[String:AnyObject]]
-//
-//        } catch let error as NSError {
-//
-//            print("GameDetailsTableViewController|fetchShots: Could not fetch. \(error), \(error.userInfo)")
-//        }
-//    }
-//
-//
-//    ////
 }
 
 // MARK: - NSFetchedResultsControllerDelegate
@@ -394,7 +329,7 @@ extension GameInformationTableViewController: NSFetchedResultsControllerDelegate
             
         case .delete:
             
-             /*
+            /*
              
              CoreData: error: Serious application error.  Exception was caught during Core Data change processing.  This is usually a bug within an observer of NSManagedObjectContextObjectsDidChangeNotification.  UITableView internal inconsistency: the _swipedIndexPath cannot be nil if the swipe to delete row is being deleted in _updateRowsAtIndexPaths:withUpdateAction:rowAnimation:usingPresentationValues: with userInfo (null)
              libc++abi.dylib: terminating with uncaught exception of type NSException

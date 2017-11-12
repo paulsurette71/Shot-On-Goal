@@ -10,7 +10,5 @@ import Foundation
 
 protocol storeLastShotsDelegate {
     
-//    func storeLastRightShot(rightGoalieLastShot: ShotDetails)
-//    func storeLastLeftShot(leftGoalieLastShot: ShotDetails)
     func storeLastShot(lastShot:[ShotDetails])
 }

@@ -171,12 +171,7 @@ class ShareAction {
         message += newLine
         message += shotTotals.string
         message += newLine
-        
-//        shotDetailMessage += newLine
-        
-        print(message)
-        print(shotDetailMessage)
-        
+                        
         messageArray.insert(message, at: 0)
         messageArray.insert(goalieNetArray[0], at: 1)
         messageArray.insert(shotDetailMessage, at: 2)

@@ -127,6 +127,7 @@ class MainView: UIView {
     
     @IBAction func leftUndo(_ sender: UIButton) {
         
+        
         undoLastShot.lastShotOnNet(view: self, button: sender, managedContext: managedContext)
         
     }
@@ -224,9 +225,9 @@ class MainView: UIView {
     
     @objc func leftGoalOnNet(_ sender: UITapGestureRecognizer) {
         
-        if !rightUndoButton.isEnabled {
-            rightUndoButton.isEnabled = true
-            rightShotDetailsButton.isEnabled = true
+        if !leftUndoButton.isEnabled {
+            leftUndoButton.isEnabled = true
+            leftShotDetailsButton.isEnabled = true
         }
         
         if sender.state == .ended {
@@ -248,10 +249,7 @@ class MainView: UIView {
             GlobalVariables.myShotArray.append(shotInfo)
             
             //Pass Delegates
-//            updateGame.leftGoalieLastShot = leftGoalieLastShot
-//            updateGame.rightGoalieLastShot = rightGoalieLastShot
-//
-//            print("leftGoalieLastShot \(leftGoalieLastShot!) rightGoalieLastShot \(rightGoalieLastShot!)")
+            updateGame.lastShot = lastShot
             
             updateGame.withCurrentShots(managedContext: managedContext, currentGame: appDelegate.currentGame!, goalie: appDelegate.leftGoalie!, shotArray: GlobalVariables.myShotArray)
             
@@ -284,10 +282,7 @@ class MainView: UIView {
             GlobalVariables.theirShotArray.append(shotInfo)
             
             //Pass Delegates
-//            updateGame.leftGoalieLastShot = leftGoalieLastShot
-//            updateGame.rightGoalieLastShot = rightGoalieLastShot
-//            
-//            print("leftGoalieLastShot \(leftGoalieLastShot!) rightGoalieLastShot \(rightGoalieLastShot!)")
+            updateGame.lastShot = lastShot
             
             updateGame.withCurrentShots(managedContext: managedContext, currentGame: appDelegate.currentGame!, goalie: appDelegate.rightGoalie!, shotArray: GlobalVariables.theirShotArray)
             

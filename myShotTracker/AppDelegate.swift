@@ -20,8 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, storeCurrentGameDelegate,
     var leftGoalieIndex: IndexPath?
     var rightGoalieIndex: IndexPath?
     var periodSelected: Period?
-//    var leftGoalieLastShot: ShotDetails?
-//    var rightGoalieLastShot: ShotDetails?
     var lastShot: [ShotDetails]?
     
     var currentGame: GameInformation?
@@ -61,8 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, storeCurrentGameDelegate,
         scrollViewController.storeImageSize      = self
         scrollViewController.lastShot            = self
         
-        
-        //Game Tab
+         //Game Tab
         let gameNavigationController                           = rootViewController.viewControllers?[1] as! UINavigationController
         let gameInformationTableViewController                 = gameNavigationController.viewControllers[0] as! GameInformationTableViewController
         
