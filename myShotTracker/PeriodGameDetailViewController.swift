@@ -115,7 +115,7 @@ class PeriodGameDetailViewController: UIViewController {
         let netNib = UINib(nibName: "PeriodGameDetailTableViewCell", bundle: nil)
         
         tableView.register(netNib, forCellReuseIdentifier: "perodGameDetailCell")
-        tableView.rowHeight       = 260 //435 //250
+        tableView.rowHeight       = 275
         tableView.allowsSelection = false
     }
     

@@ -49,7 +49,7 @@
                 <outlet property="hockeyNetImageView" destination="F8A-F0-cAn" id="16m-61-PjB"/>
                 <outlet property="shotGoalDetailLabel" destination="xeT-cS-sbf" id="Qwe-c6-qVr"/>
             </connections>
-            <point key="canvasLocation" x="9.5" y="-109.5"/>
+            <point key="canvasLocation" x="-100" y="-150"/>
         </tableViewCell>
     </objects>
     <resources>
