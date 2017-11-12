@@ -59,7 +59,7 @@ class GoFetch {
             
         } catch let error as NSError {
             
-            print("PeriodGameDetailTableViewController|fectchShots: Could not fetch. \(error), \(error.userInfo)")
+            print("GoFetch|fectchShots: Could not fetch. \(error), \(error.userInfo)")
         }
         
         return shotResults
@@ -91,7 +91,7 @@ class GoFetch {
             
         } catch let error as NSError {
             
-            print("PeriodGameDetailTableViewController|fectchPeriods: Could not fetch. \(error), \(error.userInfo)")
+            print("GoFetch|fectchPeriods: Could not fetch. \(error), \(error.userInfo)")
         }
         
         return numberOfPeriodsResults

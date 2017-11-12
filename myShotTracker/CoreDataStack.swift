@@ -23,7 +23,7 @@ class CoreDataStack {
         
         let directory = NSPersistentContainer.defaultDirectoryURL()
         let url       = directory.appendingPathComponent(self.modelName + ".sqlite")
-                
+        
         //Show where CoreData files are stored
         print("url \(url)")
         
@@ -60,9 +60,4 @@ class CoreDataStack {
             print("CoreDataStack|saveContext: Error Saving.  Unresolved error \(error), \(error.userInfo)")
         }
     }
-    
 }
-
-
-
-

@@ -51,8 +51,6 @@ class ChangeGoalieAlert {
         
         if sender == mainView.leftGoalieButton {
             
-            print("left button")
-            
             //Empty the delegate
             appDelegate.leftGoalie  = nil
             appDelegate.leftGoalieIndex  = nil
@@ -82,9 +80,7 @@ class ChangeGoalieAlert {
 
             
         } else {
-            
-            print("right button")
-            
+                        
             //Empty the delegate
             appDelegate.rightGoalie = nil
             appDelegate.rightGoalieIndex = nil
