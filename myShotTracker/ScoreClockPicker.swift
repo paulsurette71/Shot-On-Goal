@@ -26,8 +26,6 @@ class ScoreClockPicker: UIPickerView {
     
     func setPickerToSelectedPeriod(currentPeriod: Period) {
         
-        
-        
         var rowToSelect = 0
         
         switch currentPeriod {
@@ -50,7 +48,6 @@ class ScoreClockPicker: UIPickerView {
 
 extension ScoreClockPicker: UIPickerViewDataSource {
     
-    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         
         return periodArray.count
@@ -67,7 +64,6 @@ extension ScoreClockPicker: UIPickerViewDataSource {
         
         return 150
     }
-    
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         

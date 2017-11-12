@@ -16,6 +16,8 @@ class EnableButtons {
     
     func enableButtons(mainView:MainView) {
         
+        print("class->EnableButtons->enableButtons")
+        
         GlobalVariables.didDisableButtons = false
         
         if (appDelegate.leftGoalie != nil) {
@@ -29,8 +31,7 @@ class EnableButtons {
             mainView.leftResetButton.isEnabled = true
             
             mainView.leftPeriodButton.isEnabled = true
-            mainView.leftPeriodButton.setImage(UIImage(named: "options 1st period enabled cell"), for: .normal)
-            
+
             mainView.leftHockeyNetImageView.isUserInteractionEnabled = true
             
         }
@@ -46,12 +47,11 @@ class EnableButtons {
             mainView.rightResetButton.isEnabled = true
             
             mainView.rightPeriodButton.isEnabled = true
-            mainView.rightPeriodButton.setImage(UIImage(named: "options footer 1st period enabled"), for: .normal)
             
-            mainView.rightHockeyNetImageView.isUserInteractionEnabled = true
-            
+            mainView.rightHockeyNetImageView.isUserInteractionEnabled = true            
         }
         
     }  //enableButtons
+    
 } //EnableButtons
 

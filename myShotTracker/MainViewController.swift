@@ -49,7 +49,6 @@ struct GlobalVariables {
 class MainViewController: UIViewController {
     
     var mainView: MainView?
-    var selectedPeriod:Period = .first
     
     //CoreData
     var managedContext: NSManagedObjectContext!
@@ -86,6 +85,9 @@ class MainViewController: UIViewController {
             
         }
         
+        //set the period
+        periodSelected?.storeScoreClock(periodSelected: .first)
+        
         setupScrollView()
         setupGestures()
         setupUI()
@@ -104,20 +106,6 @@ class MainViewController: UIViewController {
         
         let enableDisableButtons = EnableDisableButtons()
         enableDisableButtons.checkForGoalieAndGame(mainView: mainView!)
-        
-        //        let disableButtons = DisableButtons()
-        //        let enableButtons = EnableButtons()
-        //
-        //        guard (appDelegate.leftGoalie != nil || appDelegate.rightGoalie != nil), (appDelegate.currentGame != nil) else {
-        //
-        //            //Disable buttons
-        //            disableButtons.disableButtons(mainView: mainView!)
-        //
-        //            return
-        //        }
-        //
-        //        //Enable buttons
-        //        enableButtons.enableButtons(mainView: mainView!)
         
     }
     
@@ -161,10 +149,6 @@ class MainViewController: UIViewController {
         
     }
     
-    func goalOnNet()  {
-        
-    }
-    
     func setupScrollView() {
         
         //Determine how big the tabBar is
@@ -177,7 +161,6 @@ class MainViewController: UIViewController {
         
         //Pass data
         mainView?.managedContext      = managedContext
-        mainView?.selectedPeriod      = selectedPeriod
         mainView?.leftGoalieDelegate  = leftGoalieDelegate
         mainView?.rightGoalieDelegate = rightGoalieDelegate
         mainView?.leftGoalieIndex     = leftGoalieIndex

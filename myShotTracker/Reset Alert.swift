@@ -11,11 +11,15 @@ import UIKit
 
 class ResetAlert {
     
-    let disableButtons          = DisableButtons()
+    let disableButtons       = DisableButtons()
+    let buttonImagesForState = ButtonImagesForState()
     
     //App Delegate
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let formatShotGoalPercentageAttributedString = FormatShotGoalPercentageAttributedString()
+    
+    //Passed Data
+    var periodSelected: storeScoreClockDelegate?
     
     func showAlert(mainView: MainView) {
         
@@ -81,6 +85,11 @@ class ResetAlert {
         mainView.leftTeamNameLabel.text = "No Goalie"
         mainView.rightTeamNameLabel.text = "No Goalie"
         
+        //switch back to 1st period
+        buttonImagesForState.setButtonImages(period: .first, mainView: mainView)
+        periodSelected?.storeScoreClock(periodSelected: .first)
+        
+        //Clear Delegates
         appDelegate.leftGoalieIndex  = nil
         appDelegate.rightGoalieIndex = nil
         

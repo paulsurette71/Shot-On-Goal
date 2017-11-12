@@ -58,9 +58,6 @@ class MainView: UIView {
     //CoreData
     var managedContext: NSManagedObjectContext!
     
-    //Period
-    var selectedPeriod: Period!
-    
     //App Delegate
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
@@ -70,7 +67,7 @@ class MainView: UIView {
     var leftGoalieIndex: storeLeftGoalieIndexPathDelegate?
     var rightGoalieIndex: storeRightGoalieIndexPathDelegate?
     var periodSelected: storeScoreClockDelegate?
-
+    
     var lastShot:            storeLastShotsDelegate?
     
     //IBAction
@@ -112,7 +109,7 @@ class MainView: UIView {
         periodPopover.periodSelected = periodSelected
         periodPopover.mainView = self
         
-        periodPopover.showPeriodPopover(view: self, selectedPeriod: selectedPeriod, sender: sender)
+        periodPopover.showPeriodPopover(view: self, selectedPeriod: appDelegate.periodSelected!, sender: sender)
         
     }
     
@@ -121,7 +118,7 @@ class MainView: UIView {
         periodPopover.periodSelected = periodSelected
         periodPopover.mainView = self
         
-        periodPopover.showPeriodPopover(view: self, selectedPeriod: selectedPeriod, sender: sender)
+        periodPopover.showPeriodPopover(view: self, selectedPeriod: appDelegate.periodSelected!, sender: sender)
     }
     
     
@@ -140,12 +137,14 @@ class MainView: UIView {
     
     @IBAction func leftReset(_ sender: UIButton) {
         
+        resetAlert.periodSelected = periodSelected
         resetAlert.showAlert(mainView: self)
         
     }
     
     @IBAction func rightReset(_ sender: Any) {
         
+        resetAlert.periodSelected = periodSelected
         resetAlert.showAlert(mainView: self)
         
     }
@@ -168,13 +167,13 @@ class MainView: UIView {
         
         leftShotGoalPercentageLabel.attributedText = shotString
         
-        let shotInfo = ShotInfo(shotNumber: GlobalVariables.myShotsOnNet, location: shot, timeOfShot: Date(), timeDifference: timeDifference, period: selectedPeriod , result: .shot)
+        let shotInfo = ShotInfo(shotNumber: GlobalVariables.myShotsOnNet, location: shot, timeOfShot: Date(), timeDifference: timeDifference, period: appDelegate.periodSelected! , result: .shot)
         
         GlobalVariables.myShotArray.append(shotInfo)
         
         //Pass Delegates
         updateGame.lastShot = lastShot
-
+        
         updateGame.withCurrentShots(managedContext: managedContext, currentGame: appDelegate.currentGame!, goalie: appDelegate.leftGoalie!, shotArray: GlobalVariables.myShotArray)
         
     }
@@ -212,13 +211,13 @@ class MainView: UIView {
         let shotString = formatShotGoalPercentageAttributedString.formattedString(shots: GlobalVariables.theirShotsOnNet, goals: GlobalVariables.theirGoals, fontSize: 14)
         rightShotGoalPercentageLabel.attributedText = shotString
         
-        let shotInfo = ShotInfo(shotNumber: GlobalVariables.theirShotsOnNet, location: shot, timeOfShot: Date(), timeDifference: timeDifference, period: selectedPeriod , result: .shot)
+        let shotInfo = ShotInfo(shotNumber: GlobalVariables.theirShotsOnNet, location: shot, timeOfShot: Date(), timeDifference: timeDifference, period: appDelegate.periodSelected! , result: .shot)
         
         GlobalVariables.theirShotArray.append(shotInfo)
         
         //Pass Delegates
         updateGame.lastShot = lastShot
-
+        
         updateGame.withCurrentShots(managedContext: managedContext, currentGame: appDelegate.currentGame!, goalie: appDelegate.rightGoalie!, shotArray: GlobalVariables.theirShotArray)
         
     }
@@ -244,7 +243,7 @@ class MainView: UIView {
             let shotString = formatShotGoalPercentageAttributedString.formattedString(shots: GlobalVariables.myShotsOnNet, goals: GlobalVariables.myGoals, fontSize: 14)
             leftShotGoalPercentageLabel.attributedText = shotString
             
-            let shotInfo = ShotInfo(shotNumber: GlobalVariables.myShotsOnNet, location: goal, timeOfShot: Date(), timeDifference: timeDifference, period: selectedPeriod , result: .goal)
+            let shotInfo = ShotInfo(shotNumber: GlobalVariables.myShotsOnNet, location: goal, timeOfShot: Date(), timeDifference: timeDifference, period: appDelegate.periodSelected! , result: .goal)
             
             GlobalVariables.myShotArray.append(shotInfo)
             
@@ -277,7 +276,7 @@ class MainView: UIView {
             let shotString = formatShotGoalPercentageAttributedString.formattedString(shots: GlobalVariables.theirShotsOnNet, goals: GlobalVariables.theirGoals, fontSize: 14)
             rightShotGoalPercentageLabel.attributedText = shotString
             
-            let shotInfo = ShotInfo(shotNumber: GlobalVariables.theirShotsOnNet, location: goal, timeOfShot: Date(), timeDifference: timeDifference, period: selectedPeriod , result: .goal)
+            let shotInfo = ShotInfo(shotNumber: GlobalVariables.theirShotsOnNet, location: goal, timeOfShot: Date(), timeDifference: timeDifference, period: appDelegate.periodSelected! , result: .goal)
             
             GlobalVariables.theirShotArray.append(shotInfo)
             

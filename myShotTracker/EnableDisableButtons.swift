@@ -16,6 +16,8 @@ class EnableDisableButtons {
     
     func checkForGoalieAndGame(mainView: MainView) {
         
+        print("class->EnableDisableButtons->checkForGoalieAndGame")
+        
         let disableButtons = DisableButtons()
         let enableButtons = EnableButtons()
         
@@ -30,7 +32,5 @@ class EnableDisableButtons {
         //Enable buttons
         enableButtons.enableButtons(mainView: mainView)
 
-    
     }
-    
 }
