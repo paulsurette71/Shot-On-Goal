@@ -55,6 +55,7 @@
 		759F684B1E7C7A0F00BB1183 /* DrawPuckScaled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759F684A1E7C7A0F00BB1183 /* DrawPuckScaled.swift */; };
 		75A13E3A1E6E05EF00DCB968 /* GameInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A13E381E6E05EF00DCB968 /* GameInformationTableViewCell.swift */; };
 		75A13E3B1E6E05EF00DCB968 /* GameInformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75A13E391E6E05EF00DCB968 /* GameInformationTableViewCell.xib */; };
+		75A262061FB9D98C00EDD3F6 /* ShotLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A262051FB9D98C00EDD3F6 /* ShotLocation.swift */; };
 		75A970A21E4E5B8800C6F617 /* GameInformationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A970A11E4E5B8800C6F617 /* GameInformationTableViewController.swift */; };
 		75A970A41E4E5B9A00C6F617 /* GameDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A970A31E4E5B9A00C6F617 /* GameDetailsTableViewController.swift */; };
 		75AACDE31E4D11AD00340A3E /* StoreScoreClockDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AACDE21E4D11AD00340A3E /* StoreScoreClockDelegate.swift */; };
@@ -133,6 +134,7 @@
 		759F684A1E7C7A0F00BB1183 /* DrawPuckScaled.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawPuckScaled.swift; sourceTree = "<group>"; };
 		75A13E381E6E05EF00DCB968 /* GameInformationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameInformationTableViewCell.swift; sourceTree = "<group>"; };
 		75A13E391E6E05EF00DCB968 /* GameInformationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameInformationTableViewCell.xib; sourceTree = "<group>"; };
+		75A262051FB9D98C00EDD3F6 /* ShotLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotLocation.swift; sourceTree = "<group>"; };
 		75A970A11E4E5B8800C6F617 /* GameInformationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameInformationTableViewController.swift; sourceTree = "<group>"; };
 		75A970A31E4E5B9A00C6F617 /* GameDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDetailsTableViewController.swift; sourceTree = "<group>"; };
 		75AACDE21E4D11AD00340A3E /* StoreScoreClockDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoreScoreClockDelegate.swift; path = ../StoreScoreClockDelegate.swift; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 				7599F37C1FB3EBA4009642F5 /* SaveHockeyNetAsImage.swift */,
 				7593F43A1FB689BD006DEE30 /* ChangeGoalieAlert.swift */,
 				756CE6F71FB7BAFB002D5007 /* ThereAppearsToBe.swift */,
+				75A262051FB9D98C00EDD3F6 /* ShotLocation.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 			files = (
 				751D3E561FA42CB90047910A /* ShotDetailsPopover.swift in Sources */,
 				75FC31F71FA3EF5F0062FC07 /* MainViewController.swift in Sources */,
+				75A262061FB9D98C00EDD3F6 /* ShotLocation.swift in Sources */,
 				75A13E3A1E6E05EF00DCB968 /* GameInformationTableViewCell.swift in Sources */,
 				759F68491E7C759600BB1183 /* ShareAction.swift in Sources */,
 				75D582771E7D76390092034F /* ImportTestData.swift in Sources */,

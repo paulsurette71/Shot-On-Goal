@@ -33,8 +33,10 @@ class ShareAction {
         var shotCount = 0
         var goalCount = 0
         
-        let hockeyNetImageView   = UIImageView(frame: CGRect(x: 0, y: 0, width: 500, height: 295))
-        hockeyNetImageView.image = UIImage(named: "hocketNet")
+        //        let hockeyNetImageView   = UIImageView(frame: CGRect(x: 0, y: 0, width: 500, height: 295))
+        let hockeyNetImageView   = UIImageView(frame: CGRect(x: 0, y: 0, width: 340, height: 200))
+        //        hockeyNetImageView.image = UIImage(named: "hocketNet")
+        hockeyNetImageView.image = UIImage(named: "hockeyNet")
         
         for shots in shotInformation {
             
@@ -57,8 +59,27 @@ class ShareAction {
             
         } //for shots
         
+        //        print("-> Start <- ")
+        //        UIGraphicsBeginImageContext(CGSize(width: hockeyNetImageView.frame.width, height: hockeyNetImageView.frame.height))
+        //        let context: CGContext = UIGraphicsGetCurrentContext()!
+        //        hockeyNetImageView.layer.render(in: context)
+        //        let image = UIGraphicsGetImageFromCurrentImageContext()!
+        //
+        //        let size = (image.size).applying(CGAffineTransform(scaleX: 1.0, y: 1.0))
+        //        let hasAlpha = true
+        //        let scale: CGFloat = 0.0 // Automatically use scale factor of main screen
+        //
+        //        UIGraphicsBeginImageContextWithOptions(size, !hasAlpha, scale)
+        //        image.draw(in: CGRect(origin: CGPoint(x: 0, y: 0), size: size))
+        //
+        //        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
+        //        UIGraphicsEndImageContext()
+        //        print("-> Finish <- ")
+        //
+        
         //Apply the CAShapeLayer to the UIImage
-        UIGraphicsBeginImageContext(CGSize(width: hockeyNetImageView.frame.width, height: hockeyNetImageView.frame.height))
+        //        UIGraphicsBeginImageContext(CGSize(width: hockeyNetImageView.frame.width, height: hockeyNetImageView.frame.height))
+        UIGraphicsBeginImageContext(CGSize(width: 340, height: 200))
         
         let context: CGContext = UIGraphicsGetCurrentContext()!
         hockeyNetImageView.layer.render(in: context)
@@ -68,8 +89,10 @@ class ShareAction {
         
         //Resize the image
         let size = (img.size).applying(CGAffineTransform(scaleX: 1.0, y: 1.0))
+        print("size \(size)")
+        
         let hasAlpha = true
-        let scale: CGFloat = 1.0
+        let scale: CGFloat = 0.0
         
         UIGraphicsBeginImageContextWithOptions((img.size), !hasAlpha, scale)
         img.draw(in: CGRect(origin: CGPoint(x: 0, y: 0), size: size))
@@ -171,7 +194,7 @@ class ShareAction {
         message += newLine
         message += shotTotals.string
         message += newLine
-                        
+        
         messageArray.insert(message, at: 0)
         messageArray.insert(goalieNetArray[0], at: 1)
         messageArray.insert(shotDetailMessage, at: 2)

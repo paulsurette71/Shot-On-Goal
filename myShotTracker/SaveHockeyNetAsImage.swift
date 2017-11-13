@@ -15,6 +15,8 @@ class SaveHockeyNetAsImage {
     
     func saveAsPNG(hockeyNetImageView: UIImageView, period: String) {
         
+        // http://nshipster.com/image-resizing/
+        
         //Apply the CAShapeLayer to the UIImage
         UIGraphicsBeginImageContext(CGSize(width: hockeyNetImageView.frame.width, height: hockeyNetImageView.frame.height))
         

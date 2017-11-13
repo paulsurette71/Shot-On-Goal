@@ -54,6 +54,7 @@ class MainView: UIView {
     let formatShotGoalPercentageAttributedString = FormatShotGoalPercentageAttributedString()
     let resetAlert                               = ResetAlert()
     let updateGame                               = UpdateGame()
+    let shotLocation                             = ShotLocation()
     
     //CoreData
     var managedContext: NSManagedObjectContext!
@@ -67,8 +68,9 @@ class MainView: UIView {
     var leftGoalieIndex: storeLeftGoalieIndexPathDelegate?
     var rightGoalieIndex: storeRightGoalieIndexPathDelegate?
     var periodSelected: storeScoreClockDelegate?
-    
     var lastShot:            storeLastShotsDelegate?
+    
+    let puck = 10
     
     //IBAction
     @IBAction func leftGoalie(_ sender: UIButton) {
@@ -159,7 +161,11 @@ class MainView: UIView {
         GlobalVariables.myShotsOnNet += 1
         
         let shot = shot.location(ofTouch: 0, in: leftHockeyNetImageView)
-        drawPuck.drawPuck(shot: shot, puckColour: UIColor.black.cgColor, puckSize: 10, imageView: leftHockeyNetImageView, shotNumber: String(GlobalVariables.myShotsOnNet))
+        
+        let newShot = shotLocation.checkShotLocation(image: leftHockeyNetImageView, shot: shot)
+
+        
+        drawPuck.drawPuck(shot: newShot, puckColour: UIColor.black.cgColor, puckSize: 10, imageView: leftHockeyNetImageView, shotNumber: String(GlobalVariables.myShotsOnNet))
         
         let timeDifference = calculateDifferenceInTime(array: GlobalVariables.myShotArray)
         
@@ -167,7 +173,7 @@ class MainView: UIView {
         
         leftShotGoalPercentageLabel.attributedText = shotString
         
-        let shotInfo = ShotInfo(shotNumber: GlobalVariables.myShotsOnNet, location: shot, timeOfShot: Date(), timeDifference: timeDifference, period: appDelegate.periodSelected! , result: .shot)
+        let shotInfo = ShotInfo(shotNumber: GlobalVariables.myShotsOnNet, location: newShot, timeOfShot: Date(), timeDifference: timeDifference, period: appDelegate.periodSelected! , result: .shot)
         
         GlobalVariables.myShotArray.append(shotInfo)
         
@@ -204,14 +210,16 @@ class MainView: UIView {
         GlobalVariables.theirShotsOnNet += 1
         
         let shot = shot.location(ofTouch: 0, in: rightHockeyNetImageView)
-        drawPuck.drawPuck(shot: shot, puckColour: UIColor.black.cgColor, puckSize: 10, imageView: rightHockeyNetImageView, shotNumber: String(GlobalVariables.theirShotsOnNet))
+        let newShot = shotLocation.checkShotLocation(image: rightHockeyNetImageView, shot: shot)
+        
+        drawPuck.drawPuck(shot: newShot, puckColour: UIColor.black.cgColor, puckSize: 10, imageView: rightHockeyNetImageView, shotNumber: String(GlobalVariables.theirShotsOnNet))
         
         let timeDifference = calculateDifferenceInTime(array: GlobalVariables.theirShotArray)
         
         let shotString = formatShotGoalPercentageAttributedString.formattedString(shots: GlobalVariables.theirShotsOnNet, goals: GlobalVariables.theirGoals, fontSize: 14)
         rightShotGoalPercentageLabel.attributedText = shotString
         
-        let shotInfo = ShotInfo(shotNumber: GlobalVariables.theirShotsOnNet, location: shot, timeOfShot: Date(), timeDifference: timeDifference, period: appDelegate.periodSelected! , result: .shot)
+        let shotInfo = ShotInfo(shotNumber: GlobalVariables.theirShotsOnNet, location: newShot, timeOfShot: Date(), timeDifference: timeDifference, period: appDelegate.periodSelected! , result: .shot)
         
         GlobalVariables.theirShotArray.append(shotInfo)
         
@@ -232,18 +240,19 @@ class MainView: UIView {
         if sender.state == .ended {
             
             let goal = sender.location(ofTouch: 0, in: leftHockeyNetImageView)
+            let newGoal = shotLocation.checkShotLocation(image: leftHockeyNetImageView, shot: goal)
             
             GlobalVariables.myShotsOnNet += 1
             GlobalVariables.myGoals += 1
             
-            drawPuck.drawPuck(shot: goal, puckColour: UIColor.red.cgColor, puckSize: 10, imageView: leftHockeyNetImageView, shotNumber: String(GlobalVariables.myShotsOnNet))
+            drawPuck.drawPuck(shot: newGoal, puckColour: UIColor.red.cgColor, puckSize: 10, imageView: leftHockeyNetImageView, shotNumber: String(GlobalVariables.myShotsOnNet))
             
             let timeDifference = calculateDifferenceInTime(array: GlobalVariables.myShotArray)
             
             let shotString = formatShotGoalPercentageAttributedString.formattedString(shots: GlobalVariables.myShotsOnNet, goals: GlobalVariables.myGoals, fontSize: 14)
             leftShotGoalPercentageLabel.attributedText = shotString
             
-            let shotInfo = ShotInfo(shotNumber: GlobalVariables.myShotsOnNet, location: goal, timeOfShot: Date(), timeDifference: timeDifference, period: appDelegate.periodSelected! , result: .goal)
+            let shotInfo = ShotInfo(shotNumber: GlobalVariables.myShotsOnNet, location: newGoal, timeOfShot: Date(), timeDifference: timeDifference, period: appDelegate.periodSelected! , result: .goal)
             
             GlobalVariables.myShotArray.append(shotInfo)
             
@@ -265,18 +274,19 @@ class MainView: UIView {
         if sender.state == .ended {
             
             let goal = sender.location(ofTouch: 0, in: rightHockeyNetImageView)
+            let newGoal = shotLocation.checkShotLocation(image: rightHockeyNetImageView, shot: goal)
             
             GlobalVariables.theirShotsOnNet += 1
             GlobalVariables.theirGoals += 1
             
-            drawPuck.drawPuck(shot: goal, puckColour: UIColor.red.cgColor, puckSize: 10, imageView: rightHockeyNetImageView, shotNumber: String(GlobalVariables.theirShotsOnNet))
+            drawPuck.drawPuck(shot: newGoal, puckColour: UIColor.red.cgColor, puckSize: 10, imageView: rightHockeyNetImageView, shotNumber: String(GlobalVariables.theirShotsOnNet))
             
             let timeDifference = calculateDifferenceInTime(array: GlobalVariables.theirShotArray)
             
             let shotString = formatShotGoalPercentageAttributedString.formattedString(shots: GlobalVariables.theirShotsOnNet, goals: GlobalVariables.theirGoals, fontSize: 14)
             rightShotGoalPercentageLabel.attributedText = shotString
             
-            let shotInfo = ShotInfo(shotNumber: GlobalVariables.theirShotsOnNet, location: goal, timeOfShot: Date(), timeDifference: timeDifference, period: appDelegate.periodSelected! , result: .goal)
+            let shotInfo = ShotInfo(shotNumber: GlobalVariables.theirShotsOnNet, location: newGoal, timeOfShot: Date(), timeDifference: timeDifference, period: appDelegate.periodSelected! , result: .goal)
             
             GlobalVariables.theirShotArray.append(shotInfo)
             

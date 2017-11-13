@@ -28,7 +28,6 @@ class DrawPuckScaled {
         //you can change the stroke color
         shapeLayer.strokeColor = UIColor.white.cgColor
         
-        
         //you can change the line width
         shapeLayer.lineWidth = 0.5
         
@@ -41,11 +40,10 @@ class DrawPuckScaled {
         
         let labelSize:CGFloat = 18
         
-        //Add shot number
+        // Add shot number
         // Attributed string
         let myAttributes = [
             NSAttributedStringKey.font: UIFont.systemFont(ofSize: 12, weight: .thin) ,
-//            NSAttributedStringKey.font: UIFont(name: "HelveticaNeue-Thin", size: 12.0)! ,
             NSAttributedStringKey.foregroundColor: UIColor.white
         ]
         
@@ -61,9 +59,6 @@ class DrawPuckScaled {
         myTextLayer.frame         = CGRect(x: location.x - (labelSize / 2) , y: location.y - (labelSize / 2) + 1.5 , width: labelSize, height: labelSize)
         myTextLayer.alignmentMode = kCAAlignmentCenter
         myTextLayer.contentsScale = UIScreen.main.scale
-//        myTextLayer.backgroundColor = UIColor.blue.cgColor  //testing
-        
-//        myTextLayer.transform = CATransform3DMakeScale(width, height, 0.0)
         
         shapeLayer.addSublayer(myTextLayer)
         //view.layer.addSublayer(myTextLayer)
