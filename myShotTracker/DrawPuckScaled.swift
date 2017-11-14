@@ -42,6 +42,7 @@ class DrawPuckScaled {
         
         // Add shot number
         // Attributed string
+        
         let myAttributes = [
             NSAttributedStringKey.font: UIFont.systemFont(ofSize: 12, weight: .thin) ,
             NSAttributedStringKey.foregroundColor: UIColor.white
@@ -50,8 +51,8 @@ class DrawPuckScaled {
         let myAttributedString = NSAttributedString(string: shotNumber, attributes: myAttributes )
         
         // Text layer
-        let myTextLayer           = CATextLayer()
-        myTextLayer.string        = myAttributedString
+        let myTextLayer    = CATextLayer()
+        myTextLayer.string = myAttributedString
         
         //y = left <-> right
         //x = up <-> down
@@ -61,7 +62,6 @@ class DrawPuckScaled {
         myTextLayer.contentsScale = UIScreen.main.scale
         
         shapeLayer.addSublayer(myTextLayer)
-        //view.layer.addSublayer(myTextLayer)
         
     } //drawPuck
 }

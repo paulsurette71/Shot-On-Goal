@@ -55,6 +55,8 @@ class MainView: UIView {
     let resetAlert                               = ResetAlert()
     let updateGame                               = UpdateGame()
     let shotLocation                             = ShotLocation()
+    let tapHintPopover                           = TapHintPopover()
+    let hasThereBeenOneShot                      = HasThereBeenOneShot()
     
     //CoreData
     var managedContext: NSManagedObjectContext!
@@ -70,7 +72,7 @@ class MainView: UIView {
     var periodSelected: storeScoreClockDelegate?
     var lastShot:            storeLastShotsDelegate?
     
-    let puck = 10
+    let puck = CGFloat(10)
     
     //IBAction
     @IBAction func leftGoalie(_ sender: UIButton) {
@@ -163,9 +165,15 @@ class MainView: UIView {
         let shot = shot.location(ofTouch: 0, in: leftHockeyNetImageView)
         
         let newShot = shotLocation.checkShotLocation(image: leftHockeyNetImageView, shot: shot)
-
         
-        drawPuck.drawPuck(shot: newShot, puckColour: UIColor.black.cgColor, puckSize: 10, imageView: leftHockeyNetImageView, shotNumber: String(GlobalVariables.myShotsOnNet))
+        drawPuck.drawPuck(shot: newShot, puckColour: UIColor.black.cgColor, puckSize: puck, imageView: leftHockeyNetImageView, shotNumber: String(GlobalVariables.myShotsOnNet))
+
+        if  !hasThereBeenOneShot.firstShotOnNet() {
+            
+            //show Popover
+            tapHintPopover.showTapHintPopoverOnFirstShot(shot: newShot, image: leftHockeyNetImageView, delegate: self)
+            
+        }
         
         let timeDifference = calculateDifferenceInTime(array: GlobalVariables.myShotArray)
         
@@ -212,8 +220,15 @@ class MainView: UIView {
         let shot = shot.location(ofTouch: 0, in: rightHockeyNetImageView)
         let newShot = shotLocation.checkShotLocation(image: rightHockeyNetImageView, shot: shot)
         
-        drawPuck.drawPuck(shot: newShot, puckColour: UIColor.black.cgColor, puckSize: 10, imageView: rightHockeyNetImageView, shotNumber: String(GlobalVariables.theirShotsOnNet))
+        drawPuck.drawPuck(shot: newShot, puckColour: UIColor.black.cgColor, puckSize: puck, imageView: rightHockeyNetImageView, shotNumber: String(GlobalVariables.theirShotsOnNet))
         
+        if  !hasThereBeenOneShot.firstShotOnNet() {
+            
+            //show Popover
+            tapHintPopover.showTapHintPopoverOnFirstShot(shot: newShot, image: rightHockeyNetImageView, delegate: self)
+            
+        }
+
         let timeDifference = calculateDifferenceInTime(array: GlobalVariables.theirShotArray)
         
         let shotString = formatShotGoalPercentageAttributedString.formattedString(shots: GlobalVariables.theirShotsOnNet, goals: GlobalVariables.theirGoals, fontSize: 14)
@@ -245,8 +260,15 @@ class MainView: UIView {
             GlobalVariables.myShotsOnNet += 1
             GlobalVariables.myGoals += 1
             
-            drawPuck.drawPuck(shot: newGoal, puckColour: UIColor.red.cgColor, puckSize: 10, imageView: leftHockeyNetImageView, shotNumber: String(GlobalVariables.myShotsOnNet))
+            drawPuck.drawPuck(shot: newGoal, puckColour: UIColor.red.cgColor, puckSize: puck, imageView: leftHockeyNetImageView, shotNumber: String(GlobalVariables.myShotsOnNet))
             
+            if  !hasThereBeenOneShot.firstShotOnNet() {
+                
+                //show Popover
+                tapHintPopover.showTapHintPopoverOnFirstShot(shot: newGoal, image: leftHockeyNetImageView, delegate: self)
+                
+            }
+
             let timeDifference = calculateDifferenceInTime(array: GlobalVariables.myShotArray)
             
             let shotString = formatShotGoalPercentageAttributedString.formattedString(shots: GlobalVariables.myShotsOnNet, goals: GlobalVariables.myGoals, fontSize: 14)
@@ -279,8 +301,15 @@ class MainView: UIView {
             GlobalVariables.theirShotsOnNet += 1
             GlobalVariables.theirGoals += 1
             
-            drawPuck.drawPuck(shot: newGoal, puckColour: UIColor.red.cgColor, puckSize: 10, imageView: rightHockeyNetImageView, shotNumber: String(GlobalVariables.theirShotsOnNet))
+            drawPuck.drawPuck(shot: newGoal, puckColour: UIColor.red.cgColor, puckSize: puck, imageView: rightHockeyNetImageView, shotNumber: String(GlobalVariables.theirShotsOnNet))
             
+            if  !hasThereBeenOneShot.firstShotOnNet() {
+                
+                //show Popover
+                tapHintPopover.showTapHintPopoverOnFirstShot(shot: newGoal, image: rightHockeyNetImageView, delegate: self)
+                
+            }
+
             let timeDifference = calculateDifferenceInTime(array: GlobalVariables.theirShotArray)
             
             let shotString = formatShotGoalPercentageAttributedString.formattedString(shots: GlobalVariables.theirShotsOnNet, goals: GlobalVariables.theirGoals, fontSize: 14)
@@ -298,3 +327,13 @@ class MainView: UIView {
         }
     }
 }
+
+
+extension MainView: UIPopoverPresentationControllerDelegate {
+    
+    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+        
+        return .none
+    }
+} //extension
+

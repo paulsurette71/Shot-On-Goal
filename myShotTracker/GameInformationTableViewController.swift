@@ -210,17 +210,15 @@ class GameInformationTableViewController: UITableViewController {
         
         let cell = tableView.cellForRow(at: indexPath) as! GameInformationTableViewCell
         
-        if cell.checkMarkImageView.isHidden {
+        if GlobalVariables.myShotsOnNet > 0 || GlobalVariables.theirShotsOnNet > 0 {
             
-            if appDelegate.leftGoalie != nil || appDelegate.rightGoalie != nil {
+            //show Alert
+            thereAppearsToBe.aGameInProgress(viewController: self)
+            
+        } else { //if GlobalVariables.myShotsOnNet
+            
+            if cell.checkMarkImageView.isHidden {
                 
-                if GlobalVariables.myShotsOnNet > 0 || GlobalVariables.theirShotsOnNet > 0 {
-                    
-                    thereAppearsToBe.aGameInProgress(viewController: self, tableView: tableView, indexPath: indexPath)
-                    
-                }
-            }
-            
                 cell.checkMarkImageView.isHidden = false
                 
                 selectedRow = indexPath
@@ -229,15 +227,14 @@ class GameInformationTableViewController: UITableViewController {
                 
                 currentGameDelegate?.storeCurrentGame(currentGame: selectedGame!)
                 
-            
-            
-        } else {
-            
-            cell.checkMarkImageView.isHidden = true
-            
-            selectedRow = nil
-            
-            appDelegate.currentGame = nil
+            } else {
+                
+                cell.checkMarkImageView.isHidden = true
+                
+                selectedRow = nil
+                
+                appDelegate.currentGame = nil
+            }
         }
         
         //reloading the table will get rid of the checkmark if already selected.

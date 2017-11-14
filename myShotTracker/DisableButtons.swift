@@ -13,6 +13,8 @@ class DisableButtons {
     
     func disableButtons(mainView:MainView) {
         
+        print("class->DisableButtons->disableButtons")
+        
         GlobalVariables.didDisableButtons = true
         
         //Disable all left buttons on screen
@@ -20,7 +22,6 @@ class DisableButtons {
         mainView.leftResetButton.isEnabled = false
         
         mainView.leftPeriodButton.isEnabled = false
-//        mainView.leftPeriodButton.setImage(UIImage(named: "options 1st period disabled cell"), for: .disabled)
         
         mainView.leftShotDetailsButton.isEnabled = false
         mainView.leftHockeyNetImageView.isUserInteractionEnabled = false
@@ -30,7 +31,6 @@ class DisableButtons {
         mainView.rightResetButton.isEnabled = false
         
         mainView.rightPeriodButton.isEnabled = false
-//        mainView.rightPeriodButton.setImage(UIImage(named: "options footer 1st period disabled"), for: .disabled)
         
         mainView.rightShotDetailsButton.isEnabled = false
         mainView.rightHockeyNetImageView.isUserInteractionEnabled = false

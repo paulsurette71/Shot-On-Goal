@@ -31,9 +31,17 @@ class EnableButtons {
             mainView.leftResetButton.isEnabled = true
             
             mainView.leftPeriodButton.isEnabled = true
-
+            
             mainView.leftHockeyNetImageView.isUserInteractionEnabled = true
             
+        } else {
+            
+            //Enable all left buttons on screen
+            mainView.leftResetButton.isEnabled = false
+            
+            mainView.leftPeriodButton.isEnabled = false
+            
+            mainView.leftHockeyNetImageView.isUserInteractionEnabled = false
         }
         
         if (appDelegate.rightGoalie != nil) {
@@ -49,6 +57,16 @@ class EnableButtons {
             mainView.rightPeriodButton.isEnabled = true
             
             mainView.rightHockeyNetImageView.isUserInteractionEnabled = true            
+            
+        } else {
+            
+            //Disable all right buttons on screen
+            mainView.rightResetButton.isEnabled = false
+            
+            mainView.rightPeriodButton.isEnabled = false
+            
+            mainView.rightHockeyNetImageView.isUserInteractionEnabled = false
+            
         }
         
     }  //enableButtons

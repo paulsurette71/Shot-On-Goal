@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CFBundleVersion</key>
-	<string>2</string>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>Save Images to Photo Library</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -20,10 +16,14 @@
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
 	<string>2.0.0</string>
+	<key>CFBundleVersion</key>
+	<string>4</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>Goalie Head Shots</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Save Images to Photo Library</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Goalie Head Shots</string>
 	<key>UILaunchStoryboardName</key>

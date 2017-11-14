@@ -67,6 +67,8 @@
 		75D580F01F9F7E57009FF25B /* GoalieDetailsAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D580EF1F9F7E57009FF25B /* GoalieDetailsAttributedString.swift */; };
 		75D582771E7D76390092034F /* ImportTestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D582761E7D76390092034F /* ImportTestData.swift */; };
 		75D582791E7DC7620092034F /* IsAppAlreadyLaunchedOnce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D582781E7DC7620092034F /* IsAppAlreadyLaunchedOnce.swift */; };
+		75DC460A1FBB5B6F005A06F4 /* TapHintPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DC46091FBB5B6F005A06F4 /* TapHintPopover.swift */; };
+		75DC460C1FBB5E35005A06F4 /* HasThereBeenOneShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DC460B1FBB5E35005A06F4 /* HasThereBeenOneShot.swift */; };
 		75E2AA191E9D6DEC007D4B11 /* GameInformation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E2AA131E9D6DEC007D4B11 /* GameInformation+CoreDataClass.swift */; };
 		75E2AA1A1E9D6DEC007D4B11 /* GameInformation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E2AA141E9D6DEC007D4B11 /* GameInformation+CoreDataProperties.swift */; };
 		75E2AA1B1E9D6DEC007D4B11 /* GoalieInformation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E2AA151E9D6DEC007D4B11 /* GoalieInformation+CoreDataClass.swift */; };
@@ -146,6 +148,8 @@
 		75D580EF1F9F7E57009FF25B /* GoalieDetailsAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalieDetailsAttributedString.swift; sourceTree = "<group>"; };
 		75D582761E7D76390092034F /* ImportTestData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportTestData.swift; sourceTree = "<group>"; };
 		75D582781E7DC7620092034F /* IsAppAlreadyLaunchedOnce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsAppAlreadyLaunchedOnce.swift; sourceTree = "<group>"; };
+		75DC46091FBB5B6F005A06F4 /* TapHintPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapHintPopover.swift; sourceTree = "<group>"; };
+		75DC460B1FBB5E35005A06F4 /* HasThereBeenOneShot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasThereBeenOneShot.swift; sourceTree = "<group>"; };
 		75E2AA131E9D6DEC007D4B11 /* GameInformation+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "GameInformation+CoreDataClass.swift"; path = "../GameInformation+CoreDataClass.swift"; sourceTree = "<group>"; };
 		75E2AA141E9D6DEC007D4B11 /* GameInformation+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "GameInformation+CoreDataProperties.swift"; path = "../GameInformation+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		75E2AA151E9D6DEC007D4B11 /* GoalieInformation+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "GoalieInformation+CoreDataClass.swift"; path = "../GoalieInformation+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -306,6 +310,8 @@
 				7593F43A1FB689BD006DEE30 /* ChangeGoalieAlert.swift */,
 				756CE6F71FB7BAFB002D5007 /* ThereAppearsToBe.swift */,
 				75A262051FB9D98C00EDD3F6 /* ShotLocation.swift */,
+				75DC46091FBB5B6F005A06F4 /* TapHintPopover.swift */,
+				75DC460B1FBB5E35005A06F4 /* HasThereBeenOneShot.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -464,6 +470,7 @@
 				75A262061FB9D98C00EDD3F6 /* ShotLocation.swift in Sources */,
 				75A13E3A1E6E05EF00DCB968 /* GameInformationTableViewCell.swift in Sources */,
 				759F68491E7C759600BB1183 /* ShareAction.swift in Sources */,
+				75DC460C1FBB5E35005A06F4 /* HasThereBeenOneShot.swift in Sources */,
 				75D582771E7D76390092034F /* ImportTestData.swift in Sources */,
 				7504DA861F8D5C3A00D31E06 /* ShotInformationTableViewCell.swift in Sources */,
 				75E2AA1B1E9D6DEC007D4B11 /* GoalieInformation+CoreDataClass.swift in Sources */,
@@ -477,6 +484,7 @@
 				7510B8161E53587C0079D83F /* CurrentGameDelegate.swift in Sources */,
 				75D582791E7DC7620092034F /* IsAppAlreadyLaunchedOnce.swift in Sources */,
 				758B2E6A1FA8EAE900A9926B /* EnableDisableButtons.swift in Sources */,
+				75DC460A1FBB5B6F005A06F4 /* TapHintPopover.swift in Sources */,
 				75F301581FA7B5E900666918 /* RightGoalieIndexPathDelegate.swift in Sources */,
 				75D185891E95805B002400F2 /* ScoreClockPopoverViewController.swift in Sources */,
 				756291071F9FDAC2009A9ACD /* ShotDetailsTableViewController.swift in Sources */,

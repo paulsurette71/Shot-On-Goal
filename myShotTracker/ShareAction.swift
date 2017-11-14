@@ -79,7 +79,9 @@ class ShareAction {
         
         //Apply the CAShapeLayer to the UIImage
         //        UIGraphicsBeginImageContext(CGSize(width: hockeyNetImageView.frame.width, height: hockeyNetImageView.frame.height))
-        UIGraphicsBeginImageContext(CGSize(width: 340, height: 200))
+        //        UIGraphicsBeginImageContext(CGSize(width: 340, height: 200))
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 340, height: 200), false, 1.0)
+        
         
         let context: CGContext = UIGraphicsGetCurrentContext()!
         hockeyNetImageView.layer.render(in: context)
@@ -89,12 +91,12 @@ class ShareAction {
         
         //Resize the image
         let size = (img.size).applying(CGAffineTransform(scaleX: 1.0, y: 1.0))
-        print("size \(size)")
         
         let hasAlpha = true
         let scale: CGFloat = 0.0
         
         UIGraphicsBeginImageContextWithOptions((img.size), !hasAlpha, scale)
+        
         img.draw(in: CGRect(origin: CGPoint(x: 0, y: 0), size: size))
         
         let scaleImage = UIGraphicsGetImageFromCurrentImageContext()
