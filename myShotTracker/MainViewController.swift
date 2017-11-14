@@ -62,10 +62,14 @@ class MainViewController: UIViewController {
     var storeImageSize:      getMainImageSizeDelegate?
     var lastShot:            storeLastShotsDelegate?
     
+    
     @IBOutlet weak var scrollView: UIScrollView!
     
     //App Delegate
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+    //classes
+    let goFetch = GoFetch()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,16 +79,16 @@ class MainViewController: UIViewController {
         
         mainView = UINib(nibName: "MainView", bundle: nil).instantiate(withOwner: nil, options: nil).first as? MainView
         
-//        let isAppAlreadyLaunchedOnce = IsAppAlreadyLaunchedOnce()
-//        let importTestData           = ImportTestData()
-//        
-//        if !isAppAlreadyLaunchedOnce.isAppAlreadyLaunchedOnce() {
-//            
-//            //Import Test data
-//            importTestData.importGoalies()
-//            
-//        }
-        
+        //        let isAppAlreadyLaunchedOnce = IsAppAlreadyLaunchedOnce()
+        //        let importTestData           = ImportTestData()
+        //
+        //        if !isAppAlreadyLaunchedOnce.isAppAlreadyLaunchedOnce() {
+        //
+        //            //Import Test data
+        //            importTestData.importGoalies()
+        //
+        //        }
+                
         //set the period
         periodSelected?.storeScoreClock(periodSelected: .first)
         
@@ -95,6 +99,21 @@ class MainViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        //Check to see if there are any goalies, to enable button
+        let result = goFetch.fetchNumberOfGoalies(managedContext: managedContext)
+        
+        if result == 0 {
+            
+            mainView?.leftGoalieButton.isEnabled = false
+            mainView?.rightGoalieButton.isEnabled = false
+            
+        } else {
+            
+            mainView?.leftGoalieButton.isEnabled = true
+            mainView?.rightGoalieButton.isEnabled = true
+            
+        }
         
         //Hide the Navigation Bar
         self.navigationController?.setNavigationBarHidden(true, animated: true)

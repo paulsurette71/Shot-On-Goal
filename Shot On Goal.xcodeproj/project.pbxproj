@@ -20,6 +20,7 @@
 		7510B8161E53587C0079D83F /* CurrentGameDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7510B8151E53587C0079D83F /* CurrentGameDelegate.swift */; };
 		751522AA1F93ABE00086E9C1 /* EnableButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751522A91F93ABE00086E9C1 /* EnableButtons.swift */; };
 		751522AC1F93AE2D0086E9C1 /* DisableButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751522AB1F93AE2D0086E9C1 /* DisableButtons.swift */; };
+		7516E6F31FBB8DB30016B741 /* Shot_On_GoalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7516E6F21FBB8DB30016B741 /* Shot_On_GoalUITests.swift */; };
 		7517B84A1FAFBB6300B2364F /* GoFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7517B8491FAFBB6300B2364F /* GoFetch.swift */; };
 		751D3E531FA4216F0047910A /* GoalieInformationPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751D3E521FA4216F0047910A /* GoalieInformationPopover.swift */; };
 		751D3E561FA42CB90047910A /* ShotDetailsPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751D3E551FA42CB90047910A /* ShotDetailsPopover.swift */; };
@@ -84,6 +85,16 @@
 		75FC31FB1FA3F7960062FC07 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FC31FA1FA3F7960062FC07 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		7516E6F51FBB8DB30016B741 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 755FE0FD1E37BDC0006FC1FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 755FE1041E37BDC0006FC1FD;
+			remoteInfo = "Shot On Goal";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		7504DA7F1F8D5C3A00D31E06 /* ShotInformationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotInformationTableViewCell.swift; sourceTree = "<group>"; };
 		7504DA801F8D5C3A00D31E06 /* ShotInformationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShotInformationTableViewCell.xib; sourceTree = "<group>"; };
@@ -97,6 +108,9 @@
 		7510B8151E53587C0079D83F /* CurrentGameDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentGameDelegate.swift; sourceTree = "<group>"; };
 		751522A91F93ABE00086E9C1 /* EnableButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnableButtons.swift; sourceTree = "<group>"; };
 		751522AB1F93AE2D0086E9C1 /* DisableButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisableButtons.swift; sourceTree = "<group>"; };
+		7516E6F01FBB8DB30016B741 /* Shot On GoalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Shot On GoalUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7516E6F21FBB8DB30016B741 /* Shot_On_GoalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shot_On_GoalUITests.swift; sourceTree = "<group>"; };
+		7516E6F41FBB8DB30016B741 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7517B8491FAFBB6300B2364F /* GoFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoFetch.swift; sourceTree = "<group>"; };
 		751D3E521FA4216F0047910A /* GoalieInformationPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalieInformationPopover.swift; sourceTree = "<group>"; };
 		751D3E551FA42CB90047910A /* ShotDetailsPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotDetailsPopover.swift; sourceTree = "<group>"; };
@@ -167,6 +181,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7516E6ED1FBB8DB30016B741 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		755FE1021E37BDC0006FC1FD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -207,6 +228,15 @@
 			name = "Goalie Flow";
 			sourceTree = "<group>";
 		};
+		7516E6F11FBB8DB30016B741 /* Shot On GoalUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7516E6F21FBB8DB30016B741 /* Shot_On_GoalUITests.swift */,
+				7516E6F41FBB8DB30016B741 /* Info.plist */,
+			);
+			path = "Shot On GoalUITests";
+			sourceTree = "<group>";
+		};
 		751D3E541FA4274E0047910A /* Main Flow */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				755FE1071E37BDC0006FC1FD /* myShotTracker */,
+				7516E6F11FBB8DB30016B741 /* Shot On GoalUITests */,
 				755FE1061E37BDC0006FC1FD /* Products */,
 				37676BEEE8EF5B8301C7B5E5 /* Frameworks */,
 			);
@@ -231,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				755FE1051E37BDC0006FC1FD /* Shot On Goal.app */,
+				7516E6F01FBB8DB30016B741 /* Shot On GoalUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -387,6 +419,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7516E6EF1FBB8DB30016B741 /* Shot On GoalUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7516E6F71FBB8DB30016B741 /* Build configuration list for PBXNativeTarget "Shot On GoalUITests" */;
+			buildPhases = (
+				7516E6EC1FBB8DB30016B741 /* Sources */,
+				7516E6ED1FBB8DB30016B741 /* Frameworks */,
+				7516E6EE1FBB8DB30016B741 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7516E6F61FBB8DB30016B741 /* PBXTargetDependency */,
+			);
+			name = "Shot On GoalUITests";
+			productName = "Shot On GoalUITests";
+			productReference = 7516E6F01FBB8DB30016B741 /* Shot On GoalUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		755FE1041E37BDC0006FC1FD /* Shot On Goal */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 755FE1171E37BDC0006FC1FD /* Build configuration list for PBXNativeTarget "Shot On Goal" */;
@@ -410,10 +460,16 @@
 		755FE0FD1E37BDC0006FC1FD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0820;
+				LastSwiftUpdateCheck = 0910;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Surette, Paul";
 				TargetAttributes = {
+					7516E6EF1FBB8DB30016B741 = {
+						CreatedOnToolsVersion = 9.1;
+						DevelopmentTeam = KTQBE53LG7;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 755FE1041E37BDC0006FC1FD;
+					};
 					755FE1041E37BDC0006FC1FD = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 28DUX73466;
@@ -436,11 +492,19 @@
 			projectRoot = "";
 			targets = (
 				755FE1041E37BDC0006FC1FD /* Shot On Goal */,
+				7516E6EF1FBB8DB30016B741 /* Shot On GoalUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7516E6EE1FBB8DB30016B741 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		755FE1031E37BDC0006FC1FD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -461,6 +525,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7516E6EC1FBB8DB30016B741 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7516E6F31FBB8DB30016B741 /* Shot_On_GoalUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		755FE1011E37BDC0006FC1FD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -535,6 +607,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		7516E6F61FBB8DB30016B741 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 755FE1041E37BDC0006FC1FD /* Shot On Goal */;
+			targetProxy = 7516E6F51FBB8DB30016B741 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		755FE10C1E37BDC0006FC1FD /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -547,6 +627,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		7516E6F81FBB8DB30016B741 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KTQBE53LG7;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "Shot On GoalUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.paulsurette.Shot-On-GoalUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Shot On Goal";
+			};
+			name = Debug;
+		};
+		7516E6F91FBB8DB30016B741 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KTQBE53LG7;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "Shot On GoalUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.paulsurette.Shot-On-GoalUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Shot On Goal";
+			};
+			name = Release;
+		};
 		755FE1151E37BDC0006FC1FD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -694,6 +816,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7516E6F71FBB8DB30016B741 /* Build configuration list for PBXNativeTarget "Shot On GoalUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7516E6F81FBB8DB30016B741 /* Debug */,
+				7516E6F91FBB8DB30016B741 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		755FE1001E37BDC0006FC1FD /* Build configuration list for PBXProject "Shot On Goal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

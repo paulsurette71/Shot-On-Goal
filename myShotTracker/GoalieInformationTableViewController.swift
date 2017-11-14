@@ -38,6 +38,7 @@ class GoalieInformationTableViewController: UITableViewController {
     let backButtonNav           = BackButtonNav()
     let goalieDetailsAttributedString = GoalieDetailsAttributedString()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -118,29 +119,58 @@ class GoalieInformationTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "goalieCell", for: indexPath) as! GoalieInformationTableViewCell
+        let cell   = tableView.dequeueReusableCell(withIdentifier: "goalieCell", for: indexPath) as! GoalieInformationTableViewCell
+        let goalie = fetchedResultsController.object(at: indexPath)
         
-        //turn on/off checkmark
-        if indexPath == appDelegate.leftGoalieIndex {
-            cell.checkMarkImageView.isHidden = false
-            cell.checkMarkImageView.image = UIImage(named: "red checkmark 80x80")
-            roundedImageView.setRounded(image: cell.goalieHeadShotImageView, colour: "hockeyNetRed")
+        if  appDelegate.leftGoalie != nil || appDelegate.rightGoalie != nil {
             
-        } else if indexPath == appDelegate.rightGoalieIndex {
-            cell.checkMarkImageView.isHidden = false
-            cell.checkMarkImageView.image = UIImage(named: "blue checkmark 80x80")
-            roundedImageView.setRounded(image: cell.goalieHeadShotImageView, colour: "blue")
+            if goalie == appDelegate.leftGoalie {
+                
+                leftGoalieIndex?.storeLeftGoalieIndex(leftGoalieIndex: indexPath)
+                cell.checkMarkImageView.isHidden = false
+                cell.checkMarkImageView.image = UIImage(named: "red checkmark 80x80")
+                roundedImageView.setRounded(image: cell.goalieHeadShotImageView, colour: "hockeyNetRed")
+                
+            } else if goalie == appDelegate.rightGoalie {
+                
+                rightGoalieIndex?.storeRightGoalieIndex(rightGoalieIndex: indexPath)
+                cell.checkMarkImageView.isHidden = false
+                cell.checkMarkImageView.image = UIImage(named: "blue checkmark 80x80")
+                roundedImageView.setRounded(image: cell.goalieHeadShotImageView, colour: "blue")
+                
+            } else {
+                
+                cell.checkMarkImageView.isHidden = true
+                roundedImageView.setRounded(image: cell.goalieHeadShotImageView, colour: "black")
+            }
             
-        } else {
+        } else { //no goalies are selected
+            
             cell.checkMarkImageView.isHidden = true
             roundedImageView.setRounded(image: cell.goalieHeadShotImageView, colour: "black")
         }
+        
+        //turn on/off checkmark
+        //        if indexPath == appDelegate.leftGoalieIndex {
+        //            cell.checkMarkImageView.isHidden = false
+        //            cell.checkMarkImageView.image = UIImage(named: "red checkmark 80x80")
+        //            roundedImageView.setRounded(image: cell.goalieHeadShotImageView, colour: "hockeyNetRed")
+        //
+        //        } else if indexPath == appDelegate.rightGoalieIndex {
+        //            cell.checkMarkImageView.isHidden = false
+        //            cell.checkMarkImageView.image = UIImage(named: "blue checkmark 80x80")
+        //            roundedImageView.setRounded(image: cell.goalieHeadShotImageView, colour: "blue")
+        //
+        //        } else {
+        //            cell.checkMarkImageView.isHidden = true
+        //            roundedImageView.setRounded(image: cell.goalieHeadShotImageView, colour: "black")
+        //        }
         
         cell.selectionStyle = .none
         
         //        roundedImageView.setRounded(image: cell.goalieHeadShotImageView, colour: "hockeyNetRed")
         
-        let goalie        = fetchedResultsController.object(at: indexPath)
+        
         let numberOfShots = fetchShots(indexPath: indexPath)
         
         cell.chevronButton.tag = indexPath.row
@@ -162,7 +192,6 @@ class GoalieInformationTableViewController: UITableViewController {
         cell.goalieHeadShotImageView.image = UIImage(data:goalie.goalieHeadShot! as Data,scale:1.0)
         
         cell.shotInformationLabel.attributedText = formatShotGoalPercentageAttributedString.formattedString(shots: Int(numberOfShots.shots)!, goals: Int(numberOfShots.goals)!, fontSize: 17)
-        
         
         return cell
     }
@@ -226,9 +255,6 @@ class GoalieInformationTableViewController: UITableViewController {
         }
     }
     
-    
-    
-    
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
         
         //Don't allow deletion of cell that has a goalie in it.
@@ -279,7 +305,6 @@ extension GoalieInformationTableViewController: NSFetchedResultsControllerDelega
         case .insert:
             
             tableView?.insertRows(at: [newIndexPath!], with: .automatic)
-            
             tableView?.reloadData()  //Update Goalie Header count
             
         case .delete:
@@ -311,6 +336,7 @@ extension GoalieInformationTableViewController: NSFetchedResultsControllerDelega
         
         switch type {
         case .insert:
+            print("->> 2. Insert")
             tableView?.insertSections(indexSet, with: .fade)
             
         case .delete:

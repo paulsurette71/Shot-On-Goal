@@ -98,4 +98,27 @@ class GoFetch {
         
     }  //func fectchPeriods
     
+    func fetchNumberOfGoalies(managedContext:NSManagedObjectContext) -> Int {
+        
+        var numberOfGoalies = 0
+        
+        //select ZSHOTPERIOD from ZSHOTDETAILS where ZGAMERELATIONSHIP = 1 and ZGOALIERELATIONSHIP =1 group by ZSHOTPERIOD;
+        
+        let fetchRequest        = NSFetchRequest<NSFetchRequestResult>(entityName: "GoalieInformation")
+        fetchRequest.resultType = .dictionaryResultType
+        
+        do {
+            
+            let numberOfPeriodsResults = try managedContext.fetch(fetchRequest)
+            numberOfGoalies = numberOfPeriodsResults.count
+            
+        } catch let error as NSError {
+            
+            print("GoFetch|fetchNumberOfGoalies: Could not fetch. \(error), \(error.userInfo)")
+        }
+        
+        return numberOfGoalies
+
+    }
+    
 }  //GoFetch
