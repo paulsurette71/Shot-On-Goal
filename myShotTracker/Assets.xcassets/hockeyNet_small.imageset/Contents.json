@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "hockeyNet_375x221.png",
+      "filename" : "hockeyNet_small 1x.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "hockeyNet_750x442.png",
+      "filename" : "hockeyNet_small 2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "hockeyNet_1125x663.png",
+      "filename" : "hockeyNetsmall 3x.png",
       "scale" : "3x"
     }
   ],
