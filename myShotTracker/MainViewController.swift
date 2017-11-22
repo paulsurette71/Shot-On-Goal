@@ -79,15 +79,15 @@ class MainViewController: UIViewController {
         
         mainView = UINib(nibName: "MainView", bundle: nil).instantiate(withOwner: nil, options: nil).first as? MainView
         
-        //        let isAppAlreadyLaunchedOnce = IsAppAlreadyLaunchedOnce()
-        //        let importTestData           = ImportTestData()
-        //
-        //        if !isAppAlreadyLaunchedOnce.isAppAlreadyLaunchedOnce() {
-        //
-        //            //Import Test data
-        //            importTestData.importGoalies()
-        //
-        //        }
+//                let isAppAlreadyLaunchedOnce = IsAppAlreadyLaunchedOnce()
+//                let importTestData           = ImportTestData()
+//        
+//                if !isAppAlreadyLaunchedOnce.isAppAlreadyLaunchedOnce() {
+//        
+//                    //Import Test data
+//                    importTestData.importGoalies()
+//        
+//                }
                 
         //set the period
         periodSelected?.storeScoreClock(periodSelected: .first)

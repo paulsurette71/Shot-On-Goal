@@ -123,10 +123,17 @@ class GoalieGameDetailTableViewController: UITableViewController {
         //Set Nav back button
         backButtonNav.setBackButtonToBack(navItem: navigationItem)
         
+        //This is used to pass the date to the periodGameDetailViewController for the title. - November 21st, 2017
+        let formattedDate = (resultsArray[indexPath.row] as AnyObject).value(forKey: "gameRelationship.gameDateTime")
+        let gameDate = convertDate.convertDate(date: (formattedDate)! as! NSDate)
+        let vsCity = (resultsArray[indexPath.row] as AnyObject).value(forKey: "gameRelationship.oppositionCity")
+        let vsTeamName = (resultsArray[indexPath.row] as AnyObject).value(forKey: "gameRelationship.oppositionTeamName")
+        
+        let gameDateStringForTitle = gameDateAttribString.gameDateAtrib(curentDate: gameDate, oppositionCity: vsCity as! String, oppositionTeamName: vsTeamName as! String)
         
         let periodGameDetailViewController = storyboard?.instantiateViewController(withIdentifier: "PeriodGameDetailViewController") as! PeriodGameDetailViewController
         
-        periodGameDetailViewController.dateStringForTitle = returnString
+        periodGameDetailViewController.dateStringForTitle = gameDateStringForTitle
         periodGameDetailViewController.goalie             = goalie
         periodGameDetailViewController.managedContext     = managedContext
         periodGameDetailViewController.shotInformation    = shotInformation.shotInformationLabel.attributedText as! NSMutableAttributedString
