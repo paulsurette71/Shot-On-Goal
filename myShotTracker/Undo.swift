@@ -74,8 +74,19 @@ class UndoLastShot {
                 //Check to see if the last shot was a shot or goal.
                 let lastShot = (GlobalVariables.theirShotArray.last)?.result
                 
+                //missing
+                managedContext.delete((appDelegate.lastShot?.last)!)
+                
+                do {
+                    try managedContext.save()
+                } catch let error as NSError {
+                    print("ViewController|updateCurrentGameWithShots: Fetch error: \(error) description: \(error.userInfo)")
+                }
+                
+                
                 //Delete last entry in shotArray
                 GlobalVariables.theirShotArray.removeLast()
+                appDelegate.lastShot?.removeLast()  //missing
                 
                 view.rightHockeyNetImageView.layer.sublayers?.removeLast()
                 

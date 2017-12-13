@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, storeCurrentGameDelegate,
     var rightGoalieIndex: IndexPath?
     var periodSelected: Period?
     var lastShot: [ShotDetails]?
-    
+
     var currentGame: GameInformation?
     
     //getMainImageSizeDelegate Delegate
