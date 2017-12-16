@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_0" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -31,25 +31,31 @@
                             <constraint firstAttribute="height" constant="80" id="SxP-00-omw"/>
                         </constraints>
                     </imageView>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="P5A-6k-hMg" userLabel="Labels Stack View">
-                        <rect key="frame" x="165" y="20" width="545" height="54"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="-17" translatesAutoresizingMaskIntoConstraints="NO" id="P5A-6k-hMg" userLabel="Labels Stack View">
+                        <rect key="frame" x="165" y="2.5" width="545" height="90"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connor Surette #1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" preferredMaxLayoutWidth="250" translatesAutoresizingMaskIntoConstraints="NO" id="uKh-iU-JcZ">
-                                <rect key="frame" x="0.0" y="0.0" width="545" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connor Surret #1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" preferredMaxLayoutWidth="250" translatesAutoresizingMaskIntoConstraints="NO" id="uKh-iU-JcZ">
+                                <rect key="frame" x="0.0" y="0.0" width="148" height="41.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99/99/.999%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGb-fq-yek">
-                                <rect key="frame" x="0.0" y="24" width="545" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" identifier="shot info height" id="eYq-An-hBw"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Guelph Jr. Gryphons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxg-y0-JW3">
+                                <rect key="frame" x="0.0" y="24.5" width="154.5" height="41"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shots 34 Goals 3 .999#" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGb-fq-yek">
+                                <rect key="frame" x="0.0" y="48.5" width="210.5" height="41.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="90" id="0FC-xA-197"/>
+                        </constraints>
                     </stackView>
                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bTL-1z-s1H" userLabel="Right Buttons Stack View">
                         <rect key="frame" x="715" y="8" width="160" height="80"/>
@@ -71,6 +77,10 @@
                                 <state key="normal" image="chevron icon 80x80"/>
                             </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="MJo-lf-lq8" secondAttribute="trailing" id="HcS-ot-WMg"/>
+                            <constraint firstItem="Rp4-YA-AJQ" firstAttribute="leading" secondItem="bTL-1z-s1H" secondAttribute="leading" id="kaf-uD-3x1"/>
+                        </constraints>
                     </stackView>
                 </subviews>
                 <constraints>
@@ -91,6 +101,7 @@
                 <outlet property="detailsButton" destination="Rp4-YA-AJQ" id="fXX-V2-kXJ"/>
                 <outlet property="goalieHeadShotImageView" destination="Hht-vr-OHL" id="HNr-Yy-zz4"/>
                 <outlet property="goalieInformationLabel" destination="uKh-iU-JcZ" id="HZM-Fc-VqS"/>
+                <outlet property="goalieTeamInformation" destination="uxg-y0-JW3" id="WhI-P5-6In"/>
                 <outlet property="shotInformationLabel" destination="JGb-fq-yek" id="zgf-QT-WjS"/>
             </connections>
             <point key="canvasLocation" x="764.5" y="-56.5"/>

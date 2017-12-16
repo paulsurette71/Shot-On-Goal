@@ -193,6 +193,9 @@ class GoalieInformationTableViewController: UITableViewController {
         
         cell.shotInformationLabel.attributedText = formatShotGoalPercentageAttributedString.formattedString(shots: Int(numberOfShots.shots)!, goals: Int(numberOfShots.goals)!, fontSize: 17)
         
+        //added December 16th
+        cell.goalieTeamInformation.text = goalie.city! + " " + goalie.teamName!
+        
         return cell
     }
     

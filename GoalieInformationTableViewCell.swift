@@ -17,6 +17,8 @@ class GoalieInformationTableViewCell: UITableViewCell {
     @IBOutlet weak var goalieInformationLabel: UILabel!
     @IBOutlet weak var shotInformationLabel: UILabel!
     
+    @IBOutlet weak var goalieTeamInformation: UILabel!
+    
     //Button
     @IBOutlet weak var detailsButton: UIButton!
     @IBOutlet weak var chevronButton: UIButton!
