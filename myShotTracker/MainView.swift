@@ -70,7 +70,7 @@ class MainView: UIView {
     var leftGoalieIndex: storeLeftGoalieIndexPathDelegate?
     var rightGoalieIndex: storeRightGoalieIndexPathDelegate?
     var periodSelected: storeScoreClockDelegate?
-    var lastShot:            storeLastShotsDelegate?
+    var lastShot: storeLastShotsDelegate?
     
     let puck = CGFloat(10)
     
@@ -127,7 +127,6 @@ class MainView: UIView {
     
     
     @IBAction func leftUndo(_ sender: UIButton) {
-        
         
         undoLastShot.lastShotOnNet(view: self, button: sender, managedContext: managedContext)
         
@@ -188,7 +187,7 @@ class MainView: UIView {
         //Pass Delegates
         updateGame.lastShot = lastShot
         
-        updateGame.withCurrentShots(managedContext: managedContext, currentGame: appDelegate.currentGame!, goalie: appDelegate.leftGoalie!, shotArray: GlobalVariables.myShotArray)
+        updateGame.withMyCurrentShots(managedContext: managedContext, currentGame: appDelegate.currentGame!, goalie: appDelegate.leftGoalie!, shotArray: GlobalVariables.myShotArray)
         
     }
     
@@ -241,7 +240,7 @@ class MainView: UIView {
         //Pass Delegates
         updateGame.lastShot = lastShot
         
-        updateGame.withCurrentShots(managedContext: managedContext, currentGame: appDelegate.currentGame!, goalie: appDelegate.rightGoalie!, shotArray: GlobalVariables.theirShotArray)
+        updateGame.withTheirCurrentShots(managedContext: managedContext, currentGame: appDelegate.currentGame!, goalie: appDelegate.rightGoalie!, shotArray: GlobalVariables.theirShotArray)
         
     }
     
@@ -281,7 +280,7 @@ class MainView: UIView {
             //Pass Delegates
             updateGame.lastShot = lastShot
             
-            updateGame.withCurrentShots(managedContext: managedContext, currentGame: appDelegate.currentGame!, goalie: appDelegate.leftGoalie!, shotArray: GlobalVariables.myShotArray)
+            updateGame.withMyCurrentShots(managedContext: managedContext, currentGame: appDelegate.currentGame!, goalie: appDelegate.leftGoalie!, shotArray: GlobalVariables.myShotArray)
             
         }
     }
@@ -322,7 +321,7 @@ class MainView: UIView {
             //Pass Delegates
             updateGame.lastShot = lastShot
             
-            updateGame.withCurrentShots(managedContext: managedContext, currentGame: appDelegate.currentGame!, goalie: appDelegate.rightGoalie!, shotArray: GlobalVariables.theirShotArray)
+            updateGame.withTheirCurrentShots(managedContext: managedContext, currentGame: appDelegate.currentGame!, goalie: appDelegate.rightGoalie!, shotArray: GlobalVariables.theirShotArray)
             
         }
     }

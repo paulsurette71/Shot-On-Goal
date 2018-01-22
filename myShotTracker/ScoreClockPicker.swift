@@ -16,9 +16,7 @@ class ScoreClockPicker: UIPickerView {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
-        print("class->ScoreClockPicker->required init?")
-        
+            
         self.delegate   = self
         self.dataSource = self
         
@@ -94,5 +92,6 @@ extension ScoreClockPicker: UIPickerViewDelegate {
         return periodArray[row].rawValue
         
     }
+    
 }
 

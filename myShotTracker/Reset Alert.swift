@@ -23,8 +23,6 @@ class ResetAlert {
     
     func showAlert(mainView: MainView) {
         
-        print("class->ResetAlert->showAlert")
-        
         let alertController = UIAlertController(title: "Start a new game?", message: "Starting a new game will empty both nets, reset the period, goalies and game.", preferredStyle: .alert)
         
         let cancelAction = UIAlertAction(title: "No", style: .cancel) {

@@ -20,8 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, storeCurrentGameDelegate,
     var leftGoalieIndex: IndexPath?
     var rightGoalieIndex: IndexPath?
     var periodSelected: Period?
-    var lastShot: [ShotDetails]?
-
+//    var lastShot: [ShotDetails]?
+    var myLastShot: [ShotDetails]?
+    var theirLastShot: [ShotDetails]?
+    
     var currentGame: GameInformation?
     
     //getMainImageSizeDelegate Delegate
@@ -59,7 +61,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, storeCurrentGameDelegate,
         scrollViewController.storeImageSize      = self
         scrollViewController.lastShot            = self
         
-         //Game Tab
+        //Game Tab
         let gameNavigationController                           = rootViewController.viewControllers?[1] as! UINavigationController
         let gameInformationTableViewController                 = gameNavigationController.viewControllers[0] as! GameInformationTableViewController
         
@@ -143,17 +145,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, storeCurrentGameDelegate,
         
     }
     
-//    func storeLastRightShot(rightGoalieLastShot: ShotDetails) {
-//        self.rightGoalieLastShot = rightGoalieLastShot
-//        
-//    }
-//    
-//    func storeLastLeftShot(leftGoalieLastShot: ShotDetails) {
-//        self.leftGoalieLastShot = leftGoalieLastShot
-//        
+//    func storeLastShot(lastShot:[ShotDetails]) {
+//        self.lastShot = lastShot
 //    }
     
-    func storeLastShot(lastShot:[ShotDetails]) {
-        self.lastShot = lastShot
+    func storeMyLastShot(myLastShot:[ShotDetails]) {
+        self.myLastShot = myLastShot
+        
+    }
+    func storeTheirLastShot(theirLastShot:[ShotDetails]) {
+        self.theirLastShot = theirLastShot
+        
     }
 }

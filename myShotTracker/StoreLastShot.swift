@@ -10,5 +10,7 @@ import Foundation
 
 protocol storeLastShotsDelegate {
     
-    func storeLastShot(lastShot:[ShotDetails])
+//    func storeLastShot(lastShot:[ShotDetails])
+    func storeMyLastShot(myLastShot:[ShotDetails])
+    func storeTheirLastShot(theirLastShot:[ShotDetails])
 }

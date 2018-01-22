@@ -37,8 +37,6 @@ class GoalieGameDetailTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("2. viewDidLoad->GoalieGameDetailTableViewController")
-        
         //Setup Custom NIB
         let cellNib = UINib(nibName: "GameInformationTableViewCell", bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: "gameCell")
@@ -182,7 +180,7 @@ class GoalieGameDetailTableViewController: UITableViewController {
             
         } catch let error as NSError {
             
-            print("GoalieGameDetailTableViewController|fetchGameInformation: Could not fetch. \(error), \(error.userInfo)")
+            print("\(self) -> \(#function) \(error), \(error.userInfo)")
         }
         
         guard resultsArray.count != 0 else {
@@ -224,7 +222,7 @@ class GoalieGameDetailTableViewController: UITableViewController {
                 
             } catch let error as NSError {
                 
-                print("GoalieGameDetailTableViewController|fectchGoals: Could not fetch. \(error), \(error.userInfo)")
+                print("\(self) -> \(#function) \(error), \(error.userInfo)")
             }
         }
     }
@@ -255,7 +253,7 @@ class GoalieGameDetailTableViewController: UITableViewController {
                 
             } catch let error as NSError {
                 
-                print("GoalieGameDetailTableViewController|fectchShots: Could not fetch. \(error), \(error.userInfo)")
+                print("\(self) -> \(#function) \(error), \(error.userInfo)")
             }
         }
     }

@@ -15,9 +15,7 @@ class EnableButtons {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     func enableButtons(mainView:MainView) {
-        
-        print("class->EnableButtons->enableButtons")
-        
+                
         GlobalVariables.didDisableButtons = false
         
         if (appDelegate.leftGoalie != nil) {

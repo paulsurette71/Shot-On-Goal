@@ -14,8 +14,6 @@ class ShotDetailsPopover: UIViewController {
 
     func showShotDetails(view: MainView, sender: UIButton) {
         
-        print("class->ShotDetailsPopover->showShotDetails")
-        
         var rootViewController = UIApplication.shared.keyWindow?.rootViewController
         
         if let navigationController = rootViewController as? UINavigationController {

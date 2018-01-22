@@ -25,18 +25,18 @@ class UndoLastShot {
                 
                 //Check to see if the last shot was a shot or goal.
                 let lastShot = (GlobalVariables.myShotArray.last)?.result
-                
-                managedContext.delete((appDelegate.lastShot?.last)!)
+                                
+                managedContext.delete((appDelegate.myLastShot?.last)!)
                 
                 do {
                     try managedContext.save()
                 } catch let error as NSError {
-                    print("ViewController|updateCurrentGameWithShots: Fetch error: \(error) description: \(error.userInfo)")
+                    print("\(self) -> \(#function) \(error), \(error.userInfo)")
                 }
                 
                 //Delete last entry in shotArray
                 GlobalVariables.myShotArray.removeLast()
-                appDelegate.lastShot?.removeLast()
+                appDelegate.myLastShot?.removeLast()
                 
                 view.leftHockeyNetImageView.layer.sublayers?.removeLast()
                 
@@ -75,18 +75,17 @@ class UndoLastShot {
                 let lastShot = (GlobalVariables.theirShotArray.last)?.result
                 
                 //missing
-                managedContext.delete((appDelegate.lastShot?.last)!)
+                managedContext.delete((appDelegate.theirLastShot?.last)!)
                 
                 do {
                     try managedContext.save()
                 } catch let error as NSError {
-                    print("ViewController|updateCurrentGameWithShots: Fetch error: \(error) description: \(error.userInfo)")
+                    print("\(self) -> \(#function) \(error), \(error.userInfo)")
                 }
-                
                 
                 //Delete last entry in shotArray
                 GlobalVariables.theirShotArray.removeLast()
-                appDelegate.lastShot?.removeLast()  //missing
+                appDelegate.theirLastShot?.removeLast()  //missing
                 
                 view.rightHockeyNetImageView.layer.sublayers?.removeLast()
                 

@@ -12,9 +12,7 @@ import UIKit
 class ThereAppearsToBe {
     
     func aGameInProgress(viewController: UIViewController ) {
-        
-        print("class->ThereAppearsToBe->aGameInProgress")
-        
+                
         let alertController = UIAlertController(title: "Game already in Progress?", message: "To change the game, you have to reset from the Home tab.", preferredStyle: .alert)
         
         let okAction = UIAlertAction(title: "OK", style: .cancel) {

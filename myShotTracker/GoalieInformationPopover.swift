@@ -19,8 +19,6 @@ class GoalieInformationPopover: UIViewController  {
     
     func showGoalieInformation(view: MainView,  managedContext: NSManagedObjectContext, sender: UIButton!) {
         
-        print("class->GoalieInformationPopover->showGoalieInformation")
-        
         var rootViewController = UIApplication.shared.keyWindow?.rootViewController
         
         if let navigationController = rootViewController as? UINavigationController {

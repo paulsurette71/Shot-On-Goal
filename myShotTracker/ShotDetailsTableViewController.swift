@@ -19,8 +19,6 @@ class ShotDetailsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("viewDidLoad->ShotDetailsTableViewController")
-        
      }
     
     override func didReceiveMemoryWarning() {

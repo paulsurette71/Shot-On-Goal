@@ -53,7 +53,7 @@ class ImportTestData {
             try managedContext.save()
             
         } catch let error as NSError {
-            print("ImportTestData|importGoalies: Fetch error: \(error) description: \(error.userInfo)")
+            print("\(self) -> \(#function) \(error), \(error.userInfo)")
         }
         
         do {
@@ -88,7 +88,7 @@ class ImportTestData {
             try managedContext.save()
             
         } catch let error as NSError {
-            print("ImportTestData|importGoalies: Fetch error: \(error) description: \(error.userInfo)")
+            print("\(self) -> \(#function) \(error), \(error.userInfo)")
         }
         
         do {
@@ -123,7 +123,7 @@ class ImportTestData {
             try managedContext.save()
             
         } catch let error as NSError {
-            print("ImportTestData|importGoalies: Fetch error: \(error) description: \(error.userInfo)")
+            print("\(self) -> \(#function) \(error), \(error.userInfo)")
         }
         
         do {
@@ -158,7 +158,7 @@ class ImportTestData {
             try managedContext.save()
             
         } catch let error as NSError {
-            print("ImportTestData|importGoalies: Fetch error: \(error) description: \(error.userInfo)")
+            print("\(self) -> \(#function) \(error), \(error.userInfo)")
         }
         
         do {
@@ -193,7 +193,7 @@ class ImportTestData {
             try managedContext.save()
             
         } catch let error as NSError {
-            print("ImportTestData|importGoalies: Fetch error: \(error) description: \(error.userInfo)")
+            print("\(self) -> \(#function) \(error), \(error.userInfo)")
         }
         
         do {
@@ -228,7 +228,7 @@ class ImportTestData {
             try managedContext.save()
             
         } catch let error as NSError {
-            print("ImportTestData|importGoalies: Fetch error: \(error) description: \(error.userInfo)")
+            print("\(self) -> \(#function) \(error), \(error.userInfo)")
         }
         
         do {
@@ -263,7 +263,7 @@ class ImportTestData {
             try managedContext.save()
             
         } catch let error as NSError {
-            print("ImportTestData|importGoalies: Fetch error: \(error) description: \(error.userInfo)")
+            print("\(self) -> \(#function) \(error), \(error.userInfo)")
         }
         
         do {
@@ -298,7 +298,7 @@ class ImportTestData {
             try managedContext.save()
             
         } catch let error as NSError {
-            print("ImportTestData|importGoalies: Fetch error: \(error) description: \(error.userInfo)")
+            print("\(self) -> \(#function) \(error), \(error.userInfo)")
         }
         
         do {
@@ -333,7 +333,7 @@ class ImportTestData {
             try managedContext.save()
             
         } catch let error as NSError {
-            print("ImportTestData|importGoalies: Fetch error: \(error) description: \(error.userInfo)")
+            print("\(self) -> \(#function) \(error), \(error.userInfo)")
         }
         
         do {
@@ -368,7 +368,7 @@ class ImportTestData {
             try managedContext.save()
             
         } catch let error as NSError {
-            print("ImportTestData|importGoalies: Fetch error: \(error) description: \(error.userInfo)")
+            print("\(self) -> \(#function) \(error), \(error.userInfo)")
         }
         
         do {
@@ -392,7 +392,7 @@ class ImportTestData {
             try managedContext.save()
             
         } catch let error as NSError {
-            print("ImportTestData|importGoalies: Fetch error: \(error) description: \(error.userInfo)")
+            print("\(self) -> \(#function) \(error), \(error.userInfo)")
         }
         
         do {
@@ -416,7 +416,7 @@ class ImportTestData {
             try managedContext.save()
             
         } catch let error as NSError {
-            print("ImportTestData|importGoalies: Fetch error: \(error) description: \(error.userInfo)")
+            print("\(self) -> \(#function) \(error), \(error.userInfo)")
         }
         
         do {
@@ -440,7 +440,7 @@ class ImportTestData {
             try managedContext.save()
             
         } catch let error as NSError {
-            print("ImportTestData|importGoalies: Fetch error: \(error) description: \(error.userInfo)")
+            print("\(self) -> \(#function) \(error), \(error.userInfo)")
         }
         
         do {
@@ -464,7 +464,7 @@ class ImportTestData {
             try managedContext.save()
             
         } catch let error as NSError {
-            print("ImportTestData|importGoalies: Fetch error: \(error) description: \(error.userInfo)")
+            print("\(self) -> \(#function) \(error), \(error.userInfo)")
         }
     }
 } //class ImportTestData

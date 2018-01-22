@@ -41,8 +41,6 @@ class GameDetailsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("2. viewDidLoad->GameDetailsTableViewController")
-        
         //Move the TableView down a little bit.
         tableView.contentInset = UIEdgeInsets(top: 20.0, left: 0, bottom: 0, right: 0)
         
@@ -125,7 +123,7 @@ class GameDetailsTableViewController: UITableViewController {
             try managedContext.save()
             
         } catch let error as NSError {
-            print("GameDetailsTableViewController|saveNewGame: Fetch error: \(error) description: \(error.userInfo)")
+            print("\(self) -> \(#function) \(error), \(error.userInfo)")
         }
         
     }
@@ -144,7 +142,7 @@ class GameDetailsTableViewController: UITableViewController {
             try detailItem?.managedObjectContext?.save()
             
         } catch let error as NSError {
-            print("GameDetailsTableViewController|updateGame: Fetch error: \(error) description: \(error.userInfo)")
+            print("\(self) -> \(#function) \(error), \(error.userInfo)")
         }
         
     }

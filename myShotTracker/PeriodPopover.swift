@@ -16,9 +16,7 @@ class PeriodPopover: UIViewController {
     var mainView: MainView?
     
     func showPeriodPopover(view: MainView, selectedPeriod: Period, sender: UIButton) {
-        
-        print("class->PeriodPopover->showPeriodPopover")
-        
+                
         var rootViewController = UIApplication.shared.keyWindow?.rootViewController
         
         if let navigationController = rootViewController as? UINavigationController {

@@ -13,8 +13,6 @@ class ButtonImagesForState {
     
     func setButtonImages(period: Period, mainView: MainView!) {
         
-        print("class->ButtonImagesForState->setButtonImages")
-        
         switch period {
         case .first:
             mainView.leftPeriodButton.setImage(UIImage(named: "options 1st period enabled cell"), for: .normal)

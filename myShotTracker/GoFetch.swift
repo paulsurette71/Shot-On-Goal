@@ -14,9 +14,7 @@ class GoFetch {
     func fetchGoaliesForGame(managedContext: NSManagedObjectContext, currentGame: GameInformation) -> [Any] {
         
         var fetchGoalieForGame = [Any]()
-        
-        print("class->GoFetch->fetchGoaliesForGame")
-        
+            
         let fetchRequest            = NSFetchRequest<NSFetchRequestResult>(entityName: "ShotDetails")
         let predicate               = NSPredicate(format: "gameRelationship = %@", currentGame)
         fetchRequest.predicate      = predicate
@@ -34,7 +32,7 @@ class GoFetch {
             
         } catch let error as NSError {
             
-            print("GoFetch|fetchGoaliesForGame: Could not fetch. \(error), \(error.userInfo)")
+            print("\(self) -> \(#function) \(error), \(error.userInfo)")
         }
         
         return fetchGoalieForGame
@@ -59,7 +57,7 @@ class GoFetch {
             
         } catch let error as NSError {
             
-            print("GoFetch|fectchShots: Could not fetch. \(error), \(error.userInfo)")
+            print("\(self) -> \(#function) \(error), \(error.userInfo)")
         }
         
         return shotResults
@@ -91,7 +89,7 @@ class GoFetch {
             
         } catch let error as NSError {
             
-            print("GoFetch|fectchPeriods: Could not fetch. \(error), \(error.userInfo)")
+            print("\(self) -> \(#function) \(error), \(error.userInfo)")
         }
         
         return numberOfPeriodsResults
@@ -114,7 +112,7 @@ class GoFetch {
             
         } catch let error as NSError {
             
-            print("GoFetch|fetchNumberOfGoalies: Could not fetch. \(error), \(error.userInfo)")
+            print("\(self) -> \(#function) \(error), \(error.userInfo)")
         }
         
         return numberOfGoalies

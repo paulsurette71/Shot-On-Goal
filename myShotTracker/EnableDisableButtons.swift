@@ -15,9 +15,7 @@ class EnableDisableButtons {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     func checkForGoalieAndGame(mainView: MainView) {
-        
-        print("class->EnableDisableButtons->checkForGoalieAndGame")
-        
+                
         let disableButtons = DisableButtons()
         let enableButtons = EnableButtons()
         

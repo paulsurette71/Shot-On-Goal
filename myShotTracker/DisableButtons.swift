@@ -12,9 +12,7 @@ import UIKit
 class DisableButtons {
     
     func disableButtons(mainView:MainView) {
-        
-        print("class->DisableButtons->disableButtons")
-        
+            
         GlobalVariables.didDisableButtons = true
         
         //Disable all left buttons on screen

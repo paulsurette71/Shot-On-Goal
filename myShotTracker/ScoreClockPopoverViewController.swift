@@ -29,9 +29,7 @@ class ScoreClockPopoverViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("viewDidLoad->ScoreClockPopoverViewController")
- 
+         
     }
     
     override func viewWillAppear(_ animated: Bool) {

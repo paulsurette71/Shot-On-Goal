@@ -47,8 +47,6 @@ class GoalieDetailsTableViewController: UITableViewController, UIImagePickerCont
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("3. viewDidLoad->GoalieDetailsTableViewController")
-        
         playerImageView.contentMode = .scaleAspectFill
         
         //Move the TableView down a little bit.
@@ -144,7 +142,7 @@ class GoalieDetailsTableViewController: UITableViewController, UIImagePickerCont
             try managedContext.save()
             
         } catch let error as NSError {
-            print("GoalieDetailsTableViewController|saveNewGoalie: Fetch error: \(error) description: \(error.userInfo)")
+            print("\(self) -> \(#function) \(error), \(error.userInfo)")
         }
         
     }
@@ -172,7 +170,7 @@ class GoalieDetailsTableViewController: UITableViewController, UIImagePickerCont
             try detailItem?.managedObjectContext?.save()
             
         } catch let error as NSError {
-            print("GoalieDetailsTableViewController|updateGoalie: Fetch error: \(error) description: \(error.userInfo)")
+            print("\(self) -> \(#function) \(error), \(error.userInfo)")
         }
         
     }

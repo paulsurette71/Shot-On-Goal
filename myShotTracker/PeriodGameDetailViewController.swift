@@ -65,8 +65,6 @@ class PeriodGameDetailViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        print("4. viewDidLoad->PeriodGameDetailViewController")
-        
         showGoalieInfoInNav()
         addNavBarButton()
         

@@ -75,7 +75,6 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        print("viewDidLoad->MainViewController")
         
         mainView = UINib(nibName: "MainView", bundle: nil).instantiate(withOwner: nil, options: nil).first as? MainView
         

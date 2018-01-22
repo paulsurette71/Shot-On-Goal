@@ -42,8 +42,6 @@ class GoalieInformationTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("1. viewDidLoad->GoalieInformationTableViewController")
-        
         //Setup Custom NIB
         let cellNib = UINib(nibName: "GoalieInformationTableViewCell", bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: "goalieCell")
@@ -61,7 +59,7 @@ class GoalieInformationTableViewController: UITableViewController {
         do {
             try fetchedResultsController.performFetch()
         } catch let error as NSError {
-            print("GoalieInformationTableViewController|viewDidLoad: Fetching error: \(error), \(error.userInfo)")
+            print("\(self) -> \(#function) \(error), \(error.userInfo)")
         }
         
         tableView.reloadData()
@@ -253,7 +251,7 @@ class GoalieInformationTableViewController: UITableViewController {
                 tableView.reloadData()
                 
             } catch let error as NSError {
-                print("GoalieInformationTableViewController|editingStyle: Saving error: \(error), description: \(error.userInfo)")
+                print("\(self) -> \(#function) \(error), \(error.userInfo)")
             }
         }
     }
@@ -339,7 +337,7 @@ extension GoalieInformationTableViewController: NSFetchedResultsControllerDelega
         
         switch type {
         case .insert:
-            print("->> 2. Insert")
+
             tableView?.insertSections(indexSet, with: .fade)
             
         case .delete:
@@ -368,7 +366,7 @@ extension GoalieInformationTableViewController: NSFetchedResultsControllerDelega
             
         } catch let error as NSError {
             
-            print("GoalieInformationTableViewController|fetchShots: Could not fetch. \(error), \(error.userInfo)")
+            print("\(self) -> \(#function) \(error), \(error.userInfo)")
         }
         
         //filter array for TableViewCell subtitle.

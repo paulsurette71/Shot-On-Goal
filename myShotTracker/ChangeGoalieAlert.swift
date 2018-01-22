@@ -18,9 +18,7 @@ class ChangeGoalieAlert {
     let formatShotGoalPercentageAttributedString = FormatShotGoalPercentageAttributedString()
     
     func showAlert(viewController: UIViewController, mainView: MainView, tableView: UITableView, currentGoalieIndex:IndexPath, sender: UIButton) {
-        
-        print("class->ChangeGoalieAlert->showAlert")
-        
+                
         let alertController = UIAlertController(title: "Pull the goalie?", message: "Are you sure you want to pull the goalie?", preferredStyle: .alert)
         
         let cancelAction = UIAlertAction(title: "No", style: .cancel) {

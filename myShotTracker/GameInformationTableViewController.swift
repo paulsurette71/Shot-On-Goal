@@ -43,8 +43,6 @@ class GameInformationTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("1. viewDidLoad->GameInformationTableViewController")
-        
         //Setup Custom NIB
         let cellNib = UINib(nibName: "GameInformationTableViewCell", bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: "gameCell")
@@ -62,7 +60,7 @@ class GameInformationTableViewController: UITableViewController {
         do {
             try fetchedResultsController.performFetch()
         } catch let error as NSError {
-            print("GameInformationTableViewController|viewDidLoad: Fetching error: \(error), \(error.userInfo)")
+            print("\(self) -> \(#function) \(error), \(error.userInfo)")
         }
         
         tableView.reloadData()
@@ -201,7 +199,7 @@ class GameInformationTableViewController: UITableViewController {
                 tableView.reloadData()
                 
             } catch let error as NSError {
-                print("GameInformationTableViewController|editingStyle: Saving error: \(error), description: \(error.userInfo)")
+                print("\(self) -> \(#function) \(error), \(error.userInfo)")
             }
         }
     }
@@ -290,7 +288,7 @@ class GameInformationTableViewController: UITableViewController {
             shotsOnGoalie = try managedContext.fetch(fetchRequest)
             
         } catch let error as NSError {
-            print("GameInformationTableViewController|fetchShots: Could not fetch. \(error), \(error.userInfo)")
+            print("\(self) -> \(#function) \(error), \(error.userInfo)")
         }
         
         //filter array for TableViewCell subtitle.
