@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -216,13 +216,21 @@
                         </stackView>
                     </subviews>
                 </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="v2.0.3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0pb-Le-3WD">
+                    <rect key="frame" x="629.5" y="298.5" width="34" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="12"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="92m-VG-kO8" firstAttribute="leading" secondItem="dot-vB-PTM" secondAttribute="trailing" constant="10" id="1Tz-rO-hLd"/>
                 <constraint firstItem="Ghe-6d-xNF" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="1z8-al-mq9"/>
                 <constraint firstItem="gUL-rR-RfK" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Ci5-uH-6vQ"/>
+                <constraint firstItem="0pb-Le-3WD" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Dgg-nv-dal"/>
                 <constraint firstItem="gUL-rR-RfK" firstAttribute="leading" secondItem="92m-VG-kO8" secondAttribute="trailing" constant="10" id="Fed-ps-8Du"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="0pb-Le-3WD" secondAttribute="bottom" constant="30" id="PgF-0p-2m2"/>
                 <constraint firstItem="dot-vB-PTM" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="UKX-iG-r5s"/>
                 <constraint firstItem="Ghe-6d-xNF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="Ulw-E7-9KX"/>
                 <constraint firstItem="92m-VG-kO8" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="YJp-cw-Yl5"/>
