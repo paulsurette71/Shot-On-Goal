@@ -38,7 +38,7 @@ class ImportTestData {
             newGoalie.weight       = "182 lb"
             
             //HeadShot
-            let goalieImage = UIImageJPEGRepresentation(UIImage(named: "Bobrovsky.png")!, 1.0) as NSData?
+            let goalieImage = UIImage(named: "Bobrovsky.png")!.jpegData(compressionQuality: 1.0) as NSData?
             
             newGoalie.goalieHeadShot = goalieImage
             
@@ -73,7 +73,7 @@ class ImportTestData {
             newGoalie.weight       = "213 lb"
             
             //HeadShot
-            let goalieImage = UIImageJPEGRepresentation(UIImage(named: "Dubnyk.jpg")!, 1.0) as NSData?
+            let goalieImage = UIImage(named: "Dubnyk.jpg")!.jpegData(compressionQuality: 1.0) as NSData?
             
             newGoalie.goalieHeadShot = goalieImage
             
@@ -108,7 +108,7 @@ class ImportTestData {
             newGoalie.weight       = "217 lb"
             
             //HeadShot
-            let goalieImage = UIImageJPEGRepresentation(UIImage(named: "Holtby.jpg")!, 1.0) as NSData?
+            let goalieImage = UIImage(named: "Holtby.jpg")!.jpegData(compressionQuality: 1.0) as NSData?
             
             newGoalie.goalieHeadShot = goalieImage
             
@@ -143,7 +143,7 @@ class ImportTestData {
             newGoalie.weight       = "193 lb"
             
             //HeadShot
-            let goalieImage = UIImageJPEGRepresentation(UIImage(named: "Holtby.jpg")!, 1.0) as NSData?
+            let goalieImage = UIImage(named: "Holtby.jpg")!.jpegData(compressionQuality: 1.0) as NSData?
             
             newGoalie.goalieHeadShot = goalieImage
             
@@ -178,7 +178,7 @@ class ImportTestData {
             newGoalie.weight       = "176 lb"
             
             //HeadShot
-            let goalieImage = UIImageJPEGRepresentation(UIImage(named: "Rask.jpg")!, 1.0) as NSData?
+            let goalieImage = UIImage(named: "Rask.jpg")!.jpegData(compressionQuality: 1.0) as NSData?
             
             newGoalie.goalieHeadShot = goalieImage
             
@@ -213,7 +213,7 @@ class ImportTestData {
             newGoalie.weight       = "190 lb"
             
             //HeadShot
-            let goalieImage = UIImageJPEGRepresentation(UIImage(named: "Jones.jpg")!, 1.0) as NSData?
+            let goalieImage = UIImage(named: "Jones.jpg")!.jpegData(compressionQuality: 1.0) as NSData?
             
             newGoalie.goalieHeadShot = goalieImage
             
@@ -248,7 +248,7 @@ class ImportTestData {
             newGoalie.weight       = "226 lb"
             
             //HeadShot
-            let goalieImage = UIImageJPEGRepresentation(UIImage(named: "Price.jpg")!, 1.0) as NSData?
+            let goalieImage = UIImage(named: "Price.jpg")!.jpegData(compressionQuality: 1.0) as NSData?
             
             newGoalie.goalieHeadShot = goalieImage
             
@@ -283,7 +283,7 @@ class ImportTestData {
             newGoalie.weight       = "188 lb"
             
             //HeadShot
-            let goalieImage = UIImageJPEGRepresentation(UIImage(named: "Lundqvist.jpg")!, 1.0) as NSData?
+            let goalieImage = UIImage(named: "Lundqvist.jpg")!.jpegData(compressionQuality: 1.0) as NSData?
             
             newGoalie.goalieHeadShot = goalieImage
             
@@ -318,7 +318,7 @@ class ImportTestData {
             newGoalie.weight       = "216 lb"
             
             //HeadShot
-            let goalieImage = UIImageJPEGRepresentation(UIImage(named: "Crawford.jpg")!, 1.0) as NSData?
+            let goalieImage = UIImage(named: "Crawford.jpg")!.jpegData(compressionQuality: 1.0) as NSData?
             
             newGoalie.goalieHeadShot = goalieImage
             
@@ -353,7 +353,7 @@ class ImportTestData {
             newGoalie.weight       = "196 lb"
             
             //HeadShot
-            let goalieImage = UIImageJPEGRepresentation(UIImage(named: "Budaj.jpg")!, 1.0) as NSData?
+            let goalieImage = UIImage(named: "Budaj.jpg")!.jpegData(compressionQuality: 1.0) as NSData?
             
             newGoalie.goalieHeadShot = goalieImage
             

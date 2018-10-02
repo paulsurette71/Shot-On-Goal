@@ -72,6 +72,7 @@ class GoalieInformationTableViewController: UITableViewController {
         tableView.reloadData()
     }
     
+    
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         
@@ -237,7 +238,7 @@ class GoalieInformationTableViewController: UITableViewController {
         
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         if(editingStyle == .delete ) {
             
@@ -256,18 +257,18 @@ class GoalieInformationTableViewController: UITableViewController {
         }
     }
     
-    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         
         //Don't allow deletion of cell that has a goalie in it.
-        var returnValue: UITableViewCellEditingStyle?
+        var returnValue: UITableViewCell.EditingStyle?
         
         if appDelegate.leftGoalieIndex == indexPath || appDelegate.rightGoalieIndex == indexPath {
             
-            returnValue = UITableViewCellEditingStyle.none
+            returnValue = UITableViewCell.EditingStyle.none
             
         } else {
             
-            returnValue = UITableViewCellEditingStyle.delete
+            returnValue = UITableViewCell.EditingStyle.delete
             
         }
         
@@ -278,15 +279,19 @@ class GoalieInformationTableViewController: UITableViewController {
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let goalieDetailsTableViewController = segue.destination as! GoalieDetailsTableViewController
+        //        let goalieDetailsTableViewController = segue.destination as! GoalieDetailsTableViewController
+        //  let goalieDetailsTableViewController = segue.destination as? GoalieDetailsTableViewController
         
         if segue.identifier == "newGoalieSegue" {
             
             //Set Nav back button
             backButtonNav.setBackButtonToBack(navItem: navigationItem)
             
-            goalieDetailsTableViewController.managedContext = managedContext
-            goalieDetailsTableViewController.newGoalie = true
+            if let goalieDetailsTableViewController = segue.destination as? GoalieDetailsTableViewController {
+                
+                goalieDetailsTableViewController.managedContext = managedContext
+                goalieDetailsTableViewController.newGoalie = true
+            }
             
         }
     }
@@ -337,7 +342,7 @@ extension GoalieInformationTableViewController: NSFetchedResultsControllerDelega
         
         switch type {
         case .insert:
-
+            
             tableView?.insertSections(indexSet, with: .fade)
             
         case .delete:

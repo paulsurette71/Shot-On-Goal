@@ -19,33 +19,33 @@ class FormatShotGoalPercentageAttributedString {
     func formattedString(shots: Int, goals: Int, fontSize: CGFloat) -> NSMutableAttributedString {
         
         let numberOfShotsAttributedString: NSMutableAttributedString = NSMutableAttributedString(string: String(shots))
-        numberOfShotsAttributedString.addAttribute(NSAttributedStringKey.font,value: UIFont.systemFont(ofSize: fontSize, weight: UIFont.Weight.bold),range: NSMakeRange(0, numberOfShotsAttributedString.length))
+        numberOfShotsAttributedString.addAttribute(NSAttributedString.Key.font,value: UIFont.systemFont(ofSize: fontSize, weight: UIFont.Weight.bold),range: NSMakeRange(0, numberOfShotsAttributedString.length))
         
         let numberOfGoalsAttributedString: NSMutableAttributedString = NSMutableAttributedString(string: String(goals))
-        numberOfGoalsAttributedString.addAttribute(NSAttributedStringKey.font,value: UIFont.systemFont(ofSize: fontSize, weight: UIFont.Weight.bold),range: NSMakeRange(0, numberOfGoalsAttributedString.length))
+        numberOfGoalsAttributedString.addAttribute(NSAttributedString.Key.font,value: UIFont.systemFont(ofSize: fontSize, weight: UIFont.Weight.bold),range: NSMakeRange(0, numberOfGoalsAttributedString.length))
         
         //Change goals in string to red.
-        numberOfGoalsAttributedString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.red, range: NSMakeRange(0, numberOfGoalsAttributedString.length))
+        numberOfGoalsAttributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.red, range: NSMakeRange(0, numberOfGoalsAttributedString.length))
         
         let savePercentage = calculateSavePercentage.calculateSavePercentage(shots: Double(shots), goals: Double(goals))
         
         let savePercentageAttributedString = NSMutableAttributedString(string: savePercentage)
-        savePercentageAttributedString.addAttribute(NSAttributedStringKey.font,value: UIFont.systemFont(ofSize: fontSize, weight: UIFont.Weight.thin),range: NSMakeRange(0, savePercentageAttributedString.length))
-                savePercentageAttributedString.addAttribute(NSAttributedStringKey.foregroundColor, value: fontColour, range: NSMakeRange(0, savePercentageAttributedString.length))
+        savePercentageAttributedString.addAttribute(NSAttributedString.Key.font,value: UIFont.systemFont(ofSize: fontSize, weight: UIFont.Weight.thin),range: NSMakeRange(0, savePercentageAttributedString.length))
+                savePercentageAttributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: fontColour, range: NSMakeRange(0, savePercentageAttributedString.length))
         
         let combination = NSMutableAttributedString()
         let seperatorString = NSMutableAttributedString(string: "/")
-        seperatorString.addAttribute(NSAttributedStringKey.font,value: UIFont.systemFont(ofSize: fontSize, weight: UIFont.Weight.bold),range: NSMakeRange(0, seperatorString.length))
+        seperatorString.addAttribute(NSAttributedString.Key.font,value: UIFont.systemFont(ofSize: fontSize, weight: UIFont.Weight.bold),range: NSMakeRange(0, seperatorString.length))
         
         let percentString = NSMutableAttributedString(string: "%")
-        percentString.addAttribute(NSAttributedStringKey.font,value: UIFont.systemFont(ofSize: 12, weight: UIFont.Weight.thin),range: NSMakeRange(0, percentString.length))
-        percentString.addAttribute(NSAttributedStringKey.foregroundColor, value: fontColour, range: NSMakeRange(0, percentString.length))
+        percentString.addAttribute(NSAttributedString.Key.font,value: UIFont.systemFont(ofSize: 12, weight: UIFont.Weight.thin),range: NSMakeRange(0, percentString.length))
+        percentString.addAttribute(NSAttributedString.Key.foregroundColor, value: fontColour, range: NSMakeRange(0, percentString.length))
         
         let shotsString = NSMutableAttributedString(string: "Shots")
-        shotsString.addAttribute(NSAttributedStringKey.font,value: UIFont.systemFont(ofSize: fontSize, weight: UIFont.Weight.thin),range: NSMakeRange(0, shotsString.length))
+        shotsString.addAttribute(NSAttributedString.Key.font,value: UIFont.systemFont(ofSize: fontSize, weight: UIFont.Weight.thin),range: NSMakeRange(0, shotsString.length))
         
         let goalsString = NSMutableAttributedString(string: "Goals")
-        goalsString.addAttribute(NSAttributedStringKey.font,value: UIFont.systemFont(ofSize: fontSize, weight: UIFont.Weight.thin),range: NSMakeRange(0, goalsString.length))
+        goalsString.addAttribute(NSAttributedString.Key.font,value: UIFont.systemFont(ofSize: fontSize, weight: UIFont.Weight.thin),range: NSMakeRange(0, goalsString.length))
         
         let spaceString = NSMutableAttributedString(string: " ")
         
@@ -72,18 +72,18 @@ class FormatShotGoalPercentageAttributedString {
         let percentString                 = NSMutableAttributedString(string: "%")
         
         //Change goals in string to red.
-        numberOfGoalsAttributedString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor(named: "hockeyNetRed")!, range: NSMakeRange(0, numberOfGoalsAttributedString.length))
+        numberOfGoalsAttributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor(named: "hockeyNetRed")!, range: NSMakeRange(0, numberOfGoalsAttributedString.length))
         
-        savePercentage.addAttribute(NSAttributedStringKey.font,value: fontName,range: NSMakeRange(0, savePercentage.length))
-        savePercentage.addAttribute(NSAttributedStringKey.foregroundColor, value: fontColour, range: NSMakeRange(0, savePercentage.length))
+        savePercentage.addAttribute(NSAttributedString.Key.font,value: fontName,range: NSMakeRange(0, savePercentage.length))
+        savePercentage.addAttribute(NSAttributedString.Key.foregroundColor, value: fontColour, range: NSMakeRange(0, savePercentage.length))
         
         let combination = NSMutableAttributedString()
         
-        seperatorString.addAttribute(NSAttributedStringKey.font,value: UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.bold),range: NSMakeRange(0, seperatorString.length))
+        seperatorString.addAttribute(NSAttributedString.Key.font,value: UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.bold),range: NSMakeRange(0, seperatorString.length))
         
         
-        percentString.addAttribute(NSAttributedStringKey.font,value: UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.thin),range: NSMakeRange(0, percentString.length))
-        percentString.addAttribute(NSAttributedStringKey.foregroundColor, value: fontColour, range: NSMakeRange(0, percentString.length))
+        percentString.addAttribute(NSAttributedString.Key.font,value: UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.thin),range: NSMakeRange(0, percentString.length))
+        percentString.addAttribute(NSAttributedString.Key.foregroundColor, value: fontColour, range: NSMakeRange(0, percentString.length))
         
         
         combination.append(numberOfShotsAttributedString)

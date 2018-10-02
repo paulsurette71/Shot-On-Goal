@@ -53,8 +53,8 @@ class DrawPuck {
         // Attributed string
         let myAttributes = [
 //            NSAttributedStringKey.font: UIFont(name: "HelveticaNeue-Thin", size: 12.0)! ,
-            NSAttributedStringKey.font: UIFont.systemFont(ofSize: 12, weight: .thin) ,
-            NSAttributedStringKey.foregroundColor: UIColor.white
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12, weight: .thin) ,
+            NSAttributedString.Key.foregroundColor: UIColor.white
         ]
         
         let myAttributedString = NSAttributedString(string: shotNumber, attributes: myAttributes )
@@ -67,7 +67,7 @@ class DrawPuck {
         //x = up <-> down
         
         myTextLayer.frame         = CGRect(x: shot.x - (labelSize / 2) , y: shot.y - (labelSize / 2) + 1.5 , width: labelSize, height: labelSize)
-        myTextLayer.alignmentMode = kCAAlignmentCenter
+        myTextLayer.alignmentMode = CATextLayerAlignmentMode.center
         myTextLayer.contentsScale = UIScreen.main.scale
         
         imageView.layer.addSublayer(shapeLayer)

@@ -16,21 +16,21 @@ class GoalieDetailsAttributedString {
     func goalieDetailInformation(number: String, firstName:String, lastName: String) -> NSAttributedString {
         
         let firstNameAttributedString = NSMutableAttributedString(string: firstName)
-        firstNameAttributedString.addAttribute(NSAttributedStringKey.font, value: UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.thin), range: NSMakeRange(0, firstNameAttributedString.length))
+        firstNameAttributedString.addAttribute(NSAttributedString.Key.font, value: UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.thin), range: NSMakeRange(0, firstNameAttributedString.length))
         
         let lastNameAttributedString = NSMutableAttributedString(string: lastName)
-        lastNameAttributedString.addAttribute(NSAttributedStringKey.font, value: UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.heavy), range: NSMakeRange(0, lastNameAttributedString.length))
+        lastNameAttributedString.addAttribute(NSAttributedString.Key.font, value: UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.heavy), range: NSMakeRange(0, lastNameAttributedString.length))
         
         let combination = NSMutableAttributedString()
         let spaceAttributedString = NSMutableAttributedString(string: " ")
 
         
         let poundAttributedString = NSMutableAttributedString(string: "#")
-        poundAttributedString.addAttribute(NSAttributedStringKey.font,value: UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.thin),range: NSMakeRange(0, poundAttributedString.length))
-        poundAttributedString.addAttribute(NSAttributedStringKey.foregroundColor, value: fontColour, range: NSMakeRange(0, poundAttributedString.length))
+        poundAttributedString.addAttribute(NSAttributedString.Key.font,value: UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.thin),range: NSMakeRange(0, poundAttributedString.length))
+        poundAttributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: fontColour, range: NSMakeRange(0, poundAttributedString.length))
         
         let numberAttributedString = NSMutableAttributedString(string: number)
-        numberAttributedString.addAttribute(NSAttributedStringKey.font, value: UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.thin), range: NSMakeRange(0, numberAttributedString.length))
+        numberAttributedString.addAttribute(NSAttributedString.Key.font, value: UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.thin), range: NSMakeRange(0, numberAttributedString.length))
         
         
         //Connor Surette | #1

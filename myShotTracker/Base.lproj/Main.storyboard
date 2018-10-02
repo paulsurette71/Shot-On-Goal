@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Btl-7s-UZF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Btl-7s-UZF">
     <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="HelveticaNeueLights.ttc">
-            <string>HelveticaNeue-Thin</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Home-->
         <scene sceneID="a8I-dj-oiJ">
@@ -307,7 +302,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="kiB-5h-Eh5">
-                                                    <rect key="frame" x="0.0" y="0.0" width="736" height="99"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="736" height="99.5"/>
                                                     <date key="date" timeIntervalSinceReferenceDate="508448641.54396099">
                                                         <!--2017-02-10 19:44:01 +0000-->
                                                     </date>
@@ -334,7 +329,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJL-ii-bbL" userLabel="CityLabel">
-                                                    <rect key="frame" x="11" y="3" width="100" height="37"/>
+                                                    <rect key="frame" x="11" y="3" width="100" height="37.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="tz4-Lm-DgB"/>
                                                     </constraints>
@@ -343,7 +338,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mandatory" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ZBV-e8-Q8U">
-                                                    <rect key="frame" x="121" y="7" width="300" height="30"/>
+                                                    <rect key="frame" x="121" y="7" width="300" height="30.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="300" id="2FU-tl-k74"/>
                                                     </constraints>
@@ -370,7 +365,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arena Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpv-EC-tF5" userLabel="ArenaNameLabel">
-                                                    <rect key="frame" x="11" y="3" width="100" height="37"/>
+                                                    <rect key="frame" x="11" y="3" width="100" height="37.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="9m6-th-h5y"/>
                                                     </constraints>
@@ -379,7 +374,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mandatory" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="mwf-Xj-DK7" userLabel="Arena Name Text Field">
-                                                    <rect key="frame" x="121" y="7" width="300" height="30"/>
+                                                    <rect key="frame" x="121" y="7" width="300" height="30.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="300" id="na5-7w-RPx"/>
                                                     </constraints>
@@ -410,7 +405,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCq-aZ-hJX" userLabel="opposition City Label">
-                                                    <rect key="frame" x="11" y="3" width="100" height="37"/>
+                                                    <rect key="frame" x="11" y="3" width="100" height="37.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="WNa-hS-18T"/>
                                                     </constraints>
@@ -419,7 +414,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mandatory" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="s2N-Ir-eNx" userLabel="Opposition City Text Field">
-                                                    <rect key="frame" x="121" y="7" width="300" height="30"/>
+                                                    <rect key="frame" x="121" y="7" width="300" height="30.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="300" id="JqT-9F-vUw"/>
                                                     </constraints>
@@ -446,7 +441,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaH-E8-YNp" userLabel="Opposition Team Name Label">
-                                                    <rect key="frame" x="11" y="3" width="100" height="37"/>
+                                                    <rect key="frame" x="11" y="3" width="100" height="37.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="1Og-FT-NRr"/>
                                                     </constraints>
@@ -455,7 +450,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mandatory" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fKi-R1-6V0" userLabel="Opposition Team Text Field">
-                                                    <rect key="frame" x="121" y="7" width="300" height="30"/>
+                                                    <rect key="frame" x="121" y="7" width="300" height="30.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="300" id="nSE-8p-x5a"/>
                                                     </constraints>
@@ -669,7 +664,7 @@
                                 <rect key="frame" x="5" y="5" width="657" height="80"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZTb-zm-546">
-                                        <rect key="frame" x="291" y="3" width="75" height="75"/>
+                                        <rect key="frame" x="291" y="2.5" width="75" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="75" id="HRF-Of-qA5"/>
                                             <constraint firstAttribute="height" constant="75" id="cpF-xk-ud1"/>
@@ -729,7 +724,7 @@
         <!--Goalie Information-->
         <scene sceneID="0Mp-F2-YUI">
             <objects>
-                <tableViewController storyboardIdentifier="GoalieDetailsTableViewController" title="Goalie Information" id="FX8-di-e3E" customClass="GoalieDetailsTableViewController" customModule="Shot_On_Goal" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="GoalieDetailsTableViewController" title="Goalie Information" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FX8-di-e3E" customClass="GoalieDetailsTableViewController" customModule="Shot_On_Goal" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="kA5-JD-9c7">
                         <rect key="frame" x="0.0" y="0.0" width="736" height="948"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -746,7 +741,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDV-tq-LHf">
-                                                    <rect key="frame" x="11" y="11" width="100" height="21"/>
+                                                    <rect key="frame" x="11" y="11.5" width="100" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="Mv4-1w-LLJ"/>
                                                     </constraints>
@@ -755,7 +750,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mandatory" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="5qB-Ia-Fax">
-                                                    <rect key="frame" x="131" y="6" width="200" height="30"/>
+                                                    <rect key="frame" x="131" y="7" width="200" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="200" id="BPD-7o-KrT"/>
                                                     </constraints>
@@ -815,7 +810,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6c-P0-0PQ">
-                                                    <rect key="frame" x="11" y="11" width="100" height="21"/>
+                                                    <rect key="frame" x="11" y="11.5" width="100" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="suN-BX-9OS"/>
                                                     </constraints>
@@ -824,7 +819,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zjT-Kt-ZvE">
-                                                    <rect key="frame" x="131" y="6" width="200" height="30"/>
+                                                    <rect key="frame" x="131" y="7" width="200" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="200" id="Oft-fP-lJe"/>
                                                     </constraints>
@@ -858,7 +853,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="camera icon 40x40"/>
                                                     <connections>
-                                                        <action selector="takeHeadShot:" destination="FX8-di-e3E" eventType="touchUpInside" id="btB-rw-pHO"/>
+                                                        <action selector="takeHeadShot:" destination="FX8-di-e3E" eventType="touchUpInside" id="I6T-3b-LJ5"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -885,7 +880,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dFa-Su-H1k">
-                                                    <rect key="frame" x="142" y="7" width="200" height="30"/>
+                                                    <rect key="frame" x="142" y="7" width="200" height="30.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="200" id="cX3-7C-D7G"/>
                                                     </constraints>
@@ -921,7 +916,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ryk-5b-gxI">
-                                                    <rect key="frame" x="142" y="7" width="200" height="30"/>
+                                                    <rect key="frame" x="142" y="7" width="200" height="30.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="200" id="4Vk-gC-HTT"/>
                                                     </constraints>
@@ -957,7 +952,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="WQo-dv-6MB">
-                                                    <rect key="frame" x="142" y="7" width="200" height="30"/>
+                                                    <rect key="frame" x="142" y="7" width="200" height="30.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="200" id="SIp-lY-jHz"/>
                                                     </constraints>
@@ -993,7 +988,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="u3f-b9-8ov">
-                                                    <rect key="frame" x="142" y="7" width="200" height="30"/>
+                                                    <rect key="frame" x="142" y="7" width="200" height="30.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="200" id="oyh-eM-Vgx"/>
                                                     </constraints>
@@ -1029,7 +1024,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Acg-WM-JXl">
-                                                    <rect key="frame" x="142" y="7" width="200" height="30"/>
+                                                    <rect key="frame" x="142" y="7" width="200" height="30.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="200" id="AKm-6a-eFT"/>
                                                     </constraints>
@@ -1069,7 +1064,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="tKv-cm-cTJ">
-                                                    <rect key="frame" x="142" y="7" width="150" height="30"/>
+                                                    <rect key="frame" x="142" y="7" width="150" height="30.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="150" id="2Nu-Xo-jCQ"/>
                                                     </constraints>
@@ -1105,7 +1100,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="EvY-G4-sV6">
-                                                    <rect key="frame" x="142" y="7" width="150" height="30"/>
+                                                    <rect key="frame" x="142" y="7" width="150" height="30.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="150" id="8dh-tg-L8T"/>
                                                     </constraints>
@@ -1160,7 +1155,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="oZZ-Hj-Tuy">
-                                                    <rect key="frame" x="118" y="1" width="300" height="97"/>
+                                                    <rect key="frame" x="118" y="1" width="300" height="97.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="300" id="N3b-x9-4qc"/>
                                                     </constraints>
@@ -1199,7 +1194,7 @@
                     <size key="freeformSize" width="736" height="1000"/>
                     <connections>
                         <outlet property="ageLabel" destination="t2b-dR-gKl" id="29G-23-Dg4"/>
-                        <outlet property="cameraButton" destination="6jN-yc-X8T" id="sO5-aP-hge"/>
+                        <outlet property="cameraButton" destination="6jN-yc-X8T" id="mU8-Nc-kxT"/>
                         <outlet property="cityTextField" destination="dFa-Su-H1k" id="Snt-sN-oLt"/>
                         <outlet property="dateOfBirthDatePicker" destination="oZZ-Hj-Tuy" id="Soo-dt-RVD"/>
                         <outlet property="divisionTextField" destination="Acg-WM-JXl" id="0Lb-hA-o5X"/>

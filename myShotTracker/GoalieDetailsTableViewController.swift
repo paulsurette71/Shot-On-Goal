@@ -110,8 +110,6 @@ class GoalieDetailsTableViewController: UITableViewController, UIImagePickerCont
         
     }
     
-    
-    
     func saveNewGoalie() {
         
         //http://stackoverflow.com/questions/27995955/saving-picked-image-to-coredata
@@ -134,7 +132,7 @@ class GoalieDetailsTableViewController: UITableViewController, UIImagePickerCont
             newGoalie.weight       = weightTextField.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
             
             //HeadShot
-            let goalieImage = UIImageJPEGRepresentation(playerImageView.image!, bestQuality) as NSData?
+            let goalieImage = playerImageView.image!.jpegData(compressionQuality: bestQuality) as NSData?
             
             newGoalie.goalieHeadShot = goalieImage
             newGoalie.dob          = dateOfBirthDatePicker.date as NSDate?
@@ -165,7 +163,7 @@ class GoalieDetailsTableViewController: UITableViewController, UIImagePickerCont
             updateCurrentGoalie?.dob          = dateOfBirthDatePicker.date as NSDate?
             
             //HeadShot
-            updateCurrentGoalie?.goalieHeadShot = UIImageJPEGRepresentation(playerImageView.image!, bestQuality) as NSData?
+            updateCurrentGoalie?.goalieHeadShot = playerImageView.image!.jpegData(compressionQuality: bestQuality) as NSData?
             
             try detailItem?.managedObjectContext?.save()
             
@@ -268,16 +266,19 @@ class GoalieDetailsTableViewController: UITableViewController, UIImagePickerCont
     func takePicture() {
         
         imagePickerController.allowsEditing = false
-        imagePickerController.sourceType = UIImagePickerControllerSourceType.camera
+        imagePickerController.sourceType = UIImagePickerController.SourceType.camera
         imagePickerController.cameraCaptureMode = .photo
         imagePickerController.modalPresentationStyle = .fullScreen
         
         present(imagePickerController, animated: true, completion: nil)
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+// Local variable inserted by Swift 4.2 migrator.
+let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
+
         
-        let resizedImage = resizeImage(image: info[UIImagePickerControllerOriginalImage] as! UIImage, newWidth: 500.0)
+        let resizedImage = resizeImage(image: info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.originalImage)] as! UIImage, newWidth: 500.0)
         
         playerImageView.image = resizedImage
         
@@ -309,4 +310,14 @@ class GoalieDetailsTableViewController: UITableViewController, UIImagePickerCont
         return scaledImage!
         
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKeyDictionary(_ input: [UIImagePickerController.InfoKey: Any]) -> [String: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map {key, value in (key.rawValue, value)})
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKey(_ input: UIImagePickerController.InfoKey) -> String {
+	return input.rawValue
 }

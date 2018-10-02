@@ -16,7 +16,7 @@ class BackButtonNav {
         //Set Nav back button
         let backItem = UIBarButtonItem()
         backItem.title = "Back"
-        backItem.setTitleTextAttributes([ NSAttributedStringKey.font: UIFont.systemFont(ofSize: 20, weight: .thin)], for: .normal)
+        backItem.setTitleTextAttributes([ NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20, weight: .thin)], for: .normal)
         navItem.backBarButtonItem = backItem
 
     }    

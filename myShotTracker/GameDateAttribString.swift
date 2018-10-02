@@ -16,19 +16,19 @@ class GameDateAttribString {
     func gameDateAtrib(curentDate: String, oppositionCity:String, oppositionTeamName: String) -> NSAttributedString {
         
         let dateAttributedString = NSMutableAttributedString(string: curentDate)
-        dateAttributedString.addAttribute(NSAttributedStringKey.font, value: UIFont.systemFont(ofSize: fontSize, weight: UIFont.Weight.thin), range: NSMakeRange(0, dateAttributedString.length))
+        dateAttributedString.addAttribute(NSAttributedString.Key.font, value: UIFont.systemFont(ofSize: fontSize, weight: UIFont.Weight.thin), range: NSMakeRange(0, dateAttributedString.length))
         
         let oppositionCityAttributedString = NSMutableAttributedString(string: oppositionCity)
-        oppositionCityAttributedString.addAttribute(NSAttributedStringKey.font, value: UIFont.systemFont(ofSize: fontSize, weight: UIFont.Weight.heavy), range: NSMakeRange(0, oppositionCityAttributedString.length))
+        oppositionCityAttributedString.addAttribute(NSAttributedString.Key.font, value: UIFont.systemFont(ofSize: fontSize, weight: UIFont.Weight.heavy), range: NSMakeRange(0, oppositionCityAttributedString.length))
         
         let oppositionTeamNameAttributedString = NSMutableAttributedString(string: oppositionTeamName)
-        oppositionTeamNameAttributedString.addAttribute(NSAttributedStringKey.font, value: UIFont.systemFont(ofSize: fontSize, weight: UIFont.Weight.heavy), range: NSMakeRange(0, oppositionTeamNameAttributedString.length))
+        oppositionTeamNameAttributedString.addAttribute(NSAttributedString.Key.font, value: UIFont.systemFont(ofSize: fontSize, weight: UIFont.Weight.heavy), range: NSMakeRange(0, oppositionTeamNameAttributedString.length))
         
         let combination = NSMutableAttributedString()
         let spaceAttributedString = NSMutableAttributedString(string: " ")
         
         let vsAttributedString = NSMutableAttributedString(string: "vs.")
-        vsAttributedString.addAttribute(NSAttributedStringKey.font,value: UIFont.systemFont(ofSize: fontSize, weight: UIFont.Weight.thin),range: NSMakeRange(0, vsAttributedString.length))
+        vsAttributedString.addAttribute(NSAttributedString.Key.font,value: UIFont.systemFont(ofSize: fontSize, weight: UIFont.Weight.thin),range: NSMakeRange(0, vsAttributedString.length))
 //        vsAttributedString.addAttribute(NSAttributedStringKey.foregroundColor, value: fontColour, range: NSMakeRange(0, vsAttributedString.length))
         
         

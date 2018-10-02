@@ -98,7 +98,7 @@ class MainViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+                
         //Check to see if there are any goalies, to enable button
         let result = goFetch.fetchNumberOfGoalies(managedContext: managedContext)
         

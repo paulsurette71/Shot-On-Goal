@@ -69,7 +69,7 @@ class GameInformationTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+                
         if appDelegate.currentGame == nil {
             if selectedRow != nil {
                 
@@ -187,7 +187,7 @@ class GameInformationTableViewController: UITableViewController {
     }
     
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         if(editingStyle == .delete ) {
             

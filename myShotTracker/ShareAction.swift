@@ -101,7 +101,7 @@ class ShareAction {
         
         let scaleImage = UIGraphicsGetImageFromCurrentImageContext()
         
-        goalieNetArray.append(UIImagePNGRepresentation(scaleImage!)!)
+        goalieNetArray.append(scaleImage!.pngData()!)
         
         UIGraphicsEndImageContext()
         

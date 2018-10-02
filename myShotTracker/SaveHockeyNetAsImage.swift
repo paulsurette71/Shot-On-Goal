@@ -39,7 +39,7 @@ class SaveHockeyNetAsImage {
         
         savePNGToFile(scaleImage: scaleImage, period: period)
         
-        goalieNetArray.append(UIImagePNGRepresentation(scaleImage!)!)
+        goalieNetArray.append(scaleImage!.pngData()!)
         
         UIGraphicsEndImageContext()
         
@@ -50,7 +50,7 @@ class SaveHockeyNetAsImage {
         
         //Write to file just to make sure...
         if let image = scaleImage {
-            if let data = UIImagePNGRepresentation(image) {
+            if let data = image.pngData() {
                 
                 let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
                 let documentsDirectory = paths[0]
